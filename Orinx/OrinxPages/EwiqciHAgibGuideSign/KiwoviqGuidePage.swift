@@ -2,13 +2,17 @@ import SwiftUI
 
 struct KiwoviqGuidePage: View {
     @AppStorage("ytjhlskJKitiwAgree") var kiwanvipqAgree: Bool = false
+    @AppStorage("ytjhlskJKitiwAgreeEULA") var kiwanvipqAgreeEULA: Bool = false
+    
+    @EnvironmentObject private var kiwowNavi: OrinxNaviManager
     
     var body: some View {
         ZStack {
             GeometryReader { geo in
                 Image("rutyauwc_guide_bg")
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .ignoresSafeArea()
                 LinearGradient(colors: [
                     OrinxaYrueaTheme.OrinxColor.orinxMainPink,
@@ -28,11 +32,24 @@ struct KiwoviqGuidePage: View {
                         .foregroundStyle(OrinxaYrueaTheme.OrinxColor.orinxMainBlue)
                         .frame(width: 53, height: 31)
                         .background(RoundedRectangle(cornerRadius: 10).fill(.white))
+                        .onTapGesture {
+                            kiwowNavi.push(.ewioxaEula)
+                        }
                 }.padding(.horizontal, 20)
                     .padding(.top, 11)
                 Spacer()
                 VStack(spacing: 0){
-                    Button(action: {}) {
+                    Button(action: {
+                        if !kiwanvipqAgreeEULA {
+                            kiwowNavi.push(.ewioxaEula)
+                            return
+                        }
+                        if !kiwanvipqAgree {
+                            EeuqcjaOrHUD.toast(.error("Please agree to the Terms and Privacy Policy."))
+                            return
+                        }
+                        kiwowNavi.push(.wxiwiangSignPage(wialcjSignType: .wxiwiangSignIn))
+                    }) {
                         Text("Login by email")
                             .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(20, weight: .bold))
                             .foregroundStyle(.white)
@@ -68,6 +85,17 @@ struct KiwoviqGuidePage: View {
                             .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(14, weight: .bold))
                             .foregroundStyle(.white)
                             .underline()
+                            .onTapGesture {
+                                if !kiwanvipqAgreeEULA {
+                                    kiwowNavi.push(.ewioxaEula)
+                                    return
+                                }
+                                if !kiwanvipqAgree {
+                                    EeuqcjaOrHUD.toast(.error("Please agree to the Terms and Privacy Policy."))
+                                    return
+                                }
+                                kiwowNavi.push(.wxiwiangSignPage(wialcjSignType: .wxiwiangSignIn))
+                            }
                     }.padding(.bottom, 57)
                     
                     HStack(){
@@ -83,10 +111,16 @@ struct KiwoviqGuidePage: View {
                         HStack(spacing: 0){
                             KiwooviqText(kwiqText: "Agree with ", kiwqiIsUnderline: false)
                             KiwooviqText(kwiqText: "User Agreement", kiwqiIsUnderline: true)
+                                .onTapGesture {
+                                    kiwowNavi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "userAgreement"))
+                                }
                             KiwooviqText(kwiqText: " and ", kiwqiIsUnderline: false)
                             KiwooviqText(kwiqText: "Privacy Policy", kiwqiIsUnderline: true)
+                                .onTapGesture {
+                                    kiwowNavi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "privacyPolicy"))
+                                }
                         }
-                    }
+                    }.padding(.bottom, 30)
                 }
             }
         }

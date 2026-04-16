@@ -11,7 +11,8 @@ struct OpwicaVie29jhaEula: View {
             GeometryReader { geo in
                 Image("rutyauwc_bg")
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .ignoresSafeArea()
                 
             }
@@ -40,10 +41,16 @@ struct OpwicaVie29jhaEula: View {
                                 .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(16, weight: .regular))
                                 .foregroundStyle(.black)
                                 .underline()
+                                .onTapGesture {
+                                    opowaNavi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "userAgreement"))
+                                }
                             Text("Privacy Policy")
                                 .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(16, weight: .regular))
                                 .foregroundStyle(.black)
                                 .underline()
+                                .onTapGesture {
+                                    opowaNavi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "privacyPolice"))
+                                }
                         }
                         HStack(spacing: 24){
                             Button(action: {
@@ -66,6 +73,7 @@ struct OpwicaVie29jhaEula: View {
                             Button(action: {
                                 kiwaiAgreeEula = true
                                 kiwanvipqAgree = true
+                                opowaNavi.pop()
                             }) {
                                 Text("I agree")
                                     .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(20, weight: .bold))
@@ -101,8 +109,14 @@ struct OpwicaVie29jhaEula: View {
                     HStack(spacing: 0){
                         KiwooviqText(kwiqText: "Agree with ", kiwqiIsUnderline: false)
                         KiwooviqText(kwiqText: "User Agreement", kiwqiIsUnderline: true)
+                            .onTapGesture {
+                                opowaNavi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "userAgreement"))
+                            }
                         KiwooviqText(kwiqText: " and ", kiwqiIsUnderline: false)
                         KiwooviqText(kwiqText: "Privacy Policy", kiwqiIsUnderline: true)
+                            .onTapGesture {
+                                opowaNavi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "privacyPolicy"))
+                            }
                     }
                 }.padding(.vertical, 20)
             }

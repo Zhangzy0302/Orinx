@@ -63,7 +63,7 @@ struct OtwiNjqoiWebview: UIViewRepresentable {
         
         OtwiNjqoiWebview.currentWebView = orinxAwibaWebView
         
-        let url = URL(string: "https://app.fbspecck.link/\(otwiNjqoiWebNav)")!
+        let url = URL(string: "http://192.168.9.117:5173/\(otwiNjqoiWebNav)")!
         orinxAwibaWebView.load(URLRequest(url: url))
         
         return orinxAwibaWebView
@@ -209,7 +209,6 @@ extension Coordinator {
     private func handleLogout(_ body: Any) {
         guard let dict = body as? [String: Any],
               let isLogout = dict["isLogout"] as? Bool else {
-            print("logout 数据错误")
             return
         }
         
@@ -217,9 +216,7 @@ extension Coordinator {
             // TODO: 删除账号逻辑
             
             userVM.deleteAccountRexceaiPwvzwa()
-            print("delete")
         } else {
-            print("logout")
             storage.setCurrentUserId("")
             userVM.loadLoginRexceaiPwvzwaUser()
         }
@@ -264,13 +261,9 @@ extension Coordinator {
                 if let orinxAwibaWebView = OtwiNjqoiWebview.currentWebView {
                     orinxAwibaWebView.evaluateJavaScript(js) { result, error in
                         if let error = error {
-                            print("❌ 同步当前用户到 H5 出错:", error.localizedDescription)
-                        } else {
-                            print("✅ 当前用户信息同步到 H5 成功")
+                            print("❌", error.localizedDescription)
                         }
                     }
-                } else {
-                    print("❌ WebView 尚未创建，无法同步 H5")
                 }
             }
         }
@@ -333,7 +326,6 @@ extension Coordinator {
             ?? "{}"
         
         return """
-        try {
             window.currentUser = JSON.parse('\(escapeForJS(currentUserJSON))');
             window.userList = JSON.parse('\(escapeForJS(encode(storage.getUsers().map { $0.toTargetUser() })))');
             window.postList = JSON.parse('\(escapeForJS(encode(storage.getWorks().map { $0.toTargetPost() })))');
@@ -341,9 +333,6 @@ extension Coordinator {
             window.chatList = JSON.parse('\(escapeForJS(encode(storage.getChatRooms().map { $0.toTargetChatRoom() })))');
             window.messageList = JSON.parse('\(escapeForJS(encode(storage.getAllMessages().map { $0.toTargetMessage() })))');
             window.other = \(buildOtherConfig());
-        } catch(e) {
-            console.error("❌ 注入失败:", e);
-        }
         """
     }
     
@@ -358,15 +347,18 @@ extension Coordinator {
     private func buildOtherConfig() -> String {
         
         let obj: [String: Any] = [
-            "postTheme": ["Hobbies","Inspire"],
-            "reportContent": [
-                "Harassment",
-                "Malicious fraud",
-                "Pornography",
-                "Malicious insults",
-                "False Information"
+            "postTheme": [
+                "Hobbies",
+                "Inspire"
             ],
-            "coinsSetting": eoquaAfporjxuwProducts.map {
+            "reportContent": [
+                    "Harassment",
+                    "Malicious fraud",
+                    "Pornography",
+                    "Malicious insults",
+                    "False Information"
+                ],
+            "coinsSetting": qwoibtwkjJkProducts.map {
                 [
                     "key": $0.qwoibtwkjJkKeyId,
                     "cions": $0.qwoibtwkjJkGetDiamond,
@@ -397,7 +389,8 @@ struct OtwiNjqoiWeb: View {
             GeometryReader { geo in
                 Image("rutyauwc_bg")
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .ignoresSafeArea()
                 
             }

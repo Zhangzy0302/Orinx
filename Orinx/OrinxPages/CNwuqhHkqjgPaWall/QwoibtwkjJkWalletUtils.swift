@@ -9,7 +9,7 @@ struct QwoibtwkjJkProduct {
   let qwoibtwkjJkPrice: Double
 }
 
-let eoquaAfporjxuwProducts: [QwoibtwkjJkProduct] = [
+let qwoibtwkjJkProducts: [QwoibtwkjJkProduct] = [
   QwoibtwkjJkProduct(
     qwoibtwkjJkKeyId: "saaauiwzanugqkue", qwoibtwkjJkGetDiamond: 400, qwoibtwkjJkPrice: 0.99),
   QwoibtwkjJkProduct(
@@ -46,7 +46,7 @@ class QwoibtwkjJkIAPManager: NSObject, ObservableObject {
     private var request: SKProductsRequest?
     
     // 当前购买回调
-        private var ieudLKjalComple: ((QwoibtwkjJkPurchaseResult) -> Void)?
+        private var qwoibtwkjJkComple: ((QwoibtwkjJkPurchaseResult) -> Void)?
 
     override init() {
         super.init()
@@ -80,7 +80,7 @@ class QwoibtwkjJkIAPManager: NSObject, ObservableObject {
         xsieowKXowIsRequesting = true
         xsieowKXowTotalRequestCount += 1   // ✅ 每次请求都+1
         
-        let ids = Set(eoquaAfporjxuwProducts.map { $0.qwoibtwkjJkKeyId })
+        let ids = Set(qwoibtwkjJkProducts.map { $0.qwoibtwkjJkKeyId })
         
         request = SKProductsRequest(productIdentifiers: ids)
         request?.delegate = self
@@ -105,7 +105,7 @@ class QwoibtwkjJkIAPManager: NSObject, ObservableObject {
             EeuqcjaOrHUD.showLoading(showBackground: true)
             
             // 保存回调
-            self.ieudLKjalComple = completion
+            self.qwoibtwkjJkComple = completion
             
             let payment = SKPayment(product: product)
             SKPaymentQueue.default().add(payment)
@@ -163,44 +163,44 @@ extension QwoibtwkjJkIAPManager: SKProductsRequestDelegate {
 extension QwoibtwkjJkIAPManager: SKPaymentTransactionObserver {
     
     private func findWalletItem(productID: String) -> QwoibtwkjJkProduct? {
-        eoquaAfporjxuwProducts.first { $0.qwoibtwkjJkKeyId == productID }
+        qwoibtwkjJkProducts.first { $0.qwoibtwkjJkKeyId == productID }
     }
     
-    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions xowaAwwlTransactions: [SKPaymentTransaction]) {
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions qwoibtwkjJkTransactions: [SKPaymentTransaction]) {
         
-        for xowaAwwlTransaction in xowaAwwlTransactions {
+        for qwoibtwkjJkTransaction in qwoibtwkjJkTransactions {
             
-            switch xowaAwwlTransaction.transactionState {
+            switch qwoibtwkjJkTransaction.transactionState {
                 
             case .purchased:
-                SKPaymentQueue.default().finishTransaction(xowaAwwlTransaction)
+                SKPaymentQueue.default().finishTransaction(qwoibtwkjJkTransaction)
                 EeuqcjaOrHUD.hideLoading()
                 
-                if let chealaliwPro = eoquaAfporjxuwProducts.first(where: {
-                    $0.qwoibtwkjJkKeyId == xowaAwwlTransaction.payment.productIdentifier
+                if let chealaliwPro = qwoibtwkjJkProducts.first(where: {
+                    $0.qwoibtwkjJkKeyId == qwoibtwkjJkTransaction.payment.productIdentifier
                 }) {
-                    ieudLKjalComple?(.success(diamond: chealaliwPro.qwoibtwkjJkGetDiamond))
+                    qwoibtwkjJkComple?(.success(diamond: chealaliwPro.qwoibtwkjJkGetDiamond))
                 }
-                ieudLKjalComple = nil
+                qwoibtwkjJkComple = nil
                 
                 
             case .failed:
-                SKPaymentQueue.default().finishTransaction(xowaAwwlTransaction)
+                SKPaymentQueue.default().finishTransaction(qwoibtwkjJkTransaction)
                 EeuqcjaOrHUD.hideLoading()
                 
-                if let error = xowaAwwlTransaction.error as? SKError {
+                if let error = qwoibtwkjJkTransaction.error as? SKError {
                     if error.code == .paymentCancelled {
-                        ieudLKjalComple?(.cancelled)
+                        qwoibtwkjJkComple?(.cancelled)
                     } else {
-                        ieudLKjalComple?(.failed(message: error.localizedDescription))
+                        qwoibtwkjJkComple?(.failed(message: error.localizedDescription))
                     }
                 } else {
-                    ieudLKjalComple?(.failed(message: xowaAwwlTransaction.error?.localizedDescription ?? "Unknown error"))
+                    qwoibtwkjJkComple?(.failed(message: qwoibtwkjJkTransaction.error?.localizedDescription ?? "Unknown error"))
                 }
-                ieudLKjalComple = nil
+                qwoibtwkjJkComple = nil
                 
             case .restored:
-                SKPaymentQueue.default().finishTransaction(xowaAwwlTransaction)
+                SKPaymentQueue.default().finishTransaction(qwoibtwkjJkTransaction)
                 EeuqcjaOrHUD.hideLoading()
                 
             case .purchasing:
@@ -208,7 +208,7 @@ extension QwoibtwkjJkIAPManager: SKPaymentTransactionObserver {
                 
             case .deferred:
                 print("Purchase pending")
-                ieudLKjalComple?(.pending)
+                qwoibtwkjJkComple?(.pending)
             @unknown default:
                 break
             }

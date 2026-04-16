@@ -266,4 +266,17 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
 
     loadLoginRexceaiPwvzwaUser()
   }
+    
+    // 获取所有未拉黑的用户
+    func getAllNotBlockRexceaiPwvzwaUsers() -> [RexceaiPwvzwaUser] {
+        let users = storage.getUsers()
+        if let rexceaiPwvzwaMyInfo = currentUser {
+            let allRexceaiPwvzwaUsers = users.filter{
+                !rexceaiPwvzwaMyInfo.rexceaiPwvzwaBlacklist.contains($0.rexceaiPwvzwaUserId)
+            }
+            
+            return allRexceaiPwvzwaUsers
+        }
+        return []
+    }
 }

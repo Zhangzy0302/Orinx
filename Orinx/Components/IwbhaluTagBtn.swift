@@ -23,7 +23,7 @@ struct IwbhaluTagBtn<Content: View>: View {
         ZStack{
             RoundedRectangle(cornerRadius: 8)
                 .stroke(colorIsBlack ? .black : OrinxaYrueaTheme.OrinxColor.orinxMainPink, lineWidth: 2)
-                .frame(width: iwbhaluWidth - 4, height: iwbnhalHeight - 4)
+                .frame(width: iwbhaluWidth - 8, height: iwbnhalHeight - 8)
             content
         }.frame(width: iwbhaluWidth, height: iwbnhalHeight)
             .background(RoundedRectangle(cornerRadius: 10).fill(.white))

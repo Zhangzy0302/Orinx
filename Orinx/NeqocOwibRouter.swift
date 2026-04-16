@@ -36,9 +36,6 @@ struct NeqocOwibRouter: View {
     }
 }
 
-#Preview {
-    NeqocOwibRouter()
-}
 
 enum OrinxRoute: Hashable {
     case ewioxaEula

@@ -41,9 +41,23 @@ struct WxiwiangSignPage: View {
             }
             orinxNavi.popToRoot()
         case .wxiwiangSignUp:
-            <#code#>
+            if wxiwaingPwd != wxiwaingRepwd {
+                EeuqcjaOrHUD.toast(.error("Passwords do not match"))
+                return
+            }
+            let wxiaobwU = orinxUserVM.registerRexceaiPwvzwa(email: wxiwaingEmail, password: wxiwaingPwd)
+            if wxiaobwU == nil {
+                EeuqcjaOrHUD.toast(.error("This email is already registered"))
+                return
+            }
+            Task{
+                EeuqcjaOrHUD.showLoading()
+                await delay(1)
+                EeuqcjaOrHUD.hideLoading()
+                orinxNavi.popToRoot()
+            }
         case .wxiwiangForgotPwd:
-            <#code#>
+            return
         }
     }
     
@@ -53,7 +67,8 @@ struct WxiwiangSignPage: View {
             GeometryReader { geo in
                 Image("rutyauwc_bg")
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .ignoresSafeArea()
                 
             }
@@ -65,7 +80,7 @@ struct WxiwiangSignPage: View {
                     Spacer()
                 }.padding(.horizontal, 20)
                     .padding(.vertical, 12)
-                Text("Sign in")
+                Text(wxiwiangCurrentType == .wxiwiangSignIn ? "Sign in" : wxiwiangCurrentType == .wxiwiangSignUp ? "Sign up" : "Forgot password")
                     .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(36, weight: .bold))
                     .foregroundStyle(.black)
                     .padding(.bottom, 55)
@@ -78,24 +93,27 @@ struct WxiwiangSignPage: View {
                     }
                     
                 }.padding(.horizontal, 40)
-                HStack{
-                    Spacer()
-                    Text("Forgot ？")
-                        .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(16, weight: .bold))
-                        .foregroundStyle(OrinxaYrueaTheme.OrinxColor.orinxMainPink)
-                        .transformEffect(.init(1, 0, -0.2, 1, 0, 0))
-                        .onTapGesture {
-                            withAnimation{
-                                wxiwiangCurrentType = .wxiwiangForgotPwd
+                if wxiwiangCurrentType == .wxiwiangSignIn {
+                    HStack{
+                        Spacer()
+                        Text("Forgot ？")
+                            .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(16, weight: .bold))
+                            .foregroundStyle(OrinxaYrueaTheme.OrinxColor.orinxMainPink)
+                            .transformEffect(.init(1, 0, -0.2, 1, 0, 0))
+                            .onTapGesture {
+                                withAnimation{
+                                    wxiwiangCurrentType = .wxiwiangForgotPwd
+                                }
                             }
-                        }
-                }.padding(.top, 20)
-                    .padding(.horizontal, 30)
+                    }.padding(.top, 20)
+                        .padding(.horizontal, 30)
+                }
+                
                 Spacer()
                 Button(action: {
-                    
+                    siaoibOnSign()
                 }) {
-                    Text("Sign in")
+                    Text(wxiwiangCurrentType == .wxiwiangSignIn ? "Sign in" : wxiwiangCurrentType == .wxiwiangSignUp ? "Sign up" : "Save")
                         .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(20, weight: .bold))
                         .foregroundStyle(.white)
                         .frame(width: 198, height: 53)
@@ -111,6 +129,11 @@ struct WxiwiangSignPage: View {
             }
         }.navigationBarHidden(true)
             .background(LkjaurakjxSwipeBack())
+            .onTapGesture {
+                wxiangIsFocus1 = false
+                wxiangIsFocus2 = false
+                wxiangIsFocus3 = false
+            }
     }
     
     struct WxiwiangInputTextField: View {
@@ -127,6 +150,7 @@ struct WxiwiangSignPage: View {
             .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(16, weight: .regular))
             .foregroundColor(.black)
             .tint(.black)
+            .textInputAutocapitalization(.never)
             .frame(height: 52)
             .padding(.horizontal, 12)
             .background(
