@@ -1,0 +1,279 @@
+{
+  "" : {
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Orinx-primary.dia",
+    "emit-module-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Orinx-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Orinx-primary-emit-module.dia",
+    "pch" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Orinx-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Orinx-primary.swiftdeps"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/Components/Eiwch827PostItem.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Eiwch827PostItem.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Eiwch827PostItem.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Eiwch827PostItem.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Eiwch827PostItem.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Eiwch827PostItem.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Eiwch827PostItem.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Eiwch827PostItem.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Eiwch827PostItem~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/Components/IwbhaluTagBtn.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/IwbhaluTagBtn.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/IwbhaluTagBtn.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/IwbhaluTagBtn.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/IwbhaluTagBtn.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/IwbhaluTagBtn.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/IwbhaluTagBtn.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/IwbhaluTagBtn.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/IwbhaluTagBtn~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/Components/XaiwgMnoteImage.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/XaiwgMnoteImage.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/XaiwgMnoteImage.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/XaiwgMnoteImage.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/XaiwgMnoteImage.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/XaiwgMnoteImage.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/XaiwgMnoteImage.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/XaiwgMnoteImage.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/XaiwgMnoteImage~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/Data/AelgohiAorInitData.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/AelgohiAorInitData.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/AelgohiAorInitData.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/AelgohiAorInitData.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/AelgohiAorInitData.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/AelgohiAorInitData.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/AelgohiAorInitData.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/AelgohiAorInitData.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/AelgohiAorInitData~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/Data/keal_model/RexceaiPwvzwaUser.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/RexceaiPwvzwaUser.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/RexceaiPwvzwaUser.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/RexceaiPwvzwaUser.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/RexceaiPwvzwaUser.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/RexceaiPwvzwaUser.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/RexceaiPwvzwaUser.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/RexceaiPwvzwaUser.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/RexceaiPwvzwaUser~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/Data/keal_model/SaascieSeigComment.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/SaascieSeigComment.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/SaascieSeigComment.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/SaascieSeigComment.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/SaascieSeigComment.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/SaascieSeigComment.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/SaascieSeigComment.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/SaascieSeigComment.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/SaascieSeigComment~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/Data/keal_model/VieoaVNneqoVideo.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VieoaVNneqoVideo.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VieoaVNneqoVideo.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VieoaVNneqoVideo.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VieoaVNneqoVideo.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VieoaVNneqoVideo.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VieoaVNneqoVideo.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VieoaVNneqoVideo.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VieoaVNneqoVideo~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/Data/keal_model/ZswqoveiNiegChat.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/ZswqoveiNiegChat.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/ZswqoveiNiegChat.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/ZswqoveiNiegChat.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/ZswqoveiNiegChat.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/ZswqoveiNiegChat.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/ZswqoveiNiegChat.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/ZswqoveiNiegChat.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/ZswqoveiNiegChat~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/EeuqcjaOrLoadingToast.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/EeuqcjaOrLoadingToast.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/EeuqcjaOrLoadingToast.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/EeuqcjaOrLoadingToast.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/EeuqcjaOrLoadingToast.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/EeuqcjaOrLoadingToast.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/EeuqcjaOrLoadingToast.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/EeuqcjaOrLoadingToast.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/EeuqcjaOrLoadingToast~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/LkjairoAkaUtils.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/LkjairoAkaUtils.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/LkjairoAkaUtils.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/LkjairoAkaUtils.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/LkjairoAkaUtils.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/LkjairoAkaUtils.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/LkjairoAkaUtils.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/LkjairoAkaUtils.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/LkjairoAkaUtils~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/NeqocOwibRouter.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/NeqocOwibRouter.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/NeqocOwibRouter.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/NeqocOwibRouter.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/NeqocOwibRouter.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/NeqocOwibRouter.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/NeqocOwibRouter.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/NeqocOwibRouter.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/NeqocOwibRouter~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxApp.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxApp.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxApp.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxApp.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxApp.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxApp.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxApp.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxApp.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxApp~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxPages/CNwuqhHkqjgPaWall/QwoibtwkjJkWalletUtils.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/QwoibtwkjJkWalletUtils.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/QwoibtwkjJkWalletUtils.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/QwoibtwkjJkWalletUtils.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/QwoibtwkjJkWalletUtils.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/QwoibtwkjJkWalletUtils.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/QwoibtwkjJkWalletUtils.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/QwoibtwkjJkWalletUtils.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/QwoibtwkjJkWalletUtils~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxPages/EwiqciHAgibGuideSign/KiwoviqGuidePage.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/KiwoviqGuidePage.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/KiwoviqGuidePage.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/KiwoviqGuidePage.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/KiwoviqGuidePage.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/KiwoviqGuidePage.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/KiwoviqGuidePage.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/KiwoviqGuidePage.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/KiwoviqGuidePage~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxPages/EwiqciHAgibGuideSign/OpwicaVie29jhaEula.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OpwicaVie29jhaEula.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OpwicaVie29jhaEula.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OpwicaVie29jhaEula.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OpwicaVie29jhaEula.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OpwicaVie29jhaEula.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OpwicaVie29jhaEula.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OpwicaVie29jhaEula.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OpwicaVie29jhaEula~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxPages/EwiqciHAgibGuideSign/WxiwiangSignPage.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WxiwiangSignPage.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WxiwiangSignPage.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WxiwiangSignPage.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WxiwiangSignPage.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WxiwiangSignPage.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WxiwiangSignPage.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WxiwiangSignPage.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WxiwiangSignPage~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxPages/FwuooisDialog/CoeeZenvReportBlock.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/CoeeZenvReportBlock.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/CoeeZenvReportBlock.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/CoeeZenvReportBlock.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/CoeeZenvReportBlock.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/CoeeZenvReportBlock.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/CoeeZenvReportBlock.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/CoeeZenvReportBlock.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/CoeeZenvReportBlock~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxPages/FwuooisDialog/WoxiaeioGuestAlert.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WoxiaeioGuestAlert.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WoxiaeioGuestAlert.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WoxiaeioGuestAlert.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WoxiaeioGuestAlert.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WoxiaeioGuestAlert.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WoxiaeioGuestAlert.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WoxiaeioGuestAlert.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/WoxiaeioGuestAlert~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxPages/NiwlciwNav/BrNozhwiHome.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/BrNozhwiHome.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/BrNozhwiHome.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/BrNozhwiHome.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/BrNozhwiHome.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/BrNozhwiHome.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/BrNozhwiHome.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/BrNozhwiHome.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/BrNozhwiHome~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxPages/NiwlciwNav/Pcinzwin2jdVideo.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Pcinzwin2jdVideo.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Pcinzwin2jdVideo.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Pcinzwin2jdVideo.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Pcinzwin2jdVideo.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Pcinzwin2jdVideo.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Pcinzwin2jdVideo.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Pcinzwin2jdVideo.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Pcinzwin2jdVideo~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxPages/NiwlciwNav/Teyuxh24aMessage.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Teyuxh24aMessage.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Teyuxh24aMessage.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Teyuxh24aMessage.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Teyuxh24aMessage.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Teyuxh24aMessage.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Teyuxh24aMessage.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Teyuxh24aMessage.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Teyuxh24aMessage~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxPages/NiwlciwNav/Xzwuu858LKvMine.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Xzwuu858LKvMine.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Xzwuu858LKvMine.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Xzwuu858LKvMine.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Xzwuu858LKvMine.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Xzwuu858LKvMine.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Xzwuu858LKvMine.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Xzwuu858LKvMine.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Xzwuu858LKvMine~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxPages/OtwiNjqoiWebview.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OtwiNjqoiWebview.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OtwiNjqoiWebview.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OtwiNjqoiWebview.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OtwiNjqoiWebview.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OtwiNjqoiWebview.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OtwiNjqoiWebview.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OtwiNjqoiWebview.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OtwiNjqoiWebview~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxPages/VnziwbLiwNavPage.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VnziwbLiwNavPage.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VnziwbLiwNavPage.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VnziwbLiwNavPage.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VnziwbLiwNavPage.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VnziwbLiwNavPage.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VnziwbLiwNavPage.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VnziwbLiwNavPage.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/VnziwbLiwNavPage~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxaYrueaTheme.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxaYrueaTheme.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxaYrueaTheme.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxaYrueaTheme.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxaYrueaTheme.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxaYrueaTheme.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxaYrueaTheme.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxaYrueaTheme.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/OrinxaYrueaTheme~partial.swiftmodule"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/YtjhlskJKitiwState.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/YtjhlskJKitiwState.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/YtjhlskJKitiwState.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/YtjhlskJKitiwState.dia",
+    "index-unit-output-path" : "/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/YtjhlskJKitiwState.o",
+    "llvm-bc" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/YtjhlskJKitiwState.bc",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/YtjhlskJKitiwState.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/YtjhlskJKitiwState.swiftdeps",
+    "swiftmodule" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/YtjhlskJKitiwState~partial.swiftmodule"
+  }
+}

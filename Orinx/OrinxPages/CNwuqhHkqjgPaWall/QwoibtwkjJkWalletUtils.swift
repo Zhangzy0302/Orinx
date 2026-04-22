@@ -1,52 +1,45 @@
-
 import StoreKit
 import SwiftUI
 import Combine
 
-struct QwoibtwkjJkProduct {
-  let qwoibtwkjJkKeyId: String
-  let qwoibtwkjJkGetDiamond: Int
-  let qwoibtwkjJkPrice: Double
+struct ORINXVOGUEAtelierPack {
+    let ORINXVOGUEsilhouetteKeyId: String
+    let ORINXVOGUEwardrobeValue: Int
+    let ORINXVOGUErunwayPrice: Double
 }
 
-let qwoibtwkjJkProducts: [QwoibtwkjJkProduct] = [
-  QwoibtwkjJkProduct(
-    qwoibtwkjJkKeyId: "saaauiwzanugqkue", qwoibtwkjJkGetDiamond: 400, qwoibtwkjJkPrice: 0.99),
-  QwoibtwkjJkProduct(
-    qwoibtwkjJkKeyId: "cufqhwwtruywequl", qwoibtwkjJkGetDiamond: 800, qwoibtwkjJkPrice: 1.99),
-  QwoibtwkjJkProduct(
-    qwoibtwkjJkKeyId: "uysqkdztrnphvljc", qwoibtwkjJkGetDiamond: 2190, qwoibtwkjJkPrice: 3.99),
-  QwoibtwkjJkProduct(
-    qwoibtwkjJkKeyId: "qtrvjrldbpuobfhl", qwoibtwkjJkGetDiamond: 2450, qwoibtwkjJkPrice: 4.99),
-  QwoibtwkjJkProduct(
-    qwoibtwkjJkKeyId: "pczvlytnrqkwmbas", qwoibtwkjJkGetDiamond: 3950, qwoibtwkjJkPrice: 7.99),
-  QwoibtwkjJkProduct(
-    qwoibtwkjJkKeyId: "vwxfmzjjgzchmnfr", qwoibtwkjJkGetDiamond: 5150, qwoibtwkjJkPrice: 9.99),
-  QwoibtwkjJkProduct(
-    qwoibtwkjJkKeyId: "mxrjtlqfksahvzne", qwoibtwkjJkGetDiamond: 7700, qwoibtwkjJkPrice: 13.99),
-  QwoibtwkjJkProduct(
-    qwoibtwkjJkKeyId: "ipuxukzujkqtvbdi", qwoibtwkjJkGetDiamond: 10800, qwoibtwkjJkPrice: 19.99),
-  QwoibtwkjJkProduct(
-    qwoibtwkjJkKeyId: "zgymxegfnfowecuq", qwoibtwkjJkGetDiamond: 29400, qwoibtwkjJkPrice: 49.99),
-  QwoibtwkjJkProduct(
-    qwoibtwkjJkKeyId: "kcpisczvlozopdfa", qwoibtwkjJkGetDiamond: 63700, qwoibtwkjJkPrice: 99.99)
+let ORINXVOGUEAtelierCatalog: [ORINXVOGUEAtelierPack] = [
+    ORINXVOGUEAtelierPack(ORINXVOGUEsilhouetteKeyId: "zwdrflmmlgmldult", ORINXVOGUEwardrobeValue: 400, ORINXVOGUErunwayPrice: 0.99),
+    ORINXVOGUEAtelierPack(ORINXVOGUEsilhouetteKeyId: "vtfuahcerkatvqyc", ORINXVOGUEwardrobeValue: 800, ORINXVOGUErunwayPrice: 1.99),
+    ORINXVOGUEAtelierPack(ORINXVOGUEsilhouetteKeyId: "xhgkqjrpvczbmwfl", ORINXVOGUEwardrobeValue: 2190, ORINXVOGUErunwayPrice: 3.99),
+    ORINXVOGUEAtelierPack(ORINXVOGUEsilhouetteKeyId: "dtmzkhwjaxpjdfqm", ORINXVOGUEwardrobeValue: 2450, ORINXVOGUErunwayPrice: 4.99),
+    ORINXVOGUEAtelierPack(ORINXVOGUEsilhouetteKeyId: "ntydsewvcxuqjzop", ORINXVOGUEwardrobeValue: 3950, ORINXVOGUErunwayPrice: 7.99),
+    ORINXVOGUEAtelierPack(ORINXVOGUEsilhouetteKeyId: "xrhllyicvfyfzhnw", ORINXVOGUEwardrobeValue: 5150, ORINXVOGUErunwayPrice: 9.99),
+    ORINXVOGUEAtelierPack(ORINXVOGUEsilhouetteKeyId: "plsoujedzxtafvky", ORINXVOGUEwardrobeValue: 7700, ORINXVOGUErunwayPrice: 13.99),
+    ORINXVOGUEAtelierPack(ORINXVOGUEsilhouetteKeyId: "xumngoldawuqyzfj", ORINXVOGUEwardrobeValue: 10800, ORINXVOGUErunwayPrice: 19.99),
+    ORINXVOGUEAtelierPack(ORINXVOGUEsilhouetteKeyId: "kcvoynhmuuiekjfr", ORINXVOGUEwardrobeValue: 29400, ORINXVOGUErunwayPrice: 49.99),
+    ORINXVOGUEAtelierPack(ORINXVOGUEsilhouetteKeyId: "yshvcwlngwikdvqe", ORINXVOGUEwardrobeValue: 63700, ORINXVOGUErunwayPrice: 99.99)
 ]
 
-enum QwoibtwkjJkPurchaseResult {
-    case success(diamond: Int)
-    case cancelled
-    case pending
-    case failed(message: String)
+enum ORINXVOGUECouturePurchaseResult {
+    case ORINXVOGUESuccess(wardrobeValue: Int)
+    case ORINXVOGUECancelled
+    case ORINXVOGUEPending
+    case ORINXVOGUEFailed(message: String)
 }
 
-class QwoibtwkjJkIAPManager: NSObject, ObservableObject {
+final class ORINXVOGUERunwayIAPManager: NSObject, ObservableObject {
 
-    @Published var peiALwlxuAwiProducts: [SKProduct] = []
+    @Published var ORINXVOGUErunwayStoreProducts: [SKProduct] = []
 
-    private var request: SKProductsRequest?
-    
-    // 当前购买回调
-        private var qwoibtwkjJkComple: ((QwoibtwkjJkPurchaseResult) -> Void)?
+    private var ORINXVOGUEcatalogRequest: SKProductsRequest?
+    private var ORINXVOGUEcoutureCompletion: ((ORINXVOGUECouturePurchaseResult) -> Void)?
+
+    private var ORINXVOGUEatelierRetryCount = 0
+    private var ORINXVOGUEatelierTotalRequestCount = 0
+    private let ORINXVOGUEatelierMaxTotalRequestCount = 10
+    private let ORINXVOGUEatelierMaxRetryCount = 10
+    private var ORINXVOGUEatelierIsRequesting = false
 
     override init() {
         super.init()
@@ -56,159 +49,139 @@ class QwoibtwkjJkIAPManager: NSObject, ObservableObject {
     deinit {
         SKPaymentQueue.default().remove(self)
     }
-    
-    private var xsieowKXowRetryCount = 0
-    private var xsieowKXowTotalRequestCount = 0
-    private let xsieowKXowMaxTotalRequestCount = 10
-    private var xsieowKXowMaxRetryCount = 10
-    private var xsieowKXowIsRequesting = false
 
-    // MARK: - 拉取商品
-    func oerianAwcugdFetchProducts() {
-        
-        // ✅ 最大请求次数限制
-        guard xsieowKXowTotalRequestCount < xsieowKXowMaxTotalRequestCount else {
+    func refreshORINXVOGUERunwayCatalog() {
+        guard ORINXVOGUEatelierTotalRequestCount < ORINXVOGUEatelierMaxTotalRequestCount else {
             return
         }
-        
-        // 防止重复请求
-        guard !xsieowKXowIsRequesting else { return }
-        
-        // 已有数据就不再请求
-        guard peiALwlxuAwiProducts.isEmpty else { return }
-        
-        xsieowKXowIsRequesting = true
-        xsieowKXowTotalRequestCount += 1   // ✅ 每次请求都+1
-        
-        let ids = Set(qwoibtwkjJkProducts.map { $0.qwoibtwkjJkKeyId })
-        
-        request = SKProductsRequest(productIdentifiers: ids)
-        request?.delegate = self
-        request?.start()
+
+        guard !ORINXVOGUEatelierIsRequesting else { return }
+        guard ORINXVOGUErunwayStoreProducts.isEmpty else { return }
+
+        ORINXVOGUEatelierIsRequesting = true
+        ORINXVOGUEatelierTotalRequestCount += 1
+
+        let ORINXVOGUEsilhouetteIds = Set(ORINXVOGUEAtelierCatalog.map { $0.ORINXVOGUEsilhouetteKeyId })
+
+        ORINXVOGUEcatalogRequest = SKProductsRequest(productIdentifiers: ORINXVOGUEsilhouetteIds)
+        ORINXVOGUEcatalogRequest?.delegate = self
+        ORINXVOGUEcatalogRequest?.start()
     }
 
-    // MARK: - 购买
-    func zwkAtihaLbhRecharge(
-        _ productKeyId: String,
-            completion: @escaping (QwoibtwkjJkPurchaseResult) -> Void
-        ) {
-            guard SKPaymentQueue.canMakePayments() else {
-                completion(.failed(message: "Payments not allowed"))
-                return
-            }
-            
-            guard let product = peiALwlxuAwiProducts.first(where: { $0.productIdentifier == productKeyId }) else {
-                completion(.failed(message: "Product not found"))
-                return
-            }
-            
-            EeuqcjaOrHUD.showLoading(showBackground: true)
-            
-            // 保存回调
-            self.qwoibtwkjJkComple = completion
-            
-            let payment = SKPayment(product: product)
-            SKPaymentQueue.default().add(payment)
+    func beginORINXVOGUECoutureCheckout(
+        _ ORINXVOGUEsilhouetteKeyId: String,
+        completion: @escaping (ORINXVOGUECouturePurchaseResult) -> Void
+    ) {
+        guard SKPaymentQueue.canMakePayments() else {
+            completion(.ORINXVOGUEFailed(message: "Payments not allowed"))
+            return
         }
+
+        guard let ORINXVOGUEselectedProduct = ORINXVOGUErunwayStoreProducts.first(where: {
+            $0.productIdentifier == ORINXVOGUEsilhouetteKeyId
+        }) else {
+            completion(.ORINXVOGUEFailed(message: "Product not found"))
+            return
+        }
+
+        EeuqcjaOrHUD.showLoading(showBackground: true)
+        ORINXVOGUEcoutureCompletion = completion
+
+        let ORINXVOGUEpayment = SKPayment(product: ORINXVOGUEselectedProduct)
+        SKPaymentQueue.default().add(ORINXVOGUEpayment)
+    }
+
+    private func ORINXVOGUEscheduleCatalogRetry() {
+        ORINXVOGUEatelierRetryCount += 1
+        ORINXVOGUEatelierTotalRequestCount += 1
+
+        guard ORINXVOGUEatelierRetryCount < ORINXVOGUEatelierMaxRetryCount,
+              ORINXVOGUEatelierTotalRequestCount < ORINXVOGUEatelierMaxTotalRequestCount else {
+            return
+        }
+
+        let ORINXVOGUEretryDelay = pow(2.0, Double(ORINXVOGUEatelierRetryCount))
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + ORINXVOGUEretryDelay) {
+            self.ORINXVOGUEatelierIsRequesting = false
+            self.refreshORINXVOGUERunwayCatalog()
+        }
+    }
+
+    private func ORINXVOGUEfinishCheckout(with result: ORINXVOGUECouturePurchaseResult) {
+        EeuqcjaOrHUD.hideLoading()
+        ORINXVOGUEcoutureCompletion?(result)
+        ORINXVOGUEcoutureCompletion = nil
+    }
+
+    private func ORINXVOGUEfindAtelierPack(productID: String) -> ORINXVOGUEAtelierPack? {
+        ORINXVOGUEAtelierCatalog.first { $0.ORINXVOGUEsilhouetteKeyId == productID }
+    }
 }
 
-extension QwoibtwkjJkIAPManager: SKProductsRequestDelegate {
+extension ORINXVOGUERunwayIAPManager: SKProductsRequestDelegate {
 
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-
         DispatchQueue.main.async {
-            self.xsieowKXowIsRequesting = false
-            self.xsieowKXowRetryCount = 0   // ✅ 成功后清零
-            
-            self.peiALwlxuAwiProducts = response.products
-            
-            print("Loaded:", response.products.map { $0.productIdentifier })
-            
-            // ⚠️ 如果一个都没拿到，也可以认为失败
+            self.ORINXVOGUEatelierIsRequesting = false
+            self.ORINXVOGUEatelierRetryCount = 0
+            self.ORINXVOGUErunwayStoreProducts = response.products
+
             if response.products.isEmpty {
-                self.xsieowKXowRetryFetch()
+                self.ORINXVOGUEscheduleCatalogRetry()
             }
         }
     }
 
     func request(_ request: SKRequest, didFailWithError error: Error) {
-        
         DispatchQueue.main.async {
-            self.xsieowKXowIsRequesting = false
-            
-            print("Load failed:", error.localizedDescription)
-            
-            self.xsieowKXowRetryFetch()
-        }
-    }
-    
-    private func xsieowKXowRetryFetch() {
-        
-        xsieowKXowRetryCount += 1
-        xsieowKXowTotalRequestCount += 1   // ✅ 只在失败时累计
-        
-        guard xsieowKXowRetryCount < xsieowKXowMaxRetryCount,
-              xsieowKXowTotalRequestCount < xsieowKXowMaxTotalRequestCount else {
-            return
-        }
-        
-        let delay = pow(2.0, Double(xsieowKXowRetryCount))
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            self.xsieowKXowRetryFetch()
+            self.ORINXVOGUEatelierIsRequesting = false
+            self.ORINXVOGUEscheduleCatalogRetry()
         }
     }
 }
 
-extension QwoibtwkjJkIAPManager: SKPaymentTransactionObserver {
-    
-    private func findWalletItem(productID: String) -> QwoibtwkjJkProduct? {
-        qwoibtwkjJkProducts.first { $0.qwoibtwkjJkKeyId == productID }
-    }
-    
-    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions qwoibtwkjJkTransactions: [SKPaymentTransaction]) {
-        
-        for qwoibtwkjJkTransaction in qwoibtwkjJkTransactions {
-            
-            switch qwoibtwkjJkTransaction.transactionState {
-                
+extension ORINXVOGUERunwayIAPManager: SKPaymentTransactionObserver {
+
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for ORINXVOGUEtransaction in transactions {
+            switch ORINXVOGUEtransaction.transactionState {
             case .purchased:
-                SKPaymentQueue.default().finishTransaction(qwoibtwkjJkTransaction)
-                EeuqcjaOrHUD.hideLoading()
-                
-                if let chealaliwPro = qwoibtwkjJkProducts.first(where: {
-                    $0.qwoibtwkjJkKeyId == qwoibtwkjJkTransaction.payment.productIdentifier
-                }) {
-                    qwoibtwkjJkComple?(.success(diamond: chealaliwPro.qwoibtwkjJkGetDiamond))
+                SKPaymentQueue.default().finishTransaction(ORINXVOGUEtransaction)
+
+                if let ORINXVOGUEatelierPack = ORINXVOGUEfindAtelierPack(
+                    productID: ORINXVOGUEtransaction.payment.productIdentifier
+                ) {
+                    ORINXVOGUEfinishCheckout(with: .ORINXVOGUESuccess(wardrobeValue: ORINXVOGUEatelierPack.ORINXVOGUEwardrobeValue))
+                } else {
+                    ORINXVOGUEfinishCheckout(with: .ORINXVOGUEFailed(message: "Product not found"))
                 }
-                qwoibtwkjJkComple = nil
-                
-                
+
             case .failed:
-                SKPaymentQueue.default().finishTransaction(qwoibtwkjJkTransaction)
-                EeuqcjaOrHUD.hideLoading()
-                
-                if let error = qwoibtwkjJkTransaction.error as? SKError {
-                    if error.code == .paymentCancelled {
-                        qwoibtwkjJkComple?(.cancelled)
+                SKPaymentQueue.default().finishTransaction(ORINXVOGUEtransaction)
+
+                if let ORINXVOGUEerror = ORINXVOGUEtransaction.error as? SKError {
+                    if ORINXVOGUEerror.code == .paymentCancelled {
+                        ORINXVOGUEfinishCheckout(with: .ORINXVOGUECancelled)
                     } else {
-                        qwoibtwkjJkComple?(.failed(message: error.localizedDescription))
+                        ORINXVOGUEfinishCheckout(with: .ORINXVOGUEFailed(message: ORINXVOGUEerror.localizedDescription))
                     }
                 } else {
-                    qwoibtwkjJkComple?(.failed(message: qwoibtwkjJkTransaction.error?.localizedDescription ?? "Unknown error"))
+                    ORINXVOGUEfinishCheckout(
+                        with: .ORINXVOGUEFailed(message: ORINXVOGUEtransaction.error?.localizedDescription ?? "Unknown error")
+                    )
                 }
-                qwoibtwkjJkComple = nil
-                
+
             case .restored:
-                SKPaymentQueue.default().finishTransaction(qwoibtwkjJkTransaction)
+                SKPaymentQueue.default().finishTransaction(ORINXVOGUEtransaction)
                 EeuqcjaOrHUD.hideLoading()
-                
+
             case .purchasing:
                 break
-                
+
             case .deferred:
-                print("Purchase pending")
-                qwoibtwkjJkComple?(.pending)
+                ORINXVOGUEcoutureCompletion?(.ORINXVOGUEPending)
+
             @unknown default:
                 break
             }

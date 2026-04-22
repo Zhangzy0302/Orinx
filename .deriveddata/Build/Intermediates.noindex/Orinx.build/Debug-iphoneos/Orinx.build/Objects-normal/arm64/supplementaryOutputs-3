@@ -1,0 +1,23 @@
+{
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/Data/AelgohiAorInitData.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/AelgohiAorInitData.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/AelgohiAorInitData.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/AelgohiAorInitData.dia",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/AelgohiAorInitData.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/AelgohiAorInitData.swiftdeps"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/Data/keal_model/ZswqoveiNiegChat.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/ZswqoveiNiegChat.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/ZswqoveiNiegChat.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/ZswqoveiNiegChat.dia",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/ZswqoveiNiegChat.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/ZswqoveiNiegChat.swiftdeps"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/OrinxPages/CNwuqhHkqjgPaWall/QwoibtwkjJkWalletUtils.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/QwoibtwkjJkWalletUtils.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/QwoibtwkjJkWalletUtils.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/QwoibtwkjJkWalletUtils.dia",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/QwoibtwkjJkWalletUtils.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/QwoibtwkjJkWalletUtils.swiftdeps"
+  }
+}

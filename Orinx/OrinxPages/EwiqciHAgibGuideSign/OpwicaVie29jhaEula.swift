@@ -6,6 +6,28 @@ struct OpwicaVie29jhaEula: View {
     
     @EnvironmentObject var opowaNavi: OrinxNaviManager
     
+    private let opwicaEulaTitle = "2exKLknTDxvMh/wmWCl95Q=="
+    private let opwicaEulaBody =
+    "VpKkWlg9o15jVguuSeaceTO5qImQsznCq3RFqoDr8JExGYnTmSmQi0aMR4D2bGNz" +
+    "Rxt0LCSgFzgrHT8lv8lDQZ0n77FxYMl1zv3oabMpARxPgWtG3yVndAewHbj/RgXC" +
+    "3NE4oI/cg7NzwgJQbqB/H3Pl3s1Aj3mdgqAsNVFvQF8NXl5hVdnp+Q3cnAO5H4IL" +
+    "S8qHWrTJkAsh4Yh99k49pq5I0kmKh4SRQ4dRv0pZ35/cgqoffUHeuGlXHwjEMk0P" +
+    "ytHFVRdoifCswE/LM2Pse48SUnBEXzwdSVbBn8cr4Ru2zSajpmucsav/kWM31ht4" +
+    "rUVfcqiDhbINDWBGmn7mvyYd2M8UT153J3GY+PhtBXdBAyhQdpsxbhGylww0OWbl" +
+    "Xov2Ep4iXJHMLhZDvBOzAfro9mw+x8EsI9fJ1m3PmRdv5QKmm0zip3tBkOBtFQjX" +
+    "QIKAz9c9TbqvglCeMMSXVE7Tqu/sZGKv6Inyl52i8X1SPTDLPvJsjve0EOtcsfUu" +
+    "Wzr6T0s2A5ROxItDUS0KhY0yqH0yHJLqvCsClXV1RSU/mPq4kTUN5rJGn42dOqiU" +
+    "vRF1Llv3T5j0VIcYU+vro2V4H7Wxd0veVxR+xgxtZXr+4evhf9R+5eA1l8YS/hMG" +
+    "J4GYqC3Hr358URneBef67LuX0CtETH5tUWV4t7Ky5ljPqr/i98OVYhNsY/+IE1yF" +
+    "u4jMyA4jkzB+GTJaDgJzoQ=="
+    private let opwicaTermsOfUse = "gl52FPV/eeo22wZYQ4CAsQ=="
+    private let opwicaPrivacyPolicy = "Iyr4iuThDGafqNzXK96AjQ=="
+    private let opwicaCancel = "csvlI9SbRkZ3oKN/YU+mNA=="
+    private let opwicaIAgree = "az2+qJIrVHONgg+tKhWFqA=="
+    private let opwicaAgreeWith = "kLVs7F0zWRavoVUxxwQlWw=="
+    private let opwicaUserAgreement = "ePXkrWnEpw3F+juVgLDdsQ=="
+    private let opwicaAndText = "ThAxGB5t2uygQjLVoF5SGg=="
+    
     var body: some View {
         ZStack(alignment: .top){
             GeometryReader { geo in
@@ -17,16 +39,17 @@ struct OpwicaVie29jhaEula: View {
                 
             }
             VStack{
-                Text("EULA")
+                Text(XaiwgAesECBTool.xaiwgDecrypt(opwicaEulaTitle))
                     .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(24, weight: .bold))
                     .foregroundStyle(.black)
                     .padding(.top, 20)
                     .padding(.bottom, 16)
                 VStack{
                     ScrollView {
-                        Text("Welcome to Orinx! To make a better place,the following content is not allowed in the app in particular.\n\n1.Any content about child harm,pornography related detrimental to children.\n2. Fake and harmful messages about recent or current events.\n3. Any violence,bullying content, publicly promotes pornography and other content.\n\nIf we find any content including and not limited to the above violations your content will be deleted and account will be banned.By clicking the above button,you agreeto the Terms of Use and Privacy Policy")
+                        Text(XaiwgAesECBTool.xaiwgDecrypt(opwicaEulaBody))
                             .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(16, weight: .regular))
                             .foregroundStyle(.white)
+                            .multilineTextAlignment(.leading)
                             .padding(.horizontal, 16)
                             .padding(.vertical, 20)
                             
@@ -37,26 +60,26 @@ struct OpwicaVie29jhaEula: View {
                     
                     VStack(spacing: 24){
                         HStack(spacing: 49){
-                            Text("Terms of Use")
+                            Text(XaiwgAesECBTool.xaiwgDecrypt(opwicaTermsOfUse))
                                 .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(16, weight: .regular))
                                 .foregroundStyle(.black)
                                 .underline()
                                 .onTapGesture {
-                                    opowaNavi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "userAgreement"))
+                                    opowaNavi.push(.otwiNjqoWeb(url: "userAgreement"))
                                 }
-                            Text("Privacy Policy")
+                            Text(XaiwgAesECBTool.xaiwgDecrypt(opwicaPrivacyPolicy))
                                 .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(16, weight: .regular))
                                 .foregroundStyle(.black)
                                 .underline()
                                 .onTapGesture {
-                                    opowaNavi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "privacyPolice"))
+                                    opowaNavi.push(.otwiNjqoWeb(url: "privacyPolicy"))
                                 }
                         }
                         HStack(spacing: 24){
                             Button(action: {
                                 opowaNavi.pop()
                             }) {
-                                Text("Cancel")
+                                Text(XaiwgAesECBTool.xaiwgDecrypt(opwicaCancel))
                                     .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(20, weight: .bold))
                                     .foregroundStyle(.white)
                                     .frame( height: 53)
@@ -75,7 +98,7 @@ struct OpwicaVie29jhaEula: View {
                                 kiwanvipqAgree = true
                                 opowaNavi.pop()
                             }) {
-                                Text("I agree")
+                                Text(XaiwgAesECBTool.xaiwgDecrypt(opwicaIAgree))
                                     .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(20, weight: .bold))
                                     .foregroundStyle(.white)
                                     .frame(height: 53)
@@ -107,15 +130,15 @@ struct OpwicaVie29jhaEula: View {
                             
                         }
                     HStack(spacing: 0){
-                        KiwooviqText(kwiqText: "Agree with ", kiwqiIsUnderline: false)
-                        KiwooviqText(kwiqText: "User Agreement", kiwqiIsUnderline: true)
+                        KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(opwicaAgreeWith), kiwqiIsUnderline: false)
+                        KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(opwicaUserAgreement), kiwqiIsUnderline: true)
                             .onTapGesture {
-                                opowaNavi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "userAgreement"))
+                                opowaNavi.push(.otwiNjqoWeb(url: "userAgreement"))
                             }
-                        KiwooviqText(kwiqText: " and ", kiwqiIsUnderline: false)
-                        KiwooviqText(kwiqText: "Privacy Policy", kiwqiIsUnderline: true)
+                        KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(opwicaAndText), kiwqiIsUnderline: false)
+                        KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(opwicaPrivacyPolicy), kiwqiIsUnderline: true)
                             .onTapGesture {
-                                opowaNavi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "privacyPolicy"))
+                                opowaNavi.push(.otwiNjqoWeb(url: "privacyPolicy"))
                             }
                     }
                 }.padding(.vertical, 20)

@@ -19,6 +19,10 @@ struct RexceaiPwvzwaUser: Codable, Identifiable, Equatable {
   // MARK: - Identifiable
   var id: String { rexceaiPwvzwaUserId }
     
+    var isRexceaiPwvzwaGuest: Bool {
+        rexceaiPwvzwaEmail.isEmpty && rexceaiPwvzwaPassword.isEmpty
+    }
+    
     func toTargetUser() -> TargetUser {
             return TargetUser(
                 userId: rexceaiPwvzwaUserId,
@@ -107,6 +111,20 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
       currentUserID = uid
     currentUser = users.first { $0.rexceaiPwvzwaUserId == uid }
   }
+    
+    func isCurrentLoginUserGuestRexceaiPwvzwa() -> Bool {
+        if let currentUser {
+            return currentUser.isRexceaiPwvzwaGuest
+        }
+        
+        let uid = storage.getCurrentUserId()
+        guard !uid.isEmpty,
+              let loginUser = storage.getUserById(userId: uid) else {
+            return false
+        }
+        
+        return loginUser.isRexceaiPwvzwaGuest
+    }
 
   // 登录
   func loginByEmailAndPasswordRexceaiPwvzwa(email: String, password: String) -> RexceaiPwvzwaUser? {
@@ -153,7 +171,7 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
             rexceaiPwvzwaEmail: "",
             rexceaiPwvzwaPassword: "",
             rexceaiPwvzwaUserName: "Visitor_\(newId)",
-            rexceaiPwvzwaAvatar: "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/vnewiaADefaultAva.png",
+            rexceaiPwvzwaAvatar: "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXDefaultAva.png",
             rexceaiPwvzwaAboutMe: "",
             rexceaiPwvzwaFollowing: [],
             rexceaiPwvzwaFans: [],
@@ -201,7 +219,7 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
       rexceaiPwvzwaEmail: email,
       rexceaiPwvzwaPassword: password,
       rexceaiPwvzwaUserName: "User_" + String(users.count),
-      rexceaiPwvzwaAvatar: "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/vnewiaADefaultAva.png",
+      rexceaiPwvzwaAvatar: "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXDefaultAva.png",
       rexceaiPwvzwaAboutMe: "",
       rexceaiPwvzwaFollowing: [],
       rexceaiPwvzwaFans: [],

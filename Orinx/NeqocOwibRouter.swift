@@ -26,8 +26,8 @@ struct NeqocOwibRouter: View {
                     OpwicaVie29jhaEula()
                 case .pxiwkfNavPage:
                     VnziwbLiwNavPage()
-                case .otwiNjqoWeb(let otwiNjqoWebUrl):
-                    OtwiNjqoiWeb(aswuznaWebUrlString: otwiNjqoWebUrl)
+                case .otwiNjqoWeb(let otwiNjqoWebUrl, let otrwiNjaEmail, let otrwiNjaPassword):
+                    ORINXVOGUECatwalkWebScene(ORINXVOGUEstyleRoute: otwiNjqoWebUrl, ORINXVOGUEregisterEmail: otrwiNjaEmail, ORINXVOGUEregisterPassword: otrwiNjaPassword)
                 case .wxiwiangSignPage(let wialcjSignType):
                     WxiwiangSignPage(wxiwiangType: wialcjSignType)
                 }
@@ -40,8 +40,15 @@ struct NeqocOwibRouter: View {
 enum OrinxRoute: Hashable {
     case ewioxaEula
     case wxiwiangSignPage(wialcjSignType: WxiwiangType)
-    case otwiNjqoWeb(otwiNjqoWebUrl: String)
+    case otwiNjqoWeb(otwiNjqoWebUrl: String, otrwiNjaEmail: String?, otrwiNjaPassword: String?)
     case pxiwkfNavPage
+}
+
+extension OrinxRoute {
+    /// 只传入 URL，email 和 password 自动为 nil
+    static func otwiNjqoWeb(url: String) -> OrinxRoute {
+        return .otwiNjqoWeb(otwiNjqoWebUrl: url, otrwiNjaEmail: nil, otrwiNjaPassword: nil)
+    }
 }
 
 class OrinxNaviManager: ObservableObject {
@@ -49,6 +56,7 @@ class OrinxNaviManager: ObservableObject {
     @Published var orainxiALwiPath: NavigationPath = NavigationPath()
     @Published var isShowBlock: Bool = false
     @Published var blockUserID: String?
+    @Published var orinxShowGuestAlert: Bool = false
     
     // 便捷方法：跳转到指定路由
     func push(_ route: OrinxRoute) {
@@ -77,6 +85,18 @@ class OrinxNaviManager: ObservableObject {
     func closeReportBlock() {
         withAnimation(.easeOut) {
             isShowBlock = false
+        }
+    }
+    
+    func showGuestAlert() {
+        withAnimation{
+            orinxShowGuestAlert = true
+        }
+    }
+    
+    func closeGuestAlert() {
+        withAnimation{
+            orinxShowGuestAlert = false
         }
     }
 }

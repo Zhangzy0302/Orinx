@@ -13,7 +13,7 @@ struct OrinxApp: App {
     @StateObject var vieoaVNneqoVideoViewModel = VieoaVNneqoVideoViewModel()
     @StateObject var zswqoveiNiegChatViewModel = ZswqoveiNiegChatViewModel()
     @StateObject var orinxNaviManager = OrinxNaviManager()
-    @StateObject var qwoibtwkjJkIAPManager = QwoibtwkjJkIAPManager()
+    @StateObject var oRINXVOGUERunwayIAPManager = ORINXVOGUERunwayIAPManager()
     
     private var orinxData = OrinxntqoStorageManager.shared
     
@@ -22,15 +22,21 @@ struct OrinxApp: App {
             ZStack{
                 NeqocOwibRouter()
                 EeuqcjaOrHUDView()
+                if orinxNaviManager.isShowBlock {
+                    CoeeZenvReportBlock(coeeZenIsShowBlock: $orinxNaviManager.isShowBlock, coeeZenvBlockUID: orinxNaviManager.blockUserID!)
+                }
+                if orinxNaviManager.orinxShowGuestAlert {
+                    WoxiaeioGuestAlert(woxiaeioIsShowing: $orinxNaviManager.orinxShowGuestAlert)
+                }
             }.environmentObject(rexceaiPwvzwaUserViewModel)
                 .environmentObject(vieoaVNneqoVideoViewModel)
                 .environmentObject(zswqoveiNiegChatViewModel)
                 .environmentObject(orinxNaviManager)
-                .environmentObject(qwoibtwkjJkIAPManager)
+                .environmentObject(oRINXVOGUERunwayIAPManager)
                 .onAppear{
                     orinxData.initializeAllDefaults()
                     rexceaiPwvzwaUserViewModel.loadLoginRexceaiPwvzwaUser()
-                    qwoibtwkjJkIAPManager.oerianAwcugdFetchProducts()
+                    oRINXVOGUERunwayIAPManager.refreshORINXVOGUERunwayCatalog()
                 }
         }
     }

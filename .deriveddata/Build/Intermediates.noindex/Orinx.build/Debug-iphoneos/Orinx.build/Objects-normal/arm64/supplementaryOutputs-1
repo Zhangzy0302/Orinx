@@ -1,0 +1,23 @@
+{
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/Components/Eiwch827PostItem.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Eiwch827PostItem.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Eiwch827PostItem.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Eiwch827PostItem.dia",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Eiwch827PostItem.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/Eiwch827PostItem.swiftdeps"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/Components/IwbhaluTagBtn.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/IwbhaluTagBtn.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/IwbhaluTagBtn.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/IwbhaluTagBtn.dia",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/IwbhaluTagBtn.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/IwbhaluTagBtn.swiftdeps"
+  },
+  "/Users/yangyang/muyifeiyang/swift/Orinx/Orinx/Components/XaiwgMnoteImage.swift" : {
+    "const-values" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/XaiwgMnoteImage.swiftconstvalues",
+    "dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/XaiwgMnoteImage.d",
+    "diagnostics" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/XaiwgMnoteImage.dia",
+    "object" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/XaiwgMnoteImage.o",
+    "swift-dependencies" : "/Users/yangyang/muyifeiyang/swift/Orinx/.deriveddata/Build/Intermediates.noindex/Orinx.build/Debug-iphoneos/Orinx.build/Objects-normal/arm64/XaiwgMnoteImage.swiftdeps"
+  }
+}

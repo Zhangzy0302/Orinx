@@ -5,8 +5,21 @@ struct Xzwuu858LKvMine: View {
     @EnvironmentObject var xianNAbvi: OrinxNaviManager
     @EnvironmentObject var xzwuuOrinxPOstVM: VieoaVNneqoVideoViewModel
     
+    private let xzwuuFollowingText = "/SuEC2Zujz9WKtAssUQlOw=="
+    private let xzwuuFansText = "4sYE52hB/sph4TkoMGBCFA=="
+    private let xzwuuWalletBalanceText = "MnmBNSWMLtqS9QknpUoibw=="
+    private let xzwuuWorksText = "vxLIZg6/IyOXRmi9+enZ/w=="
+    
     var body: some View {
-        ZStack{
+        ZStack(alignment: .top){
+            GeometryReader { geo in
+                Image("rutyauwc_bg")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .ignoresSafeArea()
+                
+            }
             ScrollView {
                 VStack(alignment: .leading, spacing: 0){
                     if let xzwuuLkvMyInfo = xzwuuOrinUserVM.currentUser {
@@ -23,41 +36,53 @@ struct Xzwuu858LKvMine: View {
                                     Text("\(xzwuuLkvMyInfo.rexceaiPwvzwaFollowing.count)")
                                         .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(18, weight: .bold))
                                         .foregroundStyle(Color(red: 99/255, green: 99/255, blue: 99/255))
-                                    Text("Following")
+                                    Text(XaiwgAesECBTool.xaiwgDecrypt(xzwuuFollowingText))
                                         .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(14, weight: .regular))
                                         .foregroundStyle(Color(red: 99/255, green: 99/255, blue: 99/255))
                                 }.frame(maxWidth: .infinity)
                                     .onTapGesture {
-                                        xianNAbvi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "follow"))
+                                        if xzwuuLkvMyInfo.isRexceaiPwvzwaGuest {
+                                            xianNAbvi.showGuestAlert()
+                                            return
+                                        }
+                                        xianNAbvi.push(.otwiNjqoWeb(url: "follow"))
                                     }
                                 VStack(alignment: .leading, spacing: 10){
                                     Text("\(xzwuuLkvMyInfo.rexceaiPwvzwaFans.count)")
                                         .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(18, weight: .bold))
                                         .foregroundStyle(Color(red: 99/255, green: 99/255, blue: 99/255))
-                                    Text("Fans")
+                                    Text(XaiwgAesECBTool.xaiwgDecrypt(xzwuuFansText))
                                         .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(14, weight: .regular))
                                         .foregroundStyle(Color(red: 99/255, green: 99/255, blue: 99/255))
                                 }.frame(maxWidth: .infinity)
                                     .onTapGesture {
-                                        xianNAbvi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "fan"))
+                                        if xzwuuLkvMyInfo.isRexceaiPwvzwaGuest {
+                                            xianNAbvi.showGuestAlert()
+                                            return
+                                        }
+                                        xianNAbvi.push(.otwiNjqoWeb(url: "fan"))
                                     }
                             }.frame(width: 170)
                         }
                         HStack(spacing: 12.5){
-                            Text("Oliokn")
+                            Text(xzwuuLkvMyInfo.rexceaiPwvzwaUserName)
                                 .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(36, weight: .regular))
                                 .foregroundStyle(OrinxaYrueaTheme.OrinxColor.orinxMainBlue)
                             Image("rutyauwc_icon_edit")
                                 .resizable()
                                 .frame(width: 21, height: 21)
-                                .onTapGesture {
-                                    xianNAbvi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "edit"))
-                                }
+                                
+                        }.onTapGesture {
+                            if xzwuuLkvMyInfo.isRexceaiPwvzwaGuest {
+                                xianNAbvi.showGuestAlert()
+                                return
+                            }
+                            xianNAbvi.push(.otwiNjqoWeb(url: "edit"))
                         }
                         
                         HStack{
                             VStack(alignment: .leading, spacing: 2){
-                                Text("Wallet Balance:")
+                                Text(XaiwgAesECBTool.xaiwgDecrypt(xzwuuWalletBalanceText))
                                     .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(20, weight: .bold))
                                     .foregroundStyle(OrinxaYrueaTheme.OrinxColor.orinxMainPink)
                                     .transformEffect(
@@ -94,14 +119,18 @@ struct Xzwuu858LKvMine: View {
                                             ], startPoint: .bottom, endPoint: .top), lineWidth: 1)
                                     }
                             ).onTapGesture {
-                                xianNAbvi.push(.otwiNjqoWeb(otwiNjqoWebUrl: "coins"))
+                                if xzwuuLkvMyInfo.isRexceaiPwvzwaGuest {
+                                    xianNAbvi.showGuestAlert()
+                                    return
+                                }
+                                xianNAbvi.push(.otwiNjqoWeb(url: "coins"))
                             }.padding(.top, 17)
                             .padding(.bottom, 20)
                     }
                     
                     ZStack(alignment: .bottomTrailing){
                         IwbhaluTagBtn(iwbhaluWidth: 99, iwbnhalHeight: 47) {
-                            Text("Works")
+                            Text(XaiwgAesECBTool.xaiwgDecrypt(xzwuuWorksText))
                                 .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(20, weight: .bold))
                                 .foregroundStyle(.black)
                                 .transformEffect(
@@ -113,26 +142,39 @@ struct Xzwuu858LKvMine: View {
                             .resizable()
                             .frame(width: 22, height: 23)
                             .offset(x: 11.5, y: 3)
-                    }
+                    }.padding(.bottom, 18)
                     let xzwuuLkeMyWOrks = xzwuuOrinxPOstVM.getMyVieoaVNneqoWorks()
-                    LazyVGrid(columns: [
-                        GridItem(.flexible(), spacing: 11),
-                        GridItem(.flexible())
-                    ], spacing: 10) {
-                        ForEach(xzwuuLkeMyWOrks) { work in
-                            Eiwch827PostItem(eiwchiPostInfo: work)
+                    Group {
+                        if (xzwuuLkeMyWOrks.isEmpty) {
+                          LkjariaxEmptyData(lkajiwraTopPadding: 50)
+                        } else {
+                            LazyVGrid(columns: [
+                                GridItem(.flexible(), spacing: 11),
+                                GridItem(.flexible())
+                            ], spacing: 10) {
+                                ForEach(xzwuuLkeMyWOrks) { work in
+                                    Eiwch827PostItem(eiwchiPostInfo: work)
+                                }
+                            }
                         }
-                    }
+                    }.padding(.bottom, 70)
+                    
                     
                 }.padding(.horizontal, 20)
                     .padding(.top, 17)
             }
             
+            HStack{
+                Spacer()
+                Image("rutyauwc_setting")
+                    .resizable()
+                    .frame(width: 24, height: 24)
+                    .onTapGesture {
+                        xianNAbvi.push(.otwiNjqoWeb(url: "setting"))
+                    }
+            }.padding(.top, 10)
+                .padding(.trailing, 20)
         }
         
     }
-}
-
-#Preview {
-    Xzwuu858LKvMine()
 }

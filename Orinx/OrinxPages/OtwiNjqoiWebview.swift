@@ -1,104 +1,174 @@
 import SwiftUI
 import WebKit
 
-struct OtwiNjqoiWebview: UIViewRepresentable {
+private enum ORINXVOGUECipherVault {
+    static let ORINXVOGUEVaultUserListUpdate = "72JgxpSawPYrnTvUIe4+9Q=="
+    static let ORINXVOGUEVaultPostsUpdate = "5/GNKrZpEFaMbW8u4Ye4Vg=="
+    static let ORINXVOGUEVaultCommentsUpdate = "uTYLeIg0HmPs44cKzxSZ7A=="
+    static let ORINXVOGUEVaultChatsUpdate = "Xr3+uYw4Twi6gTQwLibQJw=="
+    static let ORINXVOGUEVaultMessagesUpdate = "8CXIFbgPmgGhg9eFTtlAqg=="
+    static let ORINXVOGUEVaultClose = "yegKg7x2VGPwEDy9VBCWvw=="
+    static let ORINXVOGUEVaultLogout = "86CG/XNxwpOzB0j/imCntA=="
+    static let ORINXVOGUEVaultPayment = "+wkGzhNLk7dXU559/+O2bg=="
+    static let ORINXVOGUEVaultNewUserData = "ye8lv1odwj1I5ORYiHjxgQ=="
+    static let ORINXVOGUEVaultShowToast = "2C9Q2GoP4gUIIWIqdo5KfQ=="
+    static let ORINXVOGUEVaultShowLoading = "jStpWVCOTOJfmzKXfHY/0g=="
+    static let ORINXVOGUEVaultShowToLogin = "K1KeNAe9GZIQF/kd0GdgZA=="
+    static let ORINXVOGUEVaultWebHost = "mvwRDSaI1txlgut9RuaG0kkkyqZQaiMvkXIwCNbSOpk="
+    static let ORINXVOGUEVaultUsers = "E6tYO83G7V+SnUkPIvqbHg=="
+    static let ORINXVOGUEVaultPosts = "BgbVN0f8b+9uLul94WY45g=="
+    static let ORINXVOGUEVaultComments = "kwvf53Yakgeqgzjwn4g4Wg=="
+    static let ORINXVOGUEVaultChats = "ExdvmNJOwlXxjtep/220eg=="
+    static let ORINXVOGUEVaultMessages = "TBNBQd8EkwDBCrz0WJPPog=="
+    static let ORINXVOGUEVaultToastMsg = "3xMP4LXnfCSiIWzLXVimzQ=="
+    static let ORINXVOGUEVaultIsShow = "J8OJtcDNc9iWWbt65df/pg=="
+    static let ORINXVOGUEVaultIsLogout = "1lxfdjtU+5clQC0fL1fw2Q=="
+    static let ORINXVOGUEVaultPayKey = "UamrvE5W8HOieBFIZim/eg=="
+    static let ORINXVOGUEVaultAvatar = "z68PW7+8yO8WLhVu0p8lVA=="
+    static let ORINXVOGUEVaultName = "Bt7506MqME5TfEW+lk2c1Q=="
+    static let ORINXVOGUEVaultDefaultAvatar = "x2dYQh/Jdw43w59EgG47idY6rIrc2b6A8jjmOJqe/jhVRd68LV/AEbaardAVIIi4ZgkgTMlC6VhUGTA9tshJ0+Mrp4ltT1BSqqyq3THMlw0="
+    static let ORINXVOGUEVaultUploadAvatarToast = "B9GGIfO0ox0RyoTx1/SY5OISzVu++AmX74J/CANplFY="
+    static let ORINXVOGUEVaultEnterNameToast = "1HZ7B4KskMXZvyijypG69TBtcmfYCDiNOmqIixGb0oE="
+    static let ORINXVOGUEVaultUpdateCurrentUser = "wifKk038/K+mP9KvCKS/t+Ma29n2jbT6Xn6hxi31+hU="
+    static let ORINXVOGUEVaultEmptyArray = "ob2F5e6g3UXzFb7yO/V2cg=="
+    static let ORINXVOGUEVaultEmptyObject = "mexU4KfHWPOWwxw8IgWuSg=="
+    static let ORINXVOGUEVaultPostTheme = "CQYRrHRa5qsjc7pYRLohzg=="
+    static let ORINXVOGUEVaultHobbies = "9XM8uSaGkqmQYvN3lUm97Q=="
+    static let ORINXVOGUEVaultInspire = "nvfrAqxSmQVbBsIPrMKqCw=="
+    static let ORINXVOGUEVaultReportContent = "CEs1ttu7wMEt8NOcvnWZWQ=="
+    static let ORINXVOGUEVaultHarassment = "3R4dby5W3jVIzoJ92N7KHQ=="
+    static let ORINXVOGUEVaultMaliciousFraud = "O2VL9IRxyVoDvpEHhfRwcA=="
+    static let ORINXVOGUEVaultPornography = "nlbyU69cRUvd/lkMlUzDEA=="
+    static let ORINXVOGUEVaultMaliciousInsults = "OuBJQRhGK3LQZ91Zovd3ZCblKeeotbrF8iD0KI64dso="
+    static let ORINXVOGUEVaultFalseInformation = "XzF4ZTYpvc8LiZndQ7yQGf3yhq+Es8IYAev9YOI7UD8="
+    static let ORINXVOGUEVaultCoinsSetting = "UVkf8z3sDwOZYNzdGQpWyg=="
+    static let ORINXVOGUEVaultKey = "4psInrN2nzCPPZsvEPB/qQ=="
+    static let ORINXVOGUEVaultCions = "81T5jUOkJa9eLV2/NbK2Sg=="
+    static let ORINXVOGUEVaultMoney = "xKP05ltc8AuyjhAHaCncxA=="
+    static let ORINXVOGUEVaultCurrentUserVariable = "D0ENAitO/jJxYWFi1s8KuuXxCL1nQzvnya5NwApOlmM="
+    static let ORINXVOGUEVaultUserListVariable = "AadaQWJKuQcuWtjrihNQtA=="
+    static let ORINXVOGUEVaultPostListVariable = "MknGuMVlHPRkpjIhAxFFYA=="
+    static let ORINXVOGUEVaultCommentListVariable = "MZANyK3i7lWvm3NsofogFkTyOBjXruzhQ6UilURPvTs="
+    static let ORINXVOGUEVaultChatListVariable = "yx02GQiO7VJsabTlMv9gpQ=="
+    static let ORINXVOGUEVaultMessageListVariable = "4KZmtCUMDT9hVDb98uXEakTyOBjXruzhQ6UilURPvTs="
+    static let ORINXVOGUEVaultOtherVariable = "znhaeGoPHfMc4RIO2JjjDg=="
+    static let ORINXVOGUEVaultBackgroundImage = "wuzc+9MqvpEZt1uPlSBWaQ=="
+}
+
+private func ORINXVOGUEDecrypt(_ cipherText: String) -> String {
+    XaiwgAesECBTool.xaiwgDecrypt(cipherText)
+}
+
+struct ORINXVOGUECatwalkWebCanvas: UIViewRepresentable {
     
-    let otwiNjqoiWebNav: String
-    @EnvironmentObject var navi: OrinxNaviManager
-    @EnvironmentObject var uejaLIcjagIpa: QwoibtwkjJkIAPManager
-    @EnvironmentObject var bcjeiLAcxiaUserVM: RexceaiPwvzwaUserViewModel
+    let ORINXVOGUEstyleRoute: String
+    @EnvironmentObject var ORINXVOGUEstyleNavigator: OrinxNaviManager
+    @EnvironmentObject var ORINXVOGUErunwayIAPManager: ORINXVOGUERunwayIAPManager
+    @EnvironmentObject var ORINXVOGUEwardrobeUserViewModel: RexceaiPwvzwaUserViewModel
     
-    static weak var currentWebView: WKWebView?
+    let ORINXVOGUEregisterEmail: String?
+    let ORINXVOGUEregisterPassword: String?
     
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self, navi: navi, ipaRecharge: uejaLIcjagIpa, userVM: bcjeiLAcxiaUserVM)
+    static weak var ORINXVOGUEcurrentWebView: WKWebView?
+    
+    func makeCoordinator() -> ORINXVOGUECatwalkWebCoordinator {
+        ORINXVOGUECatwalkWebCoordinator(
+            self,
+            ORINXVOGUEstyleNavigator: ORINXVOGUEstyleNavigator,
+            ORINXVOGUErunwayCheckoutManager: ORINXVOGUErunwayIAPManager,
+            ORINXVOGUEwardrobeUserViewModel: ORINXVOGUEwardrobeUserViewModel,
+            ORINXVOGUEregisterEmail: ORINXVOGUEregisterEmail,
+            ORINXVOGUEregisterPassword: ORINXVOGUEregisterPassword
+        )
     }
     
     func makeUIView(context: Context) -> WKWebView {
-        
-        let contentController = WKUserContentController()
-        
-        // ✅ 按文档注册事件
-        let handlers = [
-            "userListUpdate",
-            "postsUpdate",
-            "commentsUpdate",
-            "chatsUpdate",
-            "messagesUpdate",
-            "close",
-            "logout",
-            "payment"
+        let ORINXVOGUEmessageCenter = WKUserContentController()
+        let ORINXVOGUEbridgeActions = [
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultUserListUpdate),
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultPostsUpdate),
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultCommentsUpdate),
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultChatsUpdate),
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultMessagesUpdate),
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultClose),
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultLogout),
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultPayment),
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultNewUserData),
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultShowToast),
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultShowLoading),
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultShowToLogin)
         ]
         
-        handlers.forEach {
-            contentController.add(context.coordinator, name: $0)
+        ORINXVOGUEbridgeActions.forEach {
+            ORINXVOGUEmessageCenter.add(context.coordinator, name: $0)
         }
         
-        let config = WKWebViewConfiguration()
-        config.userContentController = contentController
-        config.allowsInlineMediaPlayback = true
+        let ORINXVOGUEwebConfiguration = WKWebViewConfiguration()
+        ORINXVOGUEwebConfiguration.userContentController = ORINXVOGUEmessageCenter
+        ORINXVOGUEwebConfiguration.allowsInlineMediaPlayback = true
         
-        // ✅ 注入 JS 数据
-        let js = context.coordinator.generateInitialJS()
-//        print(js)
-        let script = WKUserScript(
-            source: js,
+        let ORINXVOGUEinitialScript = WKUserScript(
+            source: context.coordinator.buildORINXVOGUEInitialWardrobeScript(),
             injectionTime: .atDocumentStart,
             forMainFrameOnly: true
         )
-        contentController.addUserScript(script)
+        ORINXVOGUEmessageCenter.addUserScript(ORINXVOGUEinitialScript)
         
-        let orinxAwibaWebView = WKWebView(frame: .zero, configuration: config)
+        let ORINXVOGUEwebView = WKWebView(frame: .zero, configuration: ORINXVOGUEwebConfiguration)
+        ORINXVOGUEwebView.uiDelegate = context.coordinator
+        ORINXVOGUEwebView.navigationDelegate = context.coordinator
+        ORINXVOGUEwebView.isOpaque = false
+        ORINXVOGUEwebView.backgroundColor = .clear
+        ORINXVOGUEwebView.scrollView.backgroundColor = .clear
+        ORINXVOGUEwebView.scrollView.contentInsetAdjustmentBehavior = .never
+        ORINXVOGUEwebView.scrollView.contentInset = .zero
+        ORINXVOGUEwebView.scrollView.isScrollEnabled = false
+        ORINXVOGUEwebView.scrollView.scrollIndicatorInsets = .zero
+        ORINXVOGUEwebView.allowsBackForwardNavigationGestures = true
         
-        orinxAwibaWebView.uiDelegate = context.coordinator
-        orinxAwibaWebView.navigationDelegate = context.coordinator
-        orinxAwibaWebView.isOpaque = false
-        orinxAwibaWebView.backgroundColor = .clear
-        orinxAwibaWebView.scrollView.backgroundColor = .clear
-        orinxAwibaWebView.scrollView.contentInsetAdjustmentBehavior = .never
-        orinxAwibaWebView.scrollView.contentInset = .zero
-        orinxAwibaWebView.scrollView.isScrollEnabled = false
-        orinxAwibaWebView.scrollView.scrollIndicatorInsets = .zero
-        orinxAwibaWebView.allowsBackForwardNavigationGestures = true
+        ORINXVOGUECatwalkWebCanvas.ORINXVOGUEcurrentWebView = ORINXVOGUEwebView
         
-        OtwiNjqoiWebview.currentWebView = orinxAwibaWebView
+        let ORINXVOGUEpageURL = URL(
+            string: "\(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultWebHost))\(ORINXVOGUEstyleRoute)"
+        )!
+        ORINXVOGUEwebView.load(URLRequest(url: ORINXVOGUEpageURL))
         
-        let url = URL(string: "http://192.168.9.117:5173/\(otwiNjqoiWebNav)")!
-        orinxAwibaWebView.load(URLRequest(url: url))
-        
-        return orinxAwibaWebView
+        return ORINXVOGUEwebView
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {}
-    
 }
 
 @MainActor
-class Coordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler, WKUIDelegate {
+final class ORINXVOGUECatwalkWebCoordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler, WKUIDelegate {
     
-    // MARK: - Dependencies
-    private let storage = OrinxntqoStorageManager.shared
+    private let ORINXVOGUEstyleStorage = OrinxntqoStorageManager.shared
     
-    var parent: OtwiNjqoiWebview
-    var navi: OrinxNaviManager
-    var ipaRecharge: QwoibtwkjJkIAPManager
-    var userVM: RexceaiPwvzwaUserViewModel
+    let ORINXVOGUEcanvas: ORINXVOGUECatwalkWebCanvas
+    let ORINXVOGUEstyleNavigator: OrinxNaviManager
+    let ORINXVOGUErunwayCheckoutManager: ORINXVOGUERunwayIAPManager
+    let ORINXVOGUEwardrobeUserViewModel: RexceaiPwvzwaUserViewModel
+    let ORINXVOGUEregisterEmail: String?
+    let ORINXVOGUEregisterPassword: String?
     
-    // MARK: - Init
-    init(_ parent: OtwiNjqoiWebview,
-         navi: OrinxNaviManager,
-         ipaRecharge: QwoibtwkjJkIAPManager,
-         userVM: RexceaiPwvzwaUserViewModel) {
-        
-        self.parent = parent
-        self.navi = navi
-        self.ipaRecharge = ipaRecharge
-        self.userVM = userVM
+    init(
+        _ ORINXVOGUEcanvas: ORINXVOGUECatwalkWebCanvas,
+        ORINXVOGUEstyleNavigator: OrinxNaviManager,
+        ORINXVOGUErunwayCheckoutManager: ORINXVOGUERunwayIAPManager,
+        ORINXVOGUEwardrobeUserViewModel: RexceaiPwvzwaUserViewModel,
+        ORINXVOGUEregisterEmail: String?,
+        ORINXVOGUEregisterPassword: String?
+    ) {
+        self.ORINXVOGUEcanvas = ORINXVOGUEcanvas
+        self.ORINXVOGUEstyleNavigator = ORINXVOGUEstyleNavigator
+        self.ORINXVOGUErunwayCheckoutManager = ORINXVOGUErunwayCheckoutManager
+        self.ORINXVOGUEwardrobeUserViewModel = ORINXVOGUEwardrobeUserViewModel
+        self.ORINXVOGUEregisterEmail = ORINXVOGUEregisterEmail
+        self.ORINXVOGUEregisterPassword = ORINXVOGUEregisterPassword
     }
     
-    // MARK: - 权限（自动允许）
     func webView(
-        _ orinxAwibaWebView: WKWebView,
+        _ ORINXVOGUEwebView: WKWebView,
         requestMediaCapturePermissionFor origin: WKSecurityOrigin,
         initiatedByFrame frame: WKFrameInfo,
         type: WKMediaCaptureType,
@@ -107,30 +177,24 @@ class Coordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler, WKUID
         decisionHandler(.grant)
     }
     
-    func webView(_ orinxAwibaWebView: WKWebView, didFinish navigation: WKNavigation!) {
-        
-        orinxAwibaWebView.evaluateJavaScript("window.currentUser") { result, error in
-//            print("🧪 currentUser:", result ?? "nil")
-        }
+    func webView(_ ORINXVOGUEwebView: WKWebView, didFinish navigation: WKNavigation!) {
+        ORINXVOGUEwebView.evaluateJavaScript(
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultCurrentUserVariable)
+        ) { _, _ in }
     }
     
-    // MARK: - Web -> Native 入口
-    func userContentController(_ userContentController: WKUserContentController,
-                               didReceive message: WKScriptMessage) {
-        
-        guard let action = WebAction(rawValue: message.name) else {
-            print("❌ 未知事件:", message.name)
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        guard let ORINXVOGUEbridgeAction = ORINXVOGUEBridgeAction(rawValue: message.name) else {
             return
         }
         
-        handle(action: action, body: message.body)
+        handleORINXVOGUEBridgeAction(ORINXVOGUEbridgeAction, body: message.body)
     }
 }
 
-// MARK: - Action Enum
-extension Coordinator {
+extension ORINXVOGUECatwalkWebCoordinator {
     
-    enum WebAction: String {
+    enum ORINXVOGUEBridgeAction: String {
         case close
         case userListUpdate
         case postsUpdate
@@ -139,265 +203,337 @@ extension Coordinator {
         case messagesUpdate
         case logout
         case payment
+        case newUserData
+        case showToast
+        case showLoading
+        case showToLogin
     }
-}
-
-// MARK: - Action Dispatcher
-extension Coordinator {
     
-    private func handle(action: WebAction, body: Any) {
-        switch action {
+    private func handleORINXVOGUEBridgeAction(_ ORINXVOGUEbridgeAction: ORINXVOGUEBridgeAction, body: Any) {
+        switch ORINXVOGUEbridgeAction {
         case .close:
-            handleClose()
+            ORINXVOGUEstyleNavigator.pop()
             
         case .userListUpdate:
-            handleUserUpdate(body)
+            guard let ORINXVOGUEusers = extractORINXVOGUEArray(
+                body,
+                key: ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultUsers)
+            ) else { return }
+            ORINXVOGUEstyleStorage.saveUsers(RexceaiPwvzwaUser.fromJsonArray(ORINXVOGUEusers))
             
         case .postsUpdate:
-            handlePostUpdate(body)
+            guard let ORINXVOGUEposts = extractORINXVOGUEArray(
+                body,
+                key: ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultPosts)
+            ) else { return }
+            ORINXVOGUEstyleStorage.saveWorks(VieoaVNneqoVideo.fromJsonArray(ORINXVOGUEposts))
             
         case .commentsUpdate:
-            handleCommentUpdate(body)
+            guard let ORINXVOGUEcomments = extractORINXVOGUEArray(
+                body,
+                key: ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultComments)
+            ) else { return }
+            ORINXVOGUEstyleStorage.saveComments(SaascieSeigComment.fromJsonArray(ORINXVOGUEcomments))
             
         case .chatsUpdate:
-            handleChatUpdate(body)
+            guard let ORINXVOGUEchatRooms = extractORINXVOGUEArray(
+                body,
+                key: ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultChats)
+            ) else { return }
+            ORINXVOGUEstyleStorage.saveChatRooms(ZswqoveiNiegChatRoom.fromJsonArray(ORINXVOGUEchatRooms))
             
         case .messagesUpdate:
-            handleMessageUpdate(body)
+            guard let ORINXVOGUEmessages = extractORINXVOGUEArray(
+                body,
+                key: ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultMessages)
+            ) else { return }
+            ORINXVOGUEstyleStorage.saveChatMessageList(ZswqoveiNiegMessage.fromJsonArray(ORINXVOGUEmessages))
             
         case .logout:
-            handleLogout(body)
+            handleORINXVOGUELogout(body)
             
         case .payment:
-            handlePayment(body)
+            handleORINXVOGUEPayment(body)
+            
+        case .newUserData:
+            handleORINXVOGUERegistration(body)
+            
+        case .showToast:
+            handleORINXVOGUEToast(body)
+            
+        case .showLoading:
+            handleORINXVOGUELoading(body)
+            
+        case .showToLogin:
+            ORINXVOGUEstyleNavigator.pop()
         }
     }
-}
-
-// MARK: - Actions
-extension Coordinator {
     
-    private func handleClose() {
-        navi.pop()
-    }
-    
-    private func handleUserUpdate(_ body: Any) {
-        guard let users = extractArray(body, key: "users") else { return }
-        storage.saveUsers(RexceaiPwvzwaUser.fromJsonArray(users))
-    }
-    
-    private func handlePostUpdate(_ body: Any) {
-        guard let posts = extractArray(body, key: "posts") else { return }
-        storage.saveWorks(VieoaVNneqoVideo.fromJsonArray(posts))
-    }
-    
-    private func handleCommentUpdate(_ body: Any) {
-        guard let comments = extractArray(body, key: "comments") else { return }
-        storage.saveComments(SaascieSeigComment.fromJsonArray(comments))
-    }
-    
-    private func handleChatUpdate(_ body: Any) {
-        guard let chats = extractArray(body, key: "chats") else { return }
-        storage.saveChatRooms(ZswqoveiNiegChatRoom.fromJsonArray(chats))
-    }
-    
-    private func handleMessageUpdate(_ body: Any) {
-        guard let messages = extractArray(body, key: "messages") else { return }
-        storage.saveChatMessageList(ZswqoveiNiegMessage.fromJsonArray(messages))
-    }
-    
-    private func handleLogout(_ body: Any) {
-        guard let dict = body as? [String: Any],
-              let isLogout = dict["isLogout"] as? Bool else {
+    private func handleORINXVOGUEToast(_ body: Any) {
+        guard let ORINXVOGUEpayload = body as? [String: Any],
+              let ORINXVOGUEtoastMessage = ORINXVOGUEpayload[ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultToastMsg)] as? String else {
             return
         }
         
-        if isLogout {
-            // TODO: 删除账号逻辑
-            
-            userVM.deleteAccountRexceaiPwvzwa()
+        EeuqcjaOrHUD.toast(.normal(ORINXVOGUEtoastMessage))
+    }
+    
+    private func handleORINXVOGUELoading(_ body: Any) {
+        guard let ORINXVOGUEpayload = body as? [String: Any],
+              let ORINXVOGUEshouldShow = ORINXVOGUEpayload[ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultIsShow)] as? Bool else {
+            return
+        }
+        
+        if ORINXVOGUEshouldShow {
+            EeuqcjaOrHUD.showLoading()
         } else {
-            storage.setCurrentUserId("")
-            userVM.loadLoginRexceaiPwvzwaUser()
+            EeuqcjaOrHUD.hideLoading()
         }
-        
-        navi.popToRoot()
     }
     
-    private func handlePayment(_ body: Any) {
-        guard let dict = body as? [String: Any],
-              let payKey = dict["payKey"] as? String else {
-            print("payment 数据错误")
+    private func handleORINXVOGUELogout(_ body: Any) {
+        guard let ORINXVOGUEpayload = body as? [String: Any],
+              let ORINXVOGUEisLogout = ORINXVOGUEpayload[ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultIsLogout)] as? Bool else {
             return
         }
         
-        startIAP(payKey: payKey)
+        if ORINXVOGUEisLogout {
+            ORINXVOGUEwardrobeUserViewModel.deleteAccountRexceaiPwvzwa()
+        } else {
+            ORINXVOGUEstyleStorage.setCurrentUserId(String())
+            ORINXVOGUEwardrobeUserViewModel.loadLoginRexceaiPwvzwaUser()
+        }
+        
+        ORINXVOGUEstyleNavigator.popToRoot()
+    }
+    
+    private func handleORINXVOGUEPayment(_ body: Any) {
+        guard let ORINXVOGUEpayload = body as? [String: Any],
+              let ORINXVOGUEpayKey = ORINXVOGUEpayload[ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultPayKey)] as? String else {
+            return
+        }
+        
+        beginORINXVOGUERunwayCheckout(payKey: ORINXVOGUEpayKey)
+    }
+    
+    private func handleORINXVOGUERegistration(_ body: Any) {
+        guard let ORINXVOGUEpayload = body as? [String: Any],
+              let ORINXVOGUEwardrobeProfile = ORINXVOGUEpayload[ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultNewUserData)] as? [String: Any] else {
+            return
+        }
+        
+        let ORINXVOGUEavatar = ORINXVOGUEwardrobeProfile[ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultAvatar)] as? String ?? ""
+        let ORINXVOGUEname = ORINXVOGUEwardrobeProfile[ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultName)] as? String ?? ""
+        let ORINXVOGUEfinalAvatar = ORINXVOGUEavatar.isEmpty
+            ? ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultDefaultAvatar)
+            : ORINXVOGUEavatar
+        
+        if ORINXVOGUEfinalAvatar.isEmpty {
+            EeuqcjaOrHUD.toast(.normal(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultUploadAvatarToast)))
+            return
+        }
+        
+        if ORINXVOGUEname.isEmpty {
+            EeuqcjaOrHUD.toast(.normal(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultEnterNameToast)))
+            return
+        }
+        
+        if let ORINXVOGUEemail = ORINXVOGUEregisterEmail,
+           let ORINXVOGUEpassword = ORINXVOGUEregisterPassword {
+            ORINXVOGUEstyleStorage.addUser(
+                user: RexceaiPwvzwaUser(
+                    rexceaiPwvzwaUserId: "\(ORINXVOGUEstyleStorage.getUsers().count)",
+                    rexceaiPwvzwaEmail: ORINXVOGUEemail,
+                    rexceaiPwvzwaPassword: ORINXVOGUEpassword,
+                    rexceaiPwvzwaUserName: ORINXVOGUEname,
+                    rexceaiPwvzwaAvatar: ORINXVOGUEfinalAvatar,
+                    rexceaiPwvzwaAboutMe: String(),
+                    rexceaiPwvzwaFollowing: [],
+                    rexceaiPwvzwaFans: [],
+                    rexceaiPwvzwaBlacklist: [],
+                    rexceaiPwvzwaWalletBalance: 0,
+                    rexceaiPwvzwaLikePosts: [],
+                    rexceaiPwvzwaIsDeleted: 0
+                )
+            )
+            
+            _ = ORINXVOGUEwardrobeUserViewModel.loginByEmailAndPasswordRexceaiPwvzwa(
+                email: ORINXVOGUEemail,
+                password: ORINXVOGUEpassword
+            )
+            
+            ORINXVOGUEstyleNavigator.popToRoot()
+        }
     }
 }
 
-// MARK: - IAP
-extension Coordinator {
+extension ORINXVOGUECatwalkWebCoordinator {
     
-    /// 同步当前用户到 H5
-        func syncCurrentUserToH5() {
-            guard let currentUser = storage.getUserById(userId: storage.getCurrentUserId()) else {
-                print("❌ 当前用户为空，无法同步到 H5")
-                return
-            }
-            
-            // 转成 H5 需要的 TargetUser JSON
-            let targetUser = currentUser.toTargetUser()
-            let userJSON = encode(targetUser, defaultValue: "{}")
-            
-            // 转义 \ 和 "
-            let escapedJSON = userJSON
-                .replacingOccurrences(of: "\\", with: "\\\\")
-                .replacingOccurrences(of: "\"", with: "\\\"")
-            
-            // JS 调用 updateCurrentUser(JSON)
-            let js = "updateCurrentUser(JSON.parse(\"\(escapedJSON)\"));"
-            
-            DispatchQueue.main.async {
-                if let orinxAwibaWebView = OtwiNjqoiWebview.currentWebView {
-                    orinxAwibaWebView.evaluateJavaScript(js) { result, error in
-                        if let error = error {
-                            print("❌", error.localizedDescription)
-                        }
-                    }
-                }
-            }
+    func syncORINXVOGUECurrentUserToH5() {
+        guard let ORINXVOGUEcurrentUser = ORINXVOGUEstyleStorage.getUserById(
+            userId: ORINXVOGUEstyleStorage.getCurrentUserId()
+        ) else {
+            return
         }
+        
+        let ORINXVOGUEtargetUser = ORINXVOGUEcurrentUser.toTargetUser()
+        let ORINXVOGUEuserJSON = encodeORINXVOGUEValue(
+            ORINXVOGUEtargetUser,
+            defaultValue: ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultEmptyObject)
+        )
+        let ORINXVOGUEescapedJSON = ORINXVOGUEuserJSON
+            .replacingOccurrences(of: "\\", with: "\\\\")
+            .replacingOccurrences(of: "\"", with: "\\\"")
+        
+        let ORINXVOGUEupdateScript =
+            "\(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultUpdateCurrentUser))(JSON.parse(\"\(ORINXVOGUEescapedJSON)\"));"
+        
+        DispatchQueue.main.async {
+            ORINXVOGUECatwalkWebCanvas.ORINXVOGUEcurrentWebView?.evaluateJavaScript(ORINXVOGUEupdateScript) { _, _ in }
+        }
+    }
     
-    private func startIAP(payKey: String) {
-        ipaRecharge.zwkAtihaLbhRecharge(payKey) { [weak self] result in
+    private func beginORINXVOGUERunwayCheckout(payKey: String) {
+        ORINXVOGUErunwayCheckoutManager.beginORINXVOGUECoutureCheckout(payKey) { [weak self] ORINXVOGUEpurchaseResult in
             guard let self else { return }
             
-            switch result {
-            case .success(let diamond):
-                self.userVM.increaseUserDiamond(diamond: diamond)
-                self.userVM.loadLoginRexceaiPwvzwaUser()
-                syncCurrentUserToH5()
-                                            
-            case .failed(let msg):
-                EeuqcjaOrHUD.toast(.error(msg))
+            switch ORINXVOGUEpurchaseResult {
+            case .ORINXVOGUESuccess(let ORINXVOGUEwardrobeValue):
+                self.ORINXVOGUEwardrobeUserViewModel.increaseUserDiamond(diamond: ORINXVOGUEwardrobeValue)
+                self.ORINXVOGUEwardrobeUserViewModel.loadLoginRexceaiPwvzwaUser()
+                self.syncORINXVOGUECurrentUserToH5()
                 
-            case .cancelled, .pending:
+            case .ORINXVOGUEFailed(let ORINXVOGUEerrorMessage):
+                EeuqcjaOrHUD.toast(.error(ORINXVOGUEerrorMessage))
+                
+            case .ORINXVOGUECancelled, .ORINXVOGUEPending:
                 break
             }
         }
     }
 }
 
-// MARK: - JSON Helpers
-extension Coordinator {
+extension ORINXVOGUECatwalkWebCoordinator {
     
-    /// 通用数组解析
-    private func extractArray(_ body: Any, key: String) -> [[String: Any]]? {
-        guard let dict = body as? [String: Any],
-              let array = dict[key] as? [[String: Any]] else {
-            print("❌ \(key) 数据错误:", body)
+    private func extractORINXVOGUEArray(_ body: Any, key: String) -> [[String: Any]]? {
+        guard let ORINXVOGUEpayload = body as? [String: Any],
+              let ORINXVOGUEarray = ORINXVOGUEpayload[key] as? [[String: Any]] else {
             return nil
         }
-        return array
+        return ORINXVOGUEarray
     }
     
-    /// 通用编码
-    private func encode<T: Encodable>(_ obj: T, defaultValue: String = "[]") -> String {
-        let encoder = JSONEncoder()
-        encoder.dateEncodingStrategy = .iso8601 // 👈 先加这个
+    private func encodeORINXVOGUEValue<T: Encodable>(
+        _ value: T,
+        defaultValue: String = ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultEmptyArray)
+    ) -> String {
+        let ORINXVOGUEencoder = JSONEncoder()
+        ORINXVOGUEencoder.dateEncodingStrategy = .iso8601
         
-        guard let data = try? encoder.encode(obj),
-              let json = String(data: data, encoding: .utf8) else {
+        guard let ORINXVOGUEdata = try? ORINXVOGUEencoder.encode(value),
+              let ORINXVOGUEjson = String(data: ORINXVOGUEdata, encoding: .utf8) else {
             return defaultValue
         }
-        return json
+        
+        return ORINXVOGUEjson
+    }
+    
+    private func encodeORINXVOGUEAnyValue(_ value: Any) -> String {
+        guard let ORINXVOGUEdata = try? JSONSerialization.data(withJSONObject: value),
+              let ORINXVOGUEjson = String(data: ORINXVOGUEdata, encoding: .utf8) else {
+            return ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultEmptyObject)
+        }
+        
+        return ORINXVOGUEjson
     }
 }
 
-// MARK: - JS 注入
-extension Coordinator {
+extension ORINXVOGUECatwalkWebCoordinator {
     
-    func generateInitialJS() -> String {
+    func buildORINXVOGUEInitialWardrobeScript() -> String {
+        let ORINXVOGUEcurrentUser = ORINXVOGUEstyleStorage.getUserById(
+            userId: ORINXVOGUEstyleStorage.getCurrentUserId()
+        )
         
-        let currentUser = storage.getUserById(userId: storage.getCurrentUserId())
-        
-        let currentUserJSON = currentUser
-            .map { encode($0.toTargetUser(), defaultValue: "{}") }
-            ?? "{}"
+        let ORINXVOGUEcurrentUserJSON = ORINXVOGUEcurrentUser
+            .map {
+                encodeORINXVOGUEValue(
+                    $0.toTargetUser(),
+                    defaultValue: ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultEmptyObject)
+                )
+            }
+            ?? ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultEmptyObject)
         
         return """
-            window.currentUser = JSON.parse('\(escapeForJS(currentUserJSON))');
-            window.userList = JSON.parse('\(escapeForJS(encode(storage.getUsers().map { $0.toTargetUser() })))');
-            window.postList = JSON.parse('\(escapeForJS(encode(storage.getWorks().map { $0.toTargetPost() })))');
-            window.commentList = JSON.parse('\(escapeForJS(encode(storage.getAllComments().map { $0.toTargetComment() })))');
-            window.chatList = JSON.parse('\(escapeForJS(encode(storage.getChatRooms().map { $0.toTargetChatRoom() })))');
-            window.messageList = JSON.parse('\(escapeForJS(encode(storage.getAllMessages().map { $0.toTargetMessage() })))');
-            window.other = \(buildOtherConfig());
+            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultCurrentUserVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(ORINXVOGUEcurrentUserJSON))');
+            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultUserListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.getUsers().map { $0.toTargetUser() })))');
+            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultPostListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.getWorks().map { $0.toTargetPost() })))');
+            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultCommentListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.getAllComments().map { $0.toTargetComment() })))');
+            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultChatListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.getChatRooms().map { $0.toTargetChatRoom() })))');
+            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultMessageListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.getAllMessages().map { $0.toTargetMessage() })))');
+            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultOtherVariable)) = \(buildORINXVOGUEClosetConfig());
         """
     }
     
-    func escapeForJS(_ json: String) -> String {
-        return json
+    private func escapeORINXVOGUEForJS(_ json: String) -> String {
+        json
             .replacingOccurrences(of: "\\", with: "\\\\")
             .replacingOccurrences(of: "'", with: "\\'")
             .replacingOccurrences(of: "\n", with: "")
             .replacingOccurrences(of: "\r", with: "")
     }
     
-    private func buildOtherConfig() -> String {
-        
-        let obj: [String: Any] = [
-            "postTheme": [
-                "Hobbies",
-                "Inspire"
+    private func buildORINXVOGUEClosetConfig() -> String {
+        let ORINXVOGUEconfig: [String: Any] = [
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultPostTheme): [
+                ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultHobbies),
+                ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultInspire)
             ],
-            "reportContent": [
-                    "Harassment",
-                    "Malicious fraud",
-                    "Pornography",
-                    "Malicious insults",
-                    "False Information"
-                ],
-            "coinsSetting": qwoibtwkjJkProducts.map {
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultReportContent): [
+                ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultHarassment),
+                ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultMaliciousFraud),
+                ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultPornography),
+                ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultMaliciousInsults),
+                ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultFalseInformation)
+            ],
+            ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultCoinsSetting): ORINXVOGUEAtelierCatalog.map {
                 [
-                    "key": $0.qwoibtwkjJkKeyId,
-                    "cions": $0.qwoibtwkjJkGetDiamond,
-                    "money": $0.qwoibtwkjJkPrice
+                    ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultKey): $0.ORINXVOGUEsilhouetteKeyId,
+                    ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultCions): $0.ORINXVOGUEwardrobeValue,
+                    ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultMoney): $0.ORINXVOGUErunwayPrice
                 ]
             }
         ]
         
-        let json = encodeAny(obj) // 👇 需要这个方法
-        
-        return "JSON.parse('\(escapeForJS(json))')"
-    }
-    
-    func encodeAny(_ obj: Any) -> String {
-        if let data = try? JSONSerialization.data(withJSONObject: obj),
-           let json = String(data: data, encoding: .utf8) {
-            return json
-        }
-        return "{}"
+        let ORINXVOGUEconfigJSON = encodeORINXVOGUEAnyValue(ORINXVOGUEconfig)
+        return "JSON.parse('\(escapeORINXVOGUEForJS(ORINXVOGUEconfigJSON))')"
     }
 }
 
-struct OtwiNjqoiWeb: View {
-    let aswuznaWebUrlString: String
+struct ORINXVOGUECatwalkWebScene: View {
+    let ORINXVOGUEstyleRoute: String
+    let ORINXVOGUEregisterEmail: String?
+    let ORINXVOGUEregisterPassword: String?
     
     var body: some View {
-        ZStack{
-            GeometryReader { geo in
-                Image("rutyauwc_bg")
+        ZStack {
+            GeometryReader { _ in
+                Image(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultBackgroundImage))
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .ignoresSafeArea()
-                
             }
-            OtwiNjqoiWebview(otwiNjqoiWebNav: aswuznaWebUrlString)
-                .ignoresSafeArea()
-        }.ignoresSafeArea()
-            .navigationBarHidden(true)
-                .background(LkjaurakjxSwipeBack())
+            
+            ORINXVOGUECatwalkWebCanvas(
+                ORINXVOGUEstyleRoute: ORINXVOGUEstyleRoute,
+                ORINXVOGUEregisterEmail: ORINXVOGUEregisterEmail,
+                ORINXVOGUEregisterPassword: ORINXVOGUEregisterPassword
+            )
+            .ignoresSafeArea()
+        }
+        .ignoresSafeArea()
+        .navigationBarHidden(true)
+        .background(LkjaurakjxSwipeBack())
     }
 }

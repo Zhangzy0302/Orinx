@@ -40,13 +40,13 @@ extension OrinxntqoStorageManager {
     let users: [RexceaiPwvzwaUser] = [
       RexceaiPwvzwaUser(
         rexceaiPwvzwaUserId: "0",
-        rexceaiPwvzwaEmail: "test@gmail.com",
-        rexceaiPwvzwaPassword: "654321",
-        rexceaiPwvzwaUserName: "Barton",
+        rexceaiPwvzwaEmail: "orinx@gmail.com",
+        rexceaiPwvzwaPassword: "123123",
+        rexceaiPwvzwaUserName: "Lebreeon",
         rexceaiPwvzwaAvatar:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/kfukuruKuw_0.jpg",
-        rexceaiPwvzwaAboutMe: "Make friends with the wind, and keep company with the road.",
-        rexceaiPwvzwaFollowing: ["1", "2"],
+          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXUAva_0.jpg",
+        rexceaiPwvzwaAboutMe: "Fashion is my daily language, and every outfit tells a little story",
+        rexceaiPwvzwaFollowing: ["4", "5"],
         rexceaiPwvzwaFans: ["4", "5"],
         rexceaiPwvzwaBlacklist: [],
         rexceaiPwvzwaWalletBalance: 0,
@@ -55,12 +55,12 @@ extension OrinxntqoStorageManager {
       ),
       RexceaiPwvzwaUser(
         rexceaiPwvzwaUserId: "1",
-        rexceaiPwvzwaEmail: "Carlos@gmail.com",
-        rexceaiPwvzwaPassword: "wi28ja29jad",
-        rexceaiPwvzwaUserName: "Carlos",
+        rexceaiPwvzwaEmail: "ariawdsxa@gmail.com",
+        rexceaiPwvzwaPassword: "u3iashs8f",
+        rexceaiPwvzwaUserName: "aria",
         rexceaiPwvzwaAvatar:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/kfukuruKuw_1.jpg",
-        rexceaiPwvzwaAboutMe: "Ride into the wilderness, without caring about the destination.",
+          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXUAva_1.jpg",
+        rexceaiPwvzwaAboutMe: "Styling simple pieces into standout looks is kind of my thing.",
         rexceaiPwvzwaFollowing: [],
         rexceaiPwvzwaFans: ["0"],
         rexceaiPwvzwaBlacklist: [],
@@ -70,12 +70,12 @@ extension OrinxntqoStorageManager {
       ),
       RexceaiPwvzwaUser(
         rexceaiPwvzwaUserId: "2",
-        rexceaiPwvzwaEmail: "Willisasd@gmail.com",
-        rexceaiPwvzwaPassword: "2u8hd8aks",
-        rexceaiPwvzwaUserName: "Willis",
+        rexceaiPwvzwaEmail: "cvq3i8ha2@gmail.com",
+        rexceaiPwvzwaPassword: "cva3dat3",
+        rexceaiPwvzwaUserName: "Nicole",
         rexceaiPwvzwaAvatar:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/kfukuruKuw_2.jpg",
-        rexceaiPwvzwaAboutMe: "Those who chase the wind are always on the road.",
+          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXUAva_2.jpg",
+        rexceaiPwvzwaAboutMe: "I believe great outfits start with confidence and a good eye for detail",
         rexceaiPwvzwaFollowing: [],
         rexceaiPwvzwaFans: ["0"],
         rexceaiPwvzwaBlacklist: [],
@@ -85,12 +85,12 @@ extension OrinxntqoStorageManager {
       ),
       RexceaiPwvzwaUser(
         rexceaiPwvzwaUserId: "3",
-        rexceaiPwvzwaEmail: "32asdAw3a@gmail.com",
-        rexceaiPwvzwaPassword: "wqsd23sad",
-        rexceaiPwvzwaUserName: "Haley",
+        rexceaiPwvzwaEmail: "xc*2hkajs@gmail.com",
+        rexceaiPwvzwaPassword: "c2uhiaKAuw3",
+        rexceaiPwvzwaUserName: "RyderSketch",
         rexceaiPwvzwaAvatar:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/kfukuruKuw_3.jpg",
-        rexceaiPwvzwaAboutMe: "The road lies beneath our feet, and the wind follows behind us.",
+          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXUAva_3.jpg",
+        rexceaiPwvzwaAboutMe: "Soft tones, clean fits, and effortless vibes are my style essentials",
         rexceaiPwvzwaFollowing: [],
         rexceaiPwvzwaFans: [],
         rexceaiPwvzwaBlacklist: [],
@@ -100,14 +100,14 @@ extension OrinxntqoStorageManager {
       ),
       RexceaiPwvzwaUser(
         rexceaiPwvzwaUserId: "4",
-        rexceaiPwvzwaEmail: "32fgdgehwv@gmail.com",
-        rexceaiPwvzwaPassword: "d21g2waas",
-        rexceaiPwvzwaUserName: "Christy",
+        rexceaiPwvzwaEmail: "baKzuku@gmail.com",
+        rexceaiPwvzwaPassword: "Kkx829hsa",
+        rexceaiPwvzwaUserName: "OllieVerse",
         rexceaiPwvzwaAvatar:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/kfukuruKuw_4.jpg",
-        rexceaiPwvzwaAboutMe: "Our hearts yearn for the vast wilderness, and our steps never cease.",
+          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXUAva_4.jpg",
+        rexceaiPwvzwaAboutMe: "Dressing well is not about trends, it is about expressing who you are",
         rexceaiPwvzwaFollowing: ["0"],
-        rexceaiPwvzwaFans: [],
+        rexceaiPwvzwaFans: ["0"],
         rexceaiPwvzwaBlacklist: [],
         rexceaiPwvzwaWalletBalance: 0,
         rexceaiPwvzwaLikePosts: [],
@@ -115,14 +115,14 @@ extension OrinxntqoStorageManager {
       ),
       RexceaiPwvzwaUser(
         rexceaiPwvzwaUserId: "5",
-        rexceaiPwvzwaEmail: "sfaAd3ga@gmail.com",
-        rexceaiPwvzwaPassword: "jy64f2sasd",
-        rexceaiPwvzwaUserName: "Sophia",
+        rexceaiPwvzwaEmail: "xc28jhvra@gmail.com",
+        rexceaiPwvzwaPassword: "xcak2us",
+        rexceaiPwvzwaUserName: "kitsue_",
         rexceaiPwvzwaAvatar:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/kfukuruKuw_5.jpg",
-        rexceaiPwvzwaAboutMe: "With a lifetime of passion, we never stop moving forward.",
+          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXUAva_5.jpg",
+        rexceaiPwvzwaAboutMe: "I mix comfort with style and call it my everyday aesthetic",
         rexceaiPwvzwaFollowing: ["0"],
-        rexceaiPwvzwaFans: [],
+        rexceaiPwvzwaFans: ["0"],
         rexceaiPwvzwaBlacklist: [],
         rexceaiPwvzwaWalletBalance: 0,
         rexceaiPwvzwaLikePosts: [],
@@ -173,6 +173,16 @@ extension OrinxntqoStorageManager {
     return storage.object(forKey: Keys.orinxCurrentUId) as? String ?? ""
   }
     
+    func isCurrentLoginUserGuestRexceaiPwvzwa() -> Bool {
+        let currentUserId = getCurrentUserId()
+        guard !currentUserId.isEmpty,
+              let currentUser = getUserById(userId: currentUserId) else {
+            return false
+        }
+        
+        return currentUser.isRexceaiPwvzwaGuest
+    }
+    
     func markCurrentUserDeleted() {
         let currentUserId = getCurrentUserId()
         
@@ -196,12 +206,12 @@ extension OrinxntqoStorageManager {
         vieoaVNneqoWorkId: "0",
         vieoaVNneqoCreatorId: "0",
         vieoaVNneqoType: 1,
-        vieoaVNneqoTextContent: "At 6 pm, watch the setting sun and allow yourself to relax.",
+        vieoaVNneqoTextContent: "I love this trend ",
         vieoaVNneqoTitleType: 0,
         vieoaVNneqoVideoUrl:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/iwioaAciw_0.mp4",
+          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_0.mp4",
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/iwioaAciw_cover_0.png"],
+          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_covr_0.png"],
         vieoaVNneqoLikeCount: 397,
         vieoaVNneqoCommentCount: 1),
       VieoaVNneqoVideo(
@@ -209,104 +219,120 @@ extension OrinxntqoStorageManager {
         vieoaVNneqoCreatorId: "1",
         vieoaVNneqoType: 1,
         vieoaVNneqoTextContent:
-          "Just a guy that loves riding bikes",
+          "joining this fit trend <3 my new fav way to film fit checks",
         vieoaVNneqoTitleType: 1,
         vieoaVNneqoVideoUrl:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/iwioaAciw_1.mp4",
+          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_1.mp4",
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/iwioaAciw_cover_1.png"],
-        vieoaVNneqoLikeCount: 727,
+          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_covr_1.png"],
+        vieoaVNneqoLikeCount: 1713,
         vieoaVNneqoCommentCount: 2),
       VieoaVNneqoVideo(
         vieoaVNneqoWorkId: "2",
         vieoaVNneqoCreatorId: "2",
         vieoaVNneqoType: 1,
         vieoaVNneqoTextContent:
-          "Keep moving forward, for all the beauty lies on the journey.",
+          "Fit checkk",
         vieoaVNneqoTitleType: 2,
         vieoaVNneqoVideoUrl:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/iwioaAciw_2.mp4",
+          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_2.mp4",
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/iwioaAciw_cover_2.png"],
-        vieoaVNneqoLikeCount: 986,
+          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_covr_2.png"],
+        vieoaVNneqoLikeCount: 362,
         vieoaVNneqoCommentCount: 1),
       VieoaVNneqoVideo(
         vieoaVNneqoWorkId: "3",
         vieoaVNneqoCreatorId: "3",
         vieoaVNneqoType: 1,
-        vieoaVNneqoTextContent: "First outdoor ride of the season is going to hit the spot",
+        vieoaVNneqoTextContent: "Who are you in this?",
         vieoaVNneqoTitleType: 1,
         vieoaVNneqoVideoUrl:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/iwioaAciw_3.mp4",
+          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_3.mp4",
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/iwioaAciw_cover_3.png"],
-        vieoaVNneqoLikeCount: 657,
+          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_covr_3.png"],
+        vieoaVNneqoLikeCount: 422,
         vieoaVNneqoCommentCount: 1),
       VieoaVNneqoVideo(
         vieoaVNneqoWorkId: "4",
         vieoaVNneqoCreatorId: "4",
         vieoaVNneqoType: 1,
-        vieoaVNneqoTextContent: "Taking a ride on a bike while enjoying the breeze.",
+        vieoaVNneqoTextContent: "Hey there",
         vieoaVNneqoTitleType: 2,
         vieoaVNneqoVideoUrl:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/iwioaAciw_4.mp4",
+          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_4.mp4",
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/iwioaAciw_cover_4.png"],
+          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_covr_4.png"],
         vieoaVNneqoLikeCount: 1397,
         vieoaVNneqoCommentCount: 0),
       VieoaVNneqoVideo(
         vieoaVNneqoWorkId: "5",
         vieoaVNneqoCreatorId: "5",
         vieoaVNneqoType: 1,
-        vieoaVNneqoTextContent: "Everyone’s favorite descent on the bike",
+        vieoaVNneqoTextContent: "The combination of classic men's clothing and practical workwear emphasizes the simplification of details for a more comfortable body feel, showcasing calmness and elegance. In terms of color, it blends transparent and pure warm apricot with light blue, retro and elegant dark green with brown red, creating a layered visual melody. The printing adopts a semi-structured and semi realistic technique, drawing inspiration from ancient paintings and depicting the graceful movements of animals and plants in a pure white environment. In terms of materials, materials such as cotton corduroy and textured wool are used to restore the soft and smooth texture of the rough ground and the crisp texture of walking on it in both visual and tactile senses, reproducing the dynamic poetic effect of snow light on the environment in the single product.",
         vieoaVNneqoTitleType: 0,
         vieoaVNneqoVideoUrl:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/iwioaAciw_5.mp4",
+          "",
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/iwioaAciw_cover_5.png"],
-        vieoaVNneqoLikeCount: 221,
+          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_0.jpg",
+          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_1.jpg",
+          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_2.jpg"],
+        vieoaVNneqoLikeCount: 456,
         vieoaVNneqoCommentCount: 0),
       //image
       VieoaVNneqoVideo(
         vieoaVNneqoWorkId: "6",
         vieoaVNneqoCreatorId: "2",
         vieoaVNneqoType: 0,
-        vieoaVNneqoTextContent: "Conquer every uphill stretch, enjoy every downhill ride.",
+        vieoaVNneqoTextContent: "The fusion of timeless western attire and contemporary casual elements highlights the refinement of simplicity for a more relaxed fit, exuding confidence and sophistication. In terms of color, it harmonizes crisp white with classic denim blue, and rich brown with subtle metallic accents, crafting a visually engaging contrast. The styling incorporates minimalist yet functional accessories, drawing inspiration from modern urban trends while showcasing sleek, understated elegance in a neutral setting. In terms of materials, the use of supple leather, breathable cotton, and sturdy denim aims to replicate the tactile and visual textures of rugged terrains and the effortless flow of movement, evoking a dynamic yet serene ambiance in every piece.",
         vieoaVNneqoTitleType: 0,
         vieoaVNneqoVideoUrl:
           "",
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/tyauelkwAwi_0.jpg",
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/tyauelkwAwi_1.jpg",
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/tyauelkwAwi_2.png"],
-        vieoaVNneqoLikeCount: 397,
+            ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_3.jpg",
+            "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_4.jpg",
+            "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_5.jpg"],
+        vieoaVNneqoLikeCount: 957,
         vieoaVNneqoCommentCount: 1),
       VieoaVNneqoVideo(
         vieoaVNneqoWorkId: "7",
         vieoaVNneqoCreatorId: "1",
         vieoaVNneqoType: 0,
-        vieoaVNneqoTextContent: "The wheels trample through the wind and rain, and love surmounts all difficulties.",
+        vieoaVNneqoTextContent: "The ensemble merges bold, contemporary streetwear with a touch of vintage flair, emphasizing a daring yet chic aesthetic that exudes self-assurance and individuality. In terms of color, the monochromatic black palette creates a sleek, unified look, punctuated by metallic accents that add a hint of edgy sophistication. The outfit features a cropped, tied shirt that reveals a subtle hint of skin, paired with high-waisted, wide-leg trousers that elongate the silhouette. The addition of a studded belt and fingerless gloves enhances the rebellious, rock-inspired vibe. The details, such as the visible tattoos and the casual placement of the bag on the ground, contribute to an effortlessly cool, urban charm, while the textures of the fabrics add depth and richness to the overall look.",
         vieoaVNneqoTitleType: 1,
         vieoaVNneqoVideoUrl:
           "",
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/tyauelkwAwi_3.jpg",
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/tyauelkwAwi_4.png",
-           "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/tyauelkwAwi_5.jpg"],
-        vieoaVNneqoLikeCount: 523,
+            ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_6.jpg",
+            "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_7.jpg",
+            "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_8.jpg"],
+        vieoaVNneqoLikeCount: 763,
         vieoaVNneqoCommentCount: 2),
       VieoaVNneqoVideo(
         vieoaVNneqoWorkId: "8",
         vieoaVNneqoCreatorId: "0",
         vieoaVNneqoType: 0,
-        vieoaVNneqoTextContent: "Set out, it is always the most meaningful thing.",
+        vieoaVNneqoTextContent: "The newsboy cap has a vintage - inspired and somewhat casual yet stylish vibe. It can be paired with a wide range of outfits. In the picture, it is matched with a brown checkered blazer and dark trousers, creating a sophisticated and coordinated look. It can also go well with jeans and a simple sweater for a more laid - back style, or with a long coat for a fashionable winter ensemble.",
         vieoaVNneqoTitleType: 0,
         vieoaVNneqoVideoUrl:
           "",
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/tyauelkwAwi_6.jpg",
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Kael2026/tyauelkwAwi_7.jpg"],
-        vieoaVNneqoLikeCount: 584,
+            ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_9.jpg",
+            "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_10.jpg"],
+        vieoaVNneqoLikeCount: 352,
+        vieoaVNneqoCommentCount: 0),
+      VieoaVNneqoVideo(
+        vieoaVNneqoWorkId: "9",
+        vieoaVNneqoCreatorId: "5",
+        vieoaVNneqoType: 0,
+        vieoaVNneqoTextContent: "Generally, such leather shoes are made of high - quality leather for the upper. Leather is flexible and durable, able to withstand the wear and tear of daily wearing. The sole may be made of a composite material such as rubber, which provides certain elasticity and non - slip performance while ensuring thickness. These leather shoes are versatile in style and have a vintage charm. In the picture, they are paired with an off - white shirt, brown shorts, and white socks, creating a look that combines a school - style and a casual vibe. They can also be matched with dress pants or jeans. When paired with dress pants, they look more formal and steady, suitable for business occasions; when paired with jeans, they can create a casual yet fashionable daily outfit.",
+        vieoaVNneqoTitleType: 0,
+        vieoaVNneqoVideoUrl:
+          "",
+        vieoaVNneqoPic:
+            ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_11.jpg",
+            "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_12.jpg",
+             "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_13.jpg"],
+        vieoaVNneqoLikeCount: 543,
         vieoaVNneqoCommentCount: 0),
     ]
     save(vieoaVNneqoWorks, forKey: Keys.vieoaVNneqoWorks)
@@ -423,47 +449,47 @@ extension OrinxntqoStorageManager {
             saascieSeigCommentId: "0",
             saascieSeigCommentWorkId: "0",
             saascieSeigCommentUserId: "2",
-            saascieSeigCommentText: "Wow, the sunset is absolutely stunning!"),
+            saascieSeigCommentText: "Love how effortlessly you pulled this look together"),
         SaascieSeigComment(
             saascieSeigCommentId: "1",
             saascieSeigCommentWorkId: "1",
             saascieSeigCommentUserId: "5",
-            saascieSeigCommentText: "The scenery is really beautiful."),
+            saascieSeigCommentText: "This outfit is such a perfect mix of chic and comfy"),
         SaascieSeigComment(
             saascieSeigCommentId: "2",
             saascieSeigCommentWorkId: "2",
             saascieSeigCommentUserId: "3",
-            saascieSeigCommentText: "Great!"),
+            saascieSeigCommentText: "You always make simple pieces look so stylish"),
         SaascieSeigComment(
             saascieSeigCommentId: "3",
             saascieSeigCommentWorkId: "3",
             saascieSeigCommentUserId: "2",
-            saascieSeigCommentText: "You are stunning!"),
+            saascieSeigCommentText: "The color combination here is absolutely beautiful"),
         SaascieSeigComment(
             saascieSeigCommentId: "4",
             saascieSeigCommentWorkId: "1",
             saascieSeigCommentUserId: "2",
-            saascieSeigCommentText: "beautiful day for a ride I just finished mine keep pushing it cycling Sister"),
+            saascieSeigCommentText: "Obsessed with the vibe of this whole outfit"),
         SaascieSeigComment(
             saascieSeigCommentId: "5",
             saascieSeigCommentWorkId: "6",
             saascieSeigCommentUserId: "4",
-            saascieSeigCommentText: "I need to feel this again"),
+            saascieSeigCommentText: "This look is clean, classy, and so well styled"),
         SaascieSeigComment(
             saascieSeigCommentId: "6",
             saascieSeigCommentWorkId: "7",
             saascieSeigCommentUserId: "3",
-            saascieSeigCommentText: "Like the female lead in the movie."),
+            saascieSeigCommentText: "You really know how to make every detail work"),
         SaascieSeigComment(
             saascieSeigCommentId: "7",
             saascieSeigCommentWorkId: "7",
             saascieSeigCommentUserId: "2",
-            saascieSeigCommentText: "The nice weather makes going for a bike ride really relaxing."),
+            saascieSeigCommentText: "Such a cool outfit, it looks both trendy and timeless"),
         SaascieSeigComment(
             saascieSeigCommentId: "8",
             saascieSeigCommentWorkId: "8",
             saascieSeigCommentUserId: "1",
-            saascieSeigCommentText: "Cool!"),
+            saascieSeigCommentText: "Everything about this styling is just on point"),
       ]
     save(saascieSeigCommentList, forKey: Keys.saascieSeigComments)
   }

@@ -28,9 +28,9 @@ struct LkjariaxEmptyData: View {
     let lkajiwraTopPadding: CGFloat
     var body: some View {
         VStack{
-            Image("empty")
+            Image("rutyauwc_empty")
                 .resizable()
-                .frame(width: 200, height: 200)
+                .frame(width: 170, height: 170)
             Text("NO Data")
                 .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(16))
                 .foregroundStyle(.black)
