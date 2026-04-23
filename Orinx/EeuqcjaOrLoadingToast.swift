@@ -10,7 +10,7 @@ enum EeuqcjaOrHUDAction {
 enum EeuqcjaOrHUD {
 
     static func toast(_ action: EeuqcjaOrHUDAction) {
-        executeOnMain {
+        EeuqcjaOrExecuteOnMain {
             switch action {
             case .normal(let text):
                 EeuqcjaOrLoadingToast.shared.showToast(text)
@@ -25,18 +25,18 @@ enum EeuqcjaOrHUD {
       }
 
     static func showLoading(showBackground: Bool = false) {
-            executeOnMain {
+            EeuqcjaOrExecuteOnMain {
                 EeuqcjaOrLoadingToast.shared.showLoading(showBackground: showBackground)
             }
         }
 
         static func hideLoading() {
-            executeOnMain {
+            EeuqcjaOrExecuteOnMain {
                 EeuqcjaOrLoadingToast.shared.hideLoading()
             }
         }
 
-        private static func executeOnMain(
+        private static func EeuqcjaOrExecuteOnMain(
             _ action: @escaping @MainActor () -> Void
         ) {
             Task { @MainActor in

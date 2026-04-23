@@ -43,7 +43,7 @@ struct Eiwch827PostItem: View {
                         .frame(width: 54, height: 14)
                     if let eiwchMyInfo = eiwavOrinUserVM.currentUser {
                         HStack(alignment: .bottom, spacing: 2){
-                            Image(eiwchMyInfo.rexceaiPwvzwaLikePosts.contains(eiwchiPostInfo.vieoaVNneqoWorkId) ? "likepic" : "dislikepic")
+                            Image(eiwchMyInfo.rexceaiPwvzwaLikePosts.contains(eiwchiPostInfo.vieoaVNneqoWorkId) ? "ORINXLikePic" : "ORINXDislikepic")
                                 .resizable()
                                 .frame(width: 20, height: 20)
                             Text("\(eiwchiPostInfo.vieoaVNneqoLikeCount)")

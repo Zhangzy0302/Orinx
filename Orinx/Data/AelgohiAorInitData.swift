@@ -1,6 +1,15 @@
 import Foundation
 import SwiftUI
 
+private enum AelgohiAorCipherVault {
+  static let aelgohiAorAssetBaseURL =
+    "x2dYQh/Jdw43w59EgG47idY6rIrc2b6A8jjmOJqe/jhVRd68LV/AEbaardAVIIi4ZN1Th9ubaNm96WeQiQPbwg=="
+}
+
+private func aelgohiAorAssetURL(_ path: String) -> String {
+  XaiwgAesECBTool.xaiwgDecrypt(AelgohiAorCipherVault.aelgohiAorAssetBaseURL) + path
+}
+
 final class OrinxntqoStorageManager {
 
   static let shared = OrinxntqoStorageManager()
@@ -44,7 +53,7 @@ extension OrinxntqoStorageManager {
         rexceaiPwvzwaPassword: "123123",
         rexceaiPwvzwaUserName: "Lebreeon",
         rexceaiPwvzwaAvatar:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXUAva_0.jpg",
+          aelgohiAorAssetURL("ORINXUAva_0.jpg"),
         rexceaiPwvzwaAboutMe: "Fashion is my daily language, and every outfit tells a little story",
         rexceaiPwvzwaFollowing: ["4", "5"],
         rexceaiPwvzwaFans: ["4", "5"],
@@ -59,7 +68,7 @@ extension OrinxntqoStorageManager {
         rexceaiPwvzwaPassword: "u3iashs8f",
         rexceaiPwvzwaUserName: "aria",
         rexceaiPwvzwaAvatar:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXUAva_1.jpg",
+          aelgohiAorAssetURL("ORINXUAva_1.jpg"),
         rexceaiPwvzwaAboutMe: "Styling simple pieces into standout looks is kind of my thing.",
         rexceaiPwvzwaFollowing: [],
         rexceaiPwvzwaFans: ["0"],
@@ -74,7 +83,7 @@ extension OrinxntqoStorageManager {
         rexceaiPwvzwaPassword: "cva3dat3",
         rexceaiPwvzwaUserName: "Nicole",
         rexceaiPwvzwaAvatar:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXUAva_2.jpg",
+          aelgohiAorAssetURL("ORINXUAva_2.jpg"),
         rexceaiPwvzwaAboutMe: "I believe great outfits start with confidence and a good eye for detail",
         rexceaiPwvzwaFollowing: [],
         rexceaiPwvzwaFans: ["0"],
@@ -89,7 +98,7 @@ extension OrinxntqoStorageManager {
         rexceaiPwvzwaPassword: "c2uhiaKAuw3",
         rexceaiPwvzwaUserName: "RyderSketch",
         rexceaiPwvzwaAvatar:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXUAva_3.jpg",
+          aelgohiAorAssetURL("ORINXUAva_3.jpg"),
         rexceaiPwvzwaAboutMe: "Soft tones, clean fits, and effortless vibes are my style essentials",
         rexceaiPwvzwaFollowing: [],
         rexceaiPwvzwaFans: [],
@@ -104,7 +113,7 @@ extension OrinxntqoStorageManager {
         rexceaiPwvzwaPassword: "Kkx829hsa",
         rexceaiPwvzwaUserName: "OllieVerse",
         rexceaiPwvzwaAvatar:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXUAva_4.jpg",
+          aelgohiAorAssetURL("ORINXUAva_4.jpg"),
         rexceaiPwvzwaAboutMe: "Dressing well is not about trends, it is about expressing who you are",
         rexceaiPwvzwaFollowing: ["0"],
         rexceaiPwvzwaFans: ["0"],
@@ -119,7 +128,7 @@ extension OrinxntqoStorageManager {
         rexceaiPwvzwaPassword: "xcak2us",
         rexceaiPwvzwaUserName: "kitsue_",
         rexceaiPwvzwaAvatar:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXUAva_5.jpg",
+          aelgohiAorAssetURL("ORINXUAva_5.jpg"),
         rexceaiPwvzwaAboutMe: "I mix comfort with style and call it my everyday aesthetic",
         rexceaiPwvzwaFollowing: ["0"],
         rexceaiPwvzwaFans: ["0"],
@@ -133,60 +142,60 @@ extension OrinxntqoStorageManager {
     save(users, forKey: Keys.rexceaiPwvzwaUsers)
   }
 
-  func getUsers() -> [RexceaiPwvzwaUser] {
+  func aelgohiAorGetUsers() -> [RexceaiPwvzwaUser] {
     load([RexceaiPwvzwaUser].self, forKey: Keys.rexceaiPwvzwaUsers, default: [])
   }
 
-  func saveUsers(_ users: [RexceaiPwvzwaUser]) {
+  func aelgohiAorSaveUsers(_ users: [RexceaiPwvzwaUser]) {
     save(users, forKey: Keys.rexceaiPwvzwaUsers)
   }
 
-  func getUserById(userId: String) -> RexceaiPwvzwaUser? {
-    let allUsers = getUsers()
+  func aelgohiAorGetUserById(userId: String) -> RexceaiPwvzwaUser? {
+    let allUsers = aelgohiAorGetUsers()
     // 查找第一个 userId 匹配的用户
     return allUsers.first { $0.rexceaiPwvzwaUserId == userId }
   }
 
-  func updateUser(
+  func aelgohiAorUpdateUser(
     uid: String,
     update: (RexceaiPwvzwaUser) -> RexceaiPwvzwaUser
   ) {
-    var users = getUsers()
+    var users = aelgohiAorGetUsers()
     guard let index = users.firstIndex(where: { $0.rexceaiPwvzwaUserId == uid }) else { return }
     users[index] = update(users[index])
-    saveUsers(users)
+    aelgohiAorSaveUsers(users)
   }
 
   // add user
-  func addUser(user: RexceaiPwvzwaUser) {
-    var users: [RexceaiPwvzwaUser] = getUsers()
+  func aelgohiAorAddUser(user: RexceaiPwvzwaUser) {
+    var users: [RexceaiPwvzwaUser] = aelgohiAorGetUsers()
     users.append(user)
-    saveUsers(users)
+    aelgohiAorSaveUsers(users)
   }
 
   // MARK: Login State
-  func setCurrentUserId(_ uid: String) {
+  func aelgohiAorSetCurrentUserId(_ uid: String) {
     storage.set(uid, forKey: Keys.orinxCurrentUId)
   }
 
-  func getCurrentUserId() -> String {
+  func aelgohiAorGetCurrentUserId() -> String {
     return storage.object(forKey: Keys.orinxCurrentUId) as? String ?? ""
   }
     
     func isCurrentLoginUserGuestRexceaiPwvzwa() -> Bool {
-        let currentUserId = getCurrentUserId()
+        let currentUserId = aelgohiAorGetCurrentUserId()
         guard !currentUserId.isEmpty,
-              let currentUser = getUserById(userId: currentUserId) else {
+              let currentUser = aelgohiAorGetUserById(userId: currentUserId) else {
             return false
         }
         
         return currentUser.isRexceaiPwvzwaGuest
     }
     
-    func markCurrentUserDeleted() {
-        let currentUserId = getCurrentUserId()
+    func aelgohiAorMarkCurrentUserDeleted() {
+        let currentUserId = aelgohiAorGetCurrentUserId()
         
-        updateUser(uid: currentUserId) { user in
+        aelgohiAorUpdateUser(uid: currentUserId) { user in
             var updated = user
             updated.rexceaiPwvzwaIsDeleted = 1
             return updated
@@ -209,9 +218,9 @@ extension OrinxntqoStorageManager {
         vieoaVNneqoTextContent: "I love this trend ",
         vieoaVNneqoTitleType: 0,
         vieoaVNneqoVideoUrl:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_0.mp4",
+          aelgohiAorAssetURL("ORINXPosVideo_0.mp4"),
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_covr_0.png"],
+          [aelgohiAorAssetURL("ORINXPosVideo_covr_0.png")],
         vieoaVNneqoLikeCount: 397,
         vieoaVNneqoCommentCount: 1),
       VieoaVNneqoVideo(
@@ -222,9 +231,9 @@ extension OrinxntqoStorageManager {
           "joining this fit trend <3 my new fav way to film fit checks",
         vieoaVNneqoTitleType: 1,
         vieoaVNneqoVideoUrl:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_1.mp4",
+          aelgohiAorAssetURL("ORINXPosVideo_1.mp4"),
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_covr_1.png"],
+          [aelgohiAorAssetURL("ORINXPosVideo_covr_1.png")],
         vieoaVNneqoLikeCount: 1713,
         vieoaVNneqoCommentCount: 2),
       VieoaVNneqoVideo(
@@ -235,9 +244,9 @@ extension OrinxntqoStorageManager {
           "Fit checkk",
         vieoaVNneqoTitleType: 2,
         vieoaVNneqoVideoUrl:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_2.mp4",
+          aelgohiAorAssetURL("ORINXPosVideo_2.mp4"),
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_covr_2.png"],
+          [aelgohiAorAssetURL("ORINXPosVideo_covr_2.png")],
         vieoaVNneqoLikeCount: 362,
         vieoaVNneqoCommentCount: 1),
       VieoaVNneqoVideo(
@@ -247,9 +256,9 @@ extension OrinxntqoStorageManager {
         vieoaVNneqoTextContent: "Who are you in this?",
         vieoaVNneqoTitleType: 1,
         vieoaVNneqoVideoUrl:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_3.mp4",
+          aelgohiAorAssetURL("ORINXPosVideo_3.mp4"),
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_covr_3.png"],
+          [aelgohiAorAssetURL("ORINXPosVideo_covr_3.png")],
         vieoaVNneqoLikeCount: 422,
         vieoaVNneqoCommentCount: 1),
       VieoaVNneqoVideo(
@@ -259,9 +268,9 @@ extension OrinxntqoStorageManager {
         vieoaVNneqoTextContent: "Hey there",
         vieoaVNneqoTitleType: 2,
         vieoaVNneqoVideoUrl:
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_4.mp4",
+          aelgohiAorAssetURL("ORINXPosVideo_4.mp4"),
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPosVideo_covr_4.png"],
+          [aelgohiAorAssetURL("ORINXPosVideo_covr_4.png")],
         vieoaVNneqoLikeCount: 1397,
         vieoaVNneqoCommentCount: 0),
       VieoaVNneqoVideo(
@@ -273,9 +282,9 @@ extension OrinxntqoStorageManager {
         vieoaVNneqoVideoUrl:
           "",
         vieoaVNneqoPic:
-          ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_0.jpg",
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_1.jpg",
-          "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_2.jpg"],
+          [aelgohiAorAssetURL("ORINXPostPic_0.jpg"),
+          aelgohiAorAssetURL("ORINXPostPic_1.jpg"),
+          aelgohiAorAssetURL("ORINXPostPic_2.jpg")],
         vieoaVNneqoLikeCount: 456,
         vieoaVNneqoCommentCount: 0),
       //image
@@ -288,9 +297,9 @@ extension OrinxntqoStorageManager {
         vieoaVNneqoVideoUrl:
           "",
         vieoaVNneqoPic:
-            ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_3.jpg",
-            "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_4.jpg",
-            "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_5.jpg"],
+            [aelgohiAorAssetURL("ORINXPostPic_3.jpg"),
+            aelgohiAorAssetURL("ORINXPostPic_4.jpg"),
+            aelgohiAorAssetURL("ORINXPostPic_5.jpg")],
         vieoaVNneqoLikeCount: 957,
         vieoaVNneqoCommentCount: 1),
       VieoaVNneqoVideo(
@@ -302,9 +311,9 @@ extension OrinxntqoStorageManager {
         vieoaVNneqoVideoUrl:
           "",
         vieoaVNneqoPic:
-            ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_6.jpg",
-            "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_7.jpg",
-            "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_8.jpg"],
+            [aelgohiAorAssetURL("ORINXPostPic_6.jpg"),
+            aelgohiAorAssetURL("ORINXPostPic_7.jpg"),
+            aelgohiAorAssetURL("ORINXPostPic_8.jpg")],
         vieoaVNneqoLikeCount: 763,
         vieoaVNneqoCommentCount: 2),
       VieoaVNneqoVideo(
@@ -316,8 +325,8 @@ extension OrinxntqoStorageManager {
         vieoaVNneqoVideoUrl:
           "",
         vieoaVNneqoPic:
-            ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_9.jpg",
-            "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_10.jpg"],
+            [aelgohiAorAssetURL("ORINXPostPic_9.jpg"),
+            aelgohiAorAssetURL("ORINXPostPic_10.jpg")],
         vieoaVNneqoLikeCount: 352,
         vieoaVNneqoCommentCount: 0),
       VieoaVNneqoVideo(
@@ -329,26 +338,26 @@ extension OrinxntqoStorageManager {
         vieoaVNneqoVideoUrl:
           "",
         vieoaVNneqoPic:
-            ["http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_11.jpg",
-            "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_12.jpg",
-             "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/ORINXPostPic_13.jpg"],
+            [aelgohiAorAssetURL("ORINXPostPic_11.jpg"),
+            aelgohiAorAssetURL("ORINXPostPic_12.jpg"),
+             aelgohiAorAssetURL("ORINXPostPic_13.jpg")],
         vieoaVNneqoLikeCount: 543,
         vieoaVNneqoCommentCount: 0),
     ]
     save(vieoaVNneqoWorks, forKey: Keys.vieoaVNneqoWorks)
   }
 
-  func getWorks() -> [VieoaVNneqoVideo] {
+  func aelgohiAorGetWorks() -> [VieoaVNneqoVideo] {
     load([VieoaVNneqoVideo].self, forKey: Keys.vieoaVNneqoWorks, default: [])
   }
     
-    func saveWorks(_ works: [VieoaVNneqoVideo]) {
+    func aelgohiAorSaveWorks(_ works: [VieoaVNneqoVideo]) {
         save(works, forKey: Keys.vieoaVNneqoWorks)
     }
 
-  func getWorksNotBlock() -> [VieoaVNneqoVideo] {
-    let allWorks = getWorks()
-    let currentUserInfo = getUserById(userId: getCurrentUserId())
+  func aelgohiAorGetWorksNotBlock() -> [VieoaVNneqoVideo] {
+    let allWorks = aelgohiAorGetWorks()
+    let currentUserInfo = aelgohiAorGetUserById(userId: aelgohiAorGetCurrentUserId())
 
     // 用 $0 指代遍历的每个 work 元素
     return allWorks.filter {
@@ -357,8 +366,8 @@ extension OrinxntqoStorageManager {
     }
   }
 
-  func getWorkDetailById(workId: String) -> VieoaVNneqoVideo? {
-    let allWorks = getWorks()
+  func aelgohiAorGetWorkDetailById(workId: String) -> VieoaVNneqoVideo? {
+    let allWorks = aelgohiAorGetWorks()
     guard
       let workDetail = allWorks.first(where: {
         $0.vieoaVNneqoWorkId == workId
@@ -370,14 +379,14 @@ extension OrinxntqoStorageManager {
     return workDetail
   }
 
-  func addWork(_ work: VieoaVNneqoVideo) {
-    var vieoaVNneqoWorks = getWorks()
+  func aelgohiAorAddWork(_ work: VieoaVNneqoVideo) {
+    var vieoaVNneqoWorks = aelgohiAorGetWorks()
     vieoaVNneqoWorks.insert(work, at: 0)
     save(vieoaVNneqoWorks, forKey: Keys.vieoaVNneqoWorks)
   }
 
-  func updateWork(_ work: VieoaVNneqoVideo) {
-    var vieoaVNneqoWorks = getWorks()
+  func aelgohiAorUpdateWork(_ work: VieoaVNneqoVideo) {
+    var vieoaVNneqoWorks = aelgohiAorGetWorks()
     guard
       let index = vieoaVNneqoWorks.firstIndex(where: {
         $0.vieoaVNneqoWorkId == work.vieoaVNneqoWorkId
@@ -390,8 +399,8 @@ extension OrinxntqoStorageManager {
   }
     
     // like + 1
-    func increaseLikeCount(workId: String) {
-        var vieoaVNneqoWorks = getWorks()
+    func aelgohiAorIncreaseLikeCount(workId: String) {
+        var vieoaVNneqoWorks = aelgohiAorGetWorks()
         
         guard let index = vieoaVNneqoWorks.firstIndex(where: {
             $0.vieoaVNneqoWorkId == workId
@@ -405,8 +414,8 @@ extension OrinxntqoStorageManager {
     }
     
     // like - 1
-    func decreaseLikeCount(workId: String) {
-        var vieoaVNneqoWorks = getWorks()
+    func aelgohiAorDecreaseLikeCount(workId: String) {
+        var vieoaVNneqoWorks = aelgohiAorGetWorks()
         
         guard let index = vieoaVNneqoWorks.firstIndex(where: {
             $0.vieoaVNneqoWorkId == workId
@@ -422,12 +431,12 @@ extension OrinxntqoStorageManager {
     }
 
     //删除
-    func removeCurrentUserAllWorks() {
-        let currentUserId = getCurrentUserId()
+    func aelgohiAorRemoveCurrentUserAllWorks() {
+        let currentUserId = aelgohiAorGetCurrentUserId()
         
         guard !currentUserId.isEmpty else { return }
         
-        let allWorks = getWorks()
+        let allWorks = aelgohiAorGetWorks()
         
         // 过滤掉当前用户的作品
         let filteredWorks = allWorks.filter {
@@ -494,33 +503,33 @@ extension OrinxntqoStorageManager {
     save(saascieSeigCommentList, forKey: Keys.saascieSeigComments)
   }
     
-    func saveComments(_ commentsList: [SaascieSeigComment]) {
+    func aelgohiAorSaveComments(_ commentsList: [SaascieSeigComment]) {
         save(commentsList, forKey: Keys.saascieSeigComments)
     }
 
-  func getComments(for workId: String) -> [SaascieSeigComment] {
+  func aelgohiAorGetComments(for workId: String) -> [SaascieSeigComment] {
     load([SaascieSeigComment].self, forKey: Keys.saascieSeigComments, default: [])
       .filter { $0.saascieSeigCommentWorkId == workId }
   }
 
   // 获取所有评论
-  func getAllComments() -> [SaascieSeigComment] {
+  func aelgohiAorGetAllComments() -> [SaascieSeigComment] {
     load([SaascieSeigComment].self, forKey: Keys.saascieSeigComments, default: [])
   }
 
-  func addComment(_ comment: SaascieSeigComment) {
+  func aelgohiAorAddComment(_ comment: SaascieSeigComment) {
     var saascieSeigComments = load(
       [SaascieSeigComment].self, forKey: Keys.saascieSeigComments, default: [])
     saascieSeigComments.append(comment)
     save(saascieSeigComments, forKey: Keys.saascieSeigComments)
   }
     
-    func removeCurrentUserAllComments() {
-        let currentUserId = getCurrentUserId()
+    func aelgohiAorRemoveCurrentUserAllComments() {
+        let currentUserId = aelgohiAorGetCurrentUserId()
         
         guard !currentUserId.isEmpty else { return }
         
-        let allComments = getAllComments()
+        let allComments = aelgohiAorGetAllComments()
         
         // 过滤掉当前用户的评论
         let filteredComments = allComments.filter {
@@ -539,27 +548,27 @@ extension OrinxntqoStorageManager {
     save([ZswqoveiNiegChatRoom](), forKey: Keys.zswqoveiNiegChatRooms)
   }
     
-    func saveChatRooms(_ chatRooms: [ZswqoveiNiegChatRoom]) {
+    func aelgohiAorSaveChatRooms(_ chatRooms: [ZswqoveiNiegChatRoom]) {
         save(chatRooms, forKey: Keys.zswqoveiNiegChatRooms)
     }
     
-    func saveChatMessageList(_ msgList: [ZswqoveiNiegMessage]) {
+    func aelgohiAorSaveChatMessageList(_ msgList: [ZswqoveiNiegMessage]) {
         save(msgList, forKey: Keys.zswqoveiNiegMessages)
     }
 
-  func getChatRooms() -> [ZswqoveiNiegChatRoom] {
+  func aelgohiAorGetChatRooms() -> [ZswqoveiNiegChatRoom] {
     load([ZswqoveiNiegChatRoom].self, forKey: Keys.zswqoveiNiegChatRooms, default: [])
   }
 
   // 创建聊天室
-  func createChatRoom(chatUsersId: [String]) -> ZswqoveiNiegChatRoom {
-    var zswqoveiNiegChatRooms: [ZswqoveiNiegChatRoom] = getChatRooms()
+  func aelgohiAorCreateChatRoom(chatUsersId: [String]) -> ZswqoveiNiegChatRoom {
+    var zswqoveiNiegChatRooms: [ZswqoveiNiegChatRoom] = aelgohiAorGetChatRooms()
     let newRoom: ZswqoveiNiegChatRoom = ZswqoveiNiegChatRoom(
       zswqoveiNiegRoomId: "\(zswqoveiNiegChatRooms.count)",
       zswqoveiNiegChatUsers: chatUsersId,
       zswqoveiNiegLastSendMsg: "",
       zswqoveiNiegLastSendTime: Date(),
-      zswqoveiNiegLastSendUser: getCurrentUserId(),
+      zswqoveiNiegLastSendUser: aelgohiAorGetCurrentUserId(),
       zswqoveiNiegUnreadCount: 0
     )
     zswqoveiNiegChatRooms.append(newRoom)
@@ -568,8 +577,8 @@ extension OrinxntqoStorageManager {
     return newRoom
   }
   // 更新聊天室
-  func updateChatRoom(roomId: String, update: (ZswqoveiNiegChatRoom) -> ZswqoveiNiegChatRoom) {
-    var zswqoveiNiegChatRooms: [ZswqoveiNiegChatRoom] = getChatRooms()
+  func aelgohiAorUpdateChatRoom(roomId: String, update: (ZswqoveiNiegChatRoom) -> ZswqoveiNiegChatRoom) {
+    var zswqoveiNiegChatRooms: [ZswqoveiNiegChatRoom] = aelgohiAorGetChatRooms()
     guard let index = zswqoveiNiegChatRooms.firstIndex(where: { $0.zswqoveiNiegRoomId == roomId })
     else {
       return
@@ -578,12 +587,12 @@ extension OrinxntqoStorageManager {
     save(zswqoveiNiegChatRooms, forKey: Keys.zswqoveiNiegChatRooms)
   }
     
-    func removeCurrentUserChatRooms() {
-        let currentUserId = getCurrentUserId()
+    func aelgohiAorRemoveCurrentUserChatRooms() {
+        let currentUserId = aelgohiAorGetCurrentUserId()
         
         guard !currentUserId.isEmpty else { return }
         
-        let allRooms = getChatRooms()
+        let allRooms = aelgohiAorGetChatRooms()
         
         // 过滤掉包含当前用户的聊天室
         let filteredRooms = allRooms.filter {
@@ -599,17 +608,17 @@ extension OrinxntqoStorageManager {
     save([ZswqoveiNiegMessage](), forKey: Keys.zswqoveiNiegMessages)
   }
     
-    func getAllMessages() -> [ZswqoveiNiegMessage] {
+    func aelgohiAorGetAllMessages() -> [ZswqoveiNiegMessage] {
       return load([ZswqoveiNiegMessage].self, forKey: Keys.zswqoveiNiegMessages, default: [])
     }
 
-  func getMessages(roomId: String) -> [ZswqoveiNiegMessage] {
+  func aelgohiAorGetMessages(roomId: String) -> [ZswqoveiNiegMessage] {
     return load([ZswqoveiNiegMessage].self, forKey: Keys.zswqoveiNiegMessages, default: [])
       .filter { $0.zswqoveiNiegRoomId == roomId }
   }
     
 
-  func addMessage(_ msg: ZswqoveiNiegMessage) {
+  func aelgohiAorAddMessage(_ msg: ZswqoveiNiegMessage) {
     var zswqoveiNiegMessages = load(
       [ZswqoveiNiegMessage].self, forKey: Keys.zswqoveiNiegMessages, default: [])
     zswqoveiNiegMessages.append(msg)

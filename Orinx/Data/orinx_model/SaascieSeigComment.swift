@@ -18,14 +18,25 @@ struct SaascieSeigComment: Codable, Equatable {
         }
 }
 
+private enum SaascieSeigCommentJsonCipherKeys {
+    static let ORINXVougecommentId = "QvtnJp2mpH+9Sw9ONRgFDg=="
+    static let ORINXVougedynamicId = "DQyvyhASixnVKYUA9cFCtw=="
+    static let ORINXVougeuserId = "Ab9CmsrFLx2e3c69BZ9oiQ=="
+    static let ORINXVougecontent = "zNAQjuFvKdFFEwGfSYlGyg=="
+}
+
+private func saascieSeigJsonKey(_ cipherText: String) -> String {
+    XaiwgAesECBTool.xaiwgDecrypt(cipherText)
+}
+
 extension SaascieSeigComment {
 
     init(json: [String: Any]) {
 
-        self.saascieSeigCommentId = "\(json["commentId"] ?? "")"
-        self.saascieSeigCommentWorkId = "\(json["dynamicId"] ?? "")"
-        self.saascieSeigCommentUserId = "\(json["userId"] ?? "")"
-        self.saascieSeigCommentText = json["content"] as? String ?? ""
+        self.saascieSeigCommentId = "\(json[saascieSeigJsonKey(SaascieSeigCommentJsonCipherKeys.ORINXVougecommentId)] ?? "")"
+        self.saascieSeigCommentWorkId = "\(json[saascieSeigJsonKey(SaascieSeigCommentJsonCipherKeys.ORINXVougedynamicId)] ?? "")"
+        self.saascieSeigCommentUserId = "\(json[saascieSeigJsonKey(SaascieSeigCommentJsonCipherKeys.ORINXVougeuserId)] ?? "")"
+        self.saascieSeigCommentText = json[saascieSeigJsonKey(SaascieSeigCommentJsonCipherKeys.ORINXVougecontent)] as? String ?? ""
     }
     
     static func fromJsonArray(_ array: [[String: Any]]) -> [SaascieSeigComment] {
@@ -39,4 +50,3 @@ struct TargetComment: Codable {
     let userId: String
     let content: String
 }
-

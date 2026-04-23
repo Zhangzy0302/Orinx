@@ -24,21 +24,43 @@ struct ZswqoveiNiegChatRoom: Codable, Identifiable, Equatable {
     }
 }
 
+private enum ZswqoveiNiegChatRoomJsonCipherKeys {
+    static let ORINXVougechatId = "lwgxCN4FASzSW3aitKhVkg=="
+    static let ORINXVougelastSendContent = "yGpV3+qkPLctixBvxkU0pw=="
+    static let ORINXVougelastSendUserId = "ZUq/2E/HgjRTM6lv11B3Bw=="
+    static let ORINXVougeunreadMsgCount = "8erL8KvfDyEm4jKFBbywSA=="
+    static let ORINXVougechatUserIds = "HnGbSygAN+U+RrnwIDIFIA=="
+    static let ORINXVougelastSendTime = "X85G+a+PqS71EsA4s6vUfw=="
+}
+
+private enum ZswqoveiNiegMessageJsonCipherKeys {
+    static let ORINXVougemsgId = "ryzua/q9NaMhFW2hOOgWaw=="
+    static let ORINXVougechatId = "lwgxCN4FASzSW3aitKhVkg=="
+    static let ORINXVougeuserId = "Ab9CmsrFLx2e3c69BZ9oiQ=="
+    static let ORINXVougesendContent = "n0ljuhPPVwNwdYwC9qLVww=="
+    static let ORINXVougesendPicUrl = "RD100ySzaxMl0FS7fs271g=="
+    static let ORINXVougesendTime = "lgQvzfjmSXMr2lnMs50LJg=="
+}
+
+private func zswqoveiNiegJsonKey(_ cipherText: String) -> String {
+    XaiwgAesECBTool.xaiwgDecrypt(cipherText)
+}
+
 extension ZswqoveiNiegChatRoom {
 
     init(json: [String: Any]) {
 
-        self.zswqoveiNiegRoomId = "\(json["chatId"] ?? "")"
-        self.zswqoveiNiegLastSendMsg = json["lastSendContent"] as? String ?? ""
-        self.zswqoveiNiegLastSendUser = "\(json["lastSendUserId"] ?? "")"
-        self.zswqoveiNiegUnreadCount = json["unreadMsgCount"] as? Int ?? 0
+        self.zswqoveiNiegRoomId = "\(json[zswqoveiNiegJsonKey(ZswqoveiNiegChatRoomJsonCipherKeys.ORINXVougechatId)] ?? "")"
+        self.zswqoveiNiegLastSendMsg = json[zswqoveiNiegJsonKey(ZswqoveiNiegChatRoomJsonCipherKeys.ORINXVougelastSendContent)] as? String ?? ""
+        self.zswqoveiNiegLastSendUser = "\(json[zswqoveiNiegJsonKey(ZswqoveiNiegChatRoomJsonCipherKeys.ORINXVougelastSendUserId)] ?? "")"
+        self.zswqoveiNiegUnreadCount = json[zswqoveiNiegJsonKey(ZswqoveiNiegChatRoomJsonCipherKeys.ORINXVougeunreadMsgCount)] as? Int ?? 0
 
         // 👇 用户数组
-        self.zswqoveiNiegChatUsers = (json["chatUserIds"] as? [Any])?
+        self.zswqoveiNiegChatUsers = (json[zswqoveiNiegJsonKey(ZswqoveiNiegChatRoomJsonCipherKeys.ORINXVougechatUserIds)] as? [Any])?
             .map { "\($0)" } ?? []
 
         // 👇 时间转换（String → Date）
-        let timeStr = json["lastSendTime"] as? String ?? ""
+        let timeStr = json[zswqoveiNiegJsonKey(ZswqoveiNiegChatRoomJsonCipherKeys.ORINXVougelastSendTime)] as? String ?? ""
         self.zswqoveiNiegLastSendTime = Date.fromJSString(timeStr)
     }
     
@@ -84,15 +106,15 @@ extension ZswqoveiNiegMessage {
 
     init(json: [String: Any]) {
 
-        self.zswqoveiNiegMsgId = "\(json["msgId"] ?? "")"
-        self.zswqoveiNiegRoomId = "\(json["chatId"] ?? "")"
-        self.zswqoveiNiegSendUserId = "\(json["userId"] ?? "")"
+        self.zswqoveiNiegMsgId = "\(json[zswqoveiNiegJsonKey(ZswqoveiNiegMessageJsonCipherKeys.ORINXVougemsgId)] ?? "")"
+        self.zswqoveiNiegRoomId = "\(json[zswqoveiNiegJsonKey(ZswqoveiNiegMessageJsonCipherKeys.ORINXVougechatId)] ?? "")"
+        self.zswqoveiNiegSendUserId = "\(json[zswqoveiNiegJsonKey(ZswqoveiNiegMessageJsonCipherKeys.ORINXVougeuserId)] ?? "")"
 
-        self.zswqoveiNiegTextMsg = json["sendContent"] as? String ?? ""
-        self.zswqoveiNiegImageMsg = json["sendPicUrl"] as? String ?? ""
+        self.zswqoveiNiegTextMsg = json[zswqoveiNiegJsonKey(ZswqoveiNiegMessageJsonCipherKeys.ORINXVougesendContent)] as? String ?? ""
+        self.zswqoveiNiegImageMsg = json[zswqoveiNiegJsonKey(ZswqoveiNiegMessageJsonCipherKeys.ORINXVougesendPicUrl)] as? String ?? ""
 
         // 👇 时间
-        let timeStr = json["sendTime"] as? String ?? ""
+        let timeStr = json[zswqoveiNiegJsonKey(ZswqoveiNiegMessageJsonCipherKeys.ORINXVougesendTime)] as? String ?? ""
         self.zswqoveiNiegDate = Date.fromJSString(timeStr)
     }
     
@@ -137,7 +159,7 @@ final class ZswqoveiNiegChatViewModel: ObservableObject {
 
   func getZswqoveiNiegChatUserId(chatRoomId: String) -> String? {
     guard
-      let chatRoomInfo = storage.getChatRooms().first(where: {
+      let chatRoomInfo = storage.aelgohiAorGetChatRooms().first(where: {
         $0.zswqoveiNiegRoomId == chatRoomId
       })
     else {
@@ -145,7 +167,7 @@ final class ZswqoveiNiegChatViewModel: ObservableObject {
     }
     guard
       let chatUserId = chatRoomInfo.zswqoveiNiegChatUsers.first(where: {
-        $0 != storage.getCurrentUserId()
+        $0 != storage.aelgohiAorGetCurrentUserId()
       })
     else {
       return nil
@@ -155,9 +177,9 @@ final class ZswqoveiNiegChatViewModel: ObservableObject {
   }
 
   func getMyZswqoveiNiegChatRoomsNotBlock() -> [ZswqoveiNiegChatRoom] {
-    let bhajaAllChatRooms = storage.getChatRooms()
-    let loginUserId = storage.getCurrentUserId()
-    guard let myInfo = storage.getUserById(userId: loginUserId) else {
+    let bhajaAllChatRooms = storage.aelgohiAorGetChatRooms()
+    let loginUserId = storage.aelgohiAorGetCurrentUserId()
+    guard let myInfo = storage.aelgohiAorGetUserById(userId: loginUserId) else {
       return []
     }
 
@@ -179,7 +201,7 @@ final class ZswqoveiNiegChatViewModel: ObservableObject {
     guard let chatUserId = getZswqoveiNiegChatUserId(chatRoomId: chatRoomId) else {
       return nil
     }
-    return storage.getUserById(userId: chatUserId)
+    return storage.aelgohiAorGetUserById(userId: chatUserId)
   }
 
 }

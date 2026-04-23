@@ -15,7 +15,7 @@ struct NeqocOwibRouter: View {
     var body: some View {
         NavigationStack(path: $neqocNavi.orainxiALwiPath) {
             Group {
-                if orinxStorage.getCurrentUserId().isEmpty {
+                if orinxStorage.aelgohiAorGetCurrentUserId().isEmpty {
                     KiwoviqGuidePage()
                 } else {
                     VnziwbLiwNavPage()

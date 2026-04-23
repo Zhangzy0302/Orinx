@@ -45,24 +45,43 @@ struct RexceaiPwvzwaUser: Codable, Identifiable, Equatable {
     }
 }
 
+private enum RexceaiPwvzwaUserJsonCipherKeys {
+    static let ORINXVougeuserId = "Ab9CmsrFLx2e3c69BZ9oiQ=="
+    static let ORINXVougeemail = "F9ClV7Uu+JOf4RZLolM05w=="
+    static let ORINXVougepassword = "k/Pmaf8QL0TK16jgZHVm8w=="
+    static let ORINXVougename = "Bt7506MqME5TfEW+lk2c1Q=="
+    static let ORINXVougeavator = "z68PW7+8yO8WLhVu0p8lVA=="
+    static let ORINXVougeabout = "v23jaxRROcmBeRKnwpM48Q=="
+    static let ORINXVougecoins = "nFQxE/UaeyAhbS+ftYEMeg=="
+    static let ORINXVougeisdelete = "7D/glk6OQNqneenqUR4tYw=="
+    static let ORINXVougefollow = "n7la7raq+2LxyesrcJFJVQ=="
+    static let ORINXVougefans = "bFpSPGai8KI0U4LpBK4ZCg=="
+    static let ORINXVougeblockList = "USqbemV0c1uR1v9fP8bcxw=="
+    static let ORINXVougepostLikeIds = "hf8Dw6z1tRhWnS6H0RGEZQ=="
+}
+
+private func rexceaiPwvzwaJsonKey(_ cipherText: String) -> String {
+    XaiwgAesECBTool.xaiwgDecrypt(cipherText)
+}
+
 extension RexceaiPwvzwaUser {
 
     init(json: [String: Any]) {
 
-        self.rexceaiPwvzwaUserId = "\(json["userId"] ?? "")"
-        self.rexceaiPwvzwaEmail = json["email"] as? String ?? ""
-        self.rexceaiPwvzwaPassword = "\(json["password"] ?? "")"
-        self.rexceaiPwvzwaUserName = json["name"] as? String ?? ""
-        self.rexceaiPwvzwaAvatar = json["avator"] as? String ?? ""
-        self.rexceaiPwvzwaAboutMe = json["about"] as? String ?? ""
-        self.rexceaiPwvzwaWalletBalance = json["coins"] as? Int ?? 0
-        self.rexceaiPwvzwaIsDeleted = json["isdelete"] as? Int ?? 0
+        self.rexceaiPwvzwaUserId = "\(json[rexceaiPwvzwaJsonKey(RexceaiPwvzwaUserJsonCipherKeys.ORINXVougeuserId)] ?? "")"
+        self.rexceaiPwvzwaEmail = json[rexceaiPwvzwaJsonKey(RexceaiPwvzwaUserJsonCipherKeys.ORINXVougeemail)] as? String ?? ""
+        self.rexceaiPwvzwaPassword = "\(json[rexceaiPwvzwaJsonKey(RexceaiPwvzwaUserJsonCipherKeys.ORINXVougepassword)] ?? "")"
+        self.rexceaiPwvzwaUserName = json[rexceaiPwvzwaJsonKey(RexceaiPwvzwaUserJsonCipherKeys.ORINXVougename)] as? String ?? ""
+        self.rexceaiPwvzwaAvatar = json[rexceaiPwvzwaJsonKey(RexceaiPwvzwaUserJsonCipherKeys.ORINXVougeavator)] as? String ?? ""
+        self.rexceaiPwvzwaAboutMe = json[rexceaiPwvzwaJsonKey(RexceaiPwvzwaUserJsonCipherKeys.ORINXVougeabout)] as? String ?? ""
+        self.rexceaiPwvzwaWalletBalance = json[rexceaiPwvzwaJsonKey(RexceaiPwvzwaUserJsonCipherKeys.ORINXVougecoins)] as? Int ?? 0
+        self.rexceaiPwvzwaIsDeleted = json[rexceaiPwvzwaJsonKey(RexceaiPwvzwaUserJsonCipherKeys.ORINXVougeisdelete)] as? Int ?? 0
 
         // 数组转换（兼容 __NSArrayM）
-        self.rexceaiPwvzwaFollowing = (json["follow"] as? [Any])?.map { "\($0)" } ?? []
-        self.rexceaiPwvzwaFans = (json["fans"] as? [Any])?.map { "\($0)" } ?? []
-        self.rexceaiPwvzwaBlacklist = (json["blockList"] as? [Any])?.map { "\($0)" } ?? []
-        self.rexceaiPwvzwaLikePosts = (json["postLikeIds"] as? [Any])?.map { "\($0)" } ?? []
+        self.rexceaiPwvzwaFollowing = (json[rexceaiPwvzwaJsonKey(RexceaiPwvzwaUserJsonCipherKeys.ORINXVougefollow)] as? [Any])?.map { "\($0)" } ?? []
+        self.rexceaiPwvzwaFans = (json[rexceaiPwvzwaJsonKey(RexceaiPwvzwaUserJsonCipherKeys.ORINXVougefans)] as? [Any])?.map { "\($0)" } ?? []
+        self.rexceaiPwvzwaBlacklist = (json[rexceaiPwvzwaJsonKey(RexceaiPwvzwaUserJsonCipherKeys.ORINXVougeblockList)] as? [Any])?.map { "\($0)" } ?? []
+        self.rexceaiPwvzwaLikePosts = (json[rexceaiPwvzwaJsonKey(RexceaiPwvzwaUserJsonCipherKeys.ORINXVougepostLikeIds)] as? [Any])?.map { "\($0)" } ?? []
     }
     
     static func fromJsonArray(_ array: [[String: Any]]) -> [RexceaiPwvzwaUser] {
@@ -97,17 +116,17 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
   private let storage = OrinxntqoStorageManager.shared
 
   func getRexceaiPwvzwaUserInfoByUid(uid: String) {
-    userInfo = storage.getUserById(userId: uid)
+    userInfo = storage.aelgohiAorGetUserById(userId: uid)
   }
 
   func returnRexceaiPwvzwaUserInfoById(userId: String) -> RexceaiPwvzwaUser? {
-    storage.getUserById(userId: userId)
+    storage.aelgohiAorGetUserById(userId: userId)
   }
 
   func loadLoginRexceaiPwvzwaUser() {
-    users = storage.getUsers()
+    users = storage.aelgohiAorGetUsers()
 
-    let uid: String = storage.getCurrentUserId()
+    let uid: String = storage.aelgohiAorGetCurrentUserId()
       currentUserID = uid
     currentUser = users.first { $0.rexceaiPwvzwaUserId == uid }
   }
@@ -117,9 +136,9 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
             return currentUser.isRexceaiPwvzwaGuest
         }
         
-        let uid = storage.getCurrentUserId()
+        let uid = storage.aelgohiAorGetCurrentUserId()
         guard !uid.isEmpty,
-              let loginUser = storage.getUserById(userId: uid) else {
+              let loginUser = storage.aelgohiAorGetUserById(userId: uid) else {
             return false
         }
         
@@ -128,7 +147,7 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
 
   // 登录
   func loginByEmailAndPasswordRexceaiPwvzwa(email: String, password: String) -> RexceaiPwvzwaUser? {
-    let users = storage.getUsers()
+    let users = storage.aelgohiAorGetUsers()
     guard
       let matchUser = users.first(where: {
         $0.rexceaiPwvzwaEmail == email && $0.rexceaiPwvzwaPassword == password && $0.rexceaiPwvzwaIsDeleted == 0
@@ -138,7 +157,7 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
     }
 
     // 记录登录态
-    storage.setCurrentUserId(matchUser.rexceaiPwvzwaUserId)
+    storage.aelgohiAorSetCurrentUserId(matchUser.rexceaiPwvzwaUserId)
       currentUserID = matchUser.rexceaiPwvzwaUserId
     loadLoginRexceaiPwvzwaUser()
     return matchUser
@@ -147,7 +166,7 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
   // 游客登录
     func visitorLoginRexceaiPwvzwa() {
         
-        let users = storage.getUsers()
+        let users = storage.aelgohiAorGetUsers()
         
         // ✅ 1. 查找已有游客（email & password 为空 + 未删除）
         if let existVisitor = users.first(where: {
@@ -158,7 +177,7 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
             print(existVisitor)
 //            print("✅ 使用已有游客:", existVisitor.rexceaiPwvzwaUserId)
             
-            storage.setCurrentUserId(existVisitor.rexceaiPwvzwaUserId)
+            storage.aelgohiAorSetCurrentUserId(existVisitor.rexceaiPwvzwaUserId)
             loadLoginRexceaiPwvzwaUser()
             return
         }
@@ -183,31 +202,31 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
         
         print("🆕 创建新游客:", newId)
         
-        storage.addUser(user: newUser)
-        storage.setCurrentUserId(newUser.rexceaiPwvzwaUserId)
+        storage.aelgohiAorAddUser(user: newUser)
+        storage.aelgohiAorSetCurrentUserId(newUser.rexceaiPwvzwaUserId)
         
         loadLoginRexceaiPwvzwaUser()
     }
 
   // 删除账号
   func deleteAccountRexceaiPwvzwa() {
-      storage.removeCurrentUserAllWorks()
-      storage.removeCurrentUserChatRooms()
-      storage.removeCurrentUserAllComments()
+      storage.aelgohiAorRemoveCurrentUserAllWorks()
+      storage.aelgohiAorRemoveCurrentUserChatRooms()
+      storage.aelgohiAorRemoveCurrentUserAllComments()
       // ✅ 1. 标记删除
-      storage.updateUser(uid: storage.getCurrentUserId()) { user in
+      storage.aelgohiAorUpdateUser(uid: storage.aelgohiAorGetCurrentUserId()) { user in
           var newUser = user
           newUser.rexceaiPwvzwaIsDeleted = 1
           return newUser
       }
-    storage.setCurrentUserId("")
+    storage.aelgohiAorSetCurrentUserId("")
       currentUserID = ""
     loadLoginRexceaiPwvzwaUser()
   }
 
   // 注册
   func registerRexceaiPwvzwa(email: String, password: String) -> RexceaiPwvzwaUser? {
-    let users = storage.getUsers()
+    let users = storage.aelgohiAorGetUsers()
     guard
       users.first(where: { $0.rexceaiPwvzwaEmail == email }) == nil
     else {
@@ -229,21 +248,21 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
       rexceaiPwvzwaIsDeleted: 0
     )
 
-    storage.addUser(user: newUser)
-    storage.setCurrentUserId(newUser.rexceaiPwvzwaUserId)
+    storage.aelgohiAorAddUser(user: newUser)
+    storage.aelgohiAorSetCurrentUserId(newUser.rexceaiPwvzwaUserId)
     loadLoginRexceaiPwvzwaUser()
     return newUser
   }
 
   // 登出
   func logoutRexceaiPwvzwa() {
-    storage.setCurrentUserId("")
+    storage.aelgohiAorSetCurrentUserId("")
     loadLoginRexceaiPwvzwaUser()
   }
 
   // 切换拉黑状态
   func toggleUserIsBlocked(blockUserId: String) {
-    storage.updateUser(uid: currentUser!.rexceaiPwvzwaUserId) { user in
+    storage.aelgohiAorUpdateUser(uid: currentUser!.rexceaiPwvzwaUserId) { user in
       var newUser: RexceaiPwvzwaUser = user
       if newUser.rexceaiPwvzwaBlacklist.contains(blockUserId) {
         newUser.rexceaiPwvzwaBlacklist.removeAll { $0 == blockUserId }
@@ -259,14 +278,14 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
 
   // 切换是否喜欢视频作品
   func toggleVideoIsLiked(_ videoId: String) {
-    storage.updateUser(uid: currentUser!.rexceaiPwvzwaUserId) { user in
+    storage.aelgohiAorUpdateUser(uid: currentUser!.rexceaiPwvzwaUserId) { user in
       var newUser: RexceaiPwvzwaUser = user
       if newUser.rexceaiPwvzwaLikePosts.contains(videoId) {
         newUser.rexceaiPwvzwaLikePosts.removeAll { $0 == videoId }
-          storage.decreaseLikeCount(workId: videoId)
+          storage.aelgohiAorDecreaseLikeCount(workId: videoId)
       } else {
         newUser.rexceaiPwvzwaLikePosts.append(videoId)
-          storage.increaseLikeCount(workId: videoId)
+          storage.aelgohiAorIncreaseLikeCount(workId: videoId)
       }
       return newUser
     }
@@ -276,7 +295,7 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
 
   // 更新用户钻石数
   func increaseUserDiamond(diamond: Int) {
-    storage.updateUser(uid: currentUser!.rexceaiPwvzwaUserId) { user in
+    storage.aelgohiAorUpdateUser(uid: currentUser!.rexceaiPwvzwaUserId) { user in
       var newUser: RexceaiPwvzwaUser = user
       newUser.rexceaiPwvzwaWalletBalance = newUser.rexceaiPwvzwaWalletBalance + diamond
       return newUser
@@ -287,7 +306,7 @@ final class RexceaiPwvzwaUserViewModel: ObservableObject {
     
     // 获取所有未拉黑的用户
     func getAllNotBlockRexceaiPwvzwaUsers() -> [RexceaiPwvzwaUser] {
-        let users = storage.getUsers()
+        let users = storage.aelgohiAorGetUsers()
         if let rexceaiPwvzwaMyInfo = currentUser {
             let allRexceaiPwvzwaUsers = users.filter{
                 !rexceaiPwvzwaMyInfo.rexceaiPwvzwaBlacklist.contains($0.rexceaiPwvzwaUserId)

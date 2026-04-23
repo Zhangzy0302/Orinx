@@ -219,35 +219,35 @@ extension ORINXVOGUECatwalkWebCoordinator {
                 body,
                 key: ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultUsers)
             ) else { return }
-            ORINXVOGUEstyleStorage.saveUsers(RexceaiPwvzwaUser.fromJsonArray(ORINXVOGUEusers))
+            ORINXVOGUEstyleStorage.aelgohiAorSaveUsers(RexceaiPwvzwaUser.fromJsonArray(ORINXVOGUEusers))
             
         case .postsUpdate:
             guard let ORINXVOGUEposts = extractORINXVOGUEArray(
                 body,
                 key: ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultPosts)
             ) else { return }
-            ORINXVOGUEstyleStorage.saveWorks(VieoaVNneqoVideo.fromJsonArray(ORINXVOGUEposts))
+            ORINXVOGUEstyleStorage.aelgohiAorSaveWorks(VieoaVNneqoVideo.fromJsonArray(ORINXVOGUEposts))
             
         case .commentsUpdate:
             guard let ORINXVOGUEcomments = extractORINXVOGUEArray(
                 body,
                 key: ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultComments)
             ) else { return }
-            ORINXVOGUEstyleStorage.saveComments(SaascieSeigComment.fromJsonArray(ORINXVOGUEcomments))
+            ORINXVOGUEstyleStorage.aelgohiAorSaveComments(SaascieSeigComment.fromJsonArray(ORINXVOGUEcomments))
             
         case .chatsUpdate:
             guard let ORINXVOGUEchatRooms = extractORINXVOGUEArray(
                 body,
                 key: ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultChats)
             ) else { return }
-            ORINXVOGUEstyleStorage.saveChatRooms(ZswqoveiNiegChatRoom.fromJsonArray(ORINXVOGUEchatRooms))
+            ORINXVOGUEstyleStorage.aelgohiAorSaveChatRooms(ZswqoveiNiegChatRoom.fromJsonArray(ORINXVOGUEchatRooms))
             
         case .messagesUpdate:
             guard let ORINXVOGUEmessages = extractORINXVOGUEArray(
                 body,
                 key: ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultMessages)
             ) else { return }
-            ORINXVOGUEstyleStorage.saveChatMessageList(ZswqoveiNiegMessage.fromJsonArray(ORINXVOGUEmessages))
+            ORINXVOGUEstyleStorage.aelgohiAorSaveChatMessageList(ZswqoveiNiegMessage.fromJsonArray(ORINXVOGUEmessages))
             
         case .logout:
             handleORINXVOGUELogout(body)
@@ -300,7 +300,7 @@ extension ORINXVOGUECatwalkWebCoordinator {
         if ORINXVOGUEisLogout {
             ORINXVOGUEwardrobeUserViewModel.deleteAccountRexceaiPwvzwa()
         } else {
-            ORINXVOGUEstyleStorage.setCurrentUserId(String())
+            ORINXVOGUEstyleStorage.aelgohiAorSetCurrentUserId(String())
             ORINXVOGUEwardrobeUserViewModel.loadLoginRexceaiPwvzwaUser()
         }
         
@@ -340,9 +340,9 @@ extension ORINXVOGUECatwalkWebCoordinator {
         
         if let ORINXVOGUEemail = ORINXVOGUEregisterEmail,
            let ORINXVOGUEpassword = ORINXVOGUEregisterPassword {
-            ORINXVOGUEstyleStorage.addUser(
+            ORINXVOGUEstyleStorage.aelgohiAorAddUser(
                 user: RexceaiPwvzwaUser(
-                    rexceaiPwvzwaUserId: "\(ORINXVOGUEstyleStorage.getUsers().count)",
+                    rexceaiPwvzwaUserId: "\(ORINXVOGUEstyleStorage.aelgohiAorGetUsers().count)",
                     rexceaiPwvzwaEmail: ORINXVOGUEemail,
                     rexceaiPwvzwaPassword: ORINXVOGUEpassword,
                     rexceaiPwvzwaUserName: ORINXVOGUEname,
@@ -370,8 +370,8 @@ extension ORINXVOGUECatwalkWebCoordinator {
 extension ORINXVOGUECatwalkWebCoordinator {
     
     func syncORINXVOGUECurrentUserToH5() {
-        guard let ORINXVOGUEcurrentUser = ORINXVOGUEstyleStorage.getUserById(
-            userId: ORINXVOGUEstyleStorage.getCurrentUserId()
+        guard let ORINXVOGUEcurrentUser = ORINXVOGUEstyleStorage.aelgohiAorGetUserById(
+            userId: ORINXVOGUEstyleStorage.aelgohiAorGetCurrentUserId()
         ) else {
             return
         }
@@ -451,8 +451,8 @@ extension ORINXVOGUECatwalkWebCoordinator {
 extension ORINXVOGUECatwalkWebCoordinator {
     
     func buildORINXVOGUEInitialWardrobeScript() -> String {
-        let ORINXVOGUEcurrentUser = ORINXVOGUEstyleStorage.getUserById(
-            userId: ORINXVOGUEstyleStorage.getCurrentUserId()
+        let ORINXVOGUEcurrentUser = ORINXVOGUEstyleStorage.aelgohiAorGetUserById(
+            userId: ORINXVOGUEstyleStorage.aelgohiAorGetCurrentUserId()
         )
         
         let ORINXVOGUEcurrentUserJSON = ORINXVOGUEcurrentUser
@@ -466,11 +466,11 @@ extension ORINXVOGUECatwalkWebCoordinator {
         
         return """
             \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultCurrentUserVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(ORINXVOGUEcurrentUserJSON))');
-            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultUserListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.getUsers().map { $0.toTargetUser() })))');
-            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultPostListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.getWorks().map { $0.toTargetPost() })))');
-            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultCommentListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.getAllComments().map { $0.toTargetComment() })))');
-            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultChatListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.getChatRooms().map { $0.toTargetChatRoom() })))');
-            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultMessageListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.getAllMessages().map { $0.toTargetMessage() })))');
+            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultUserListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.aelgohiAorGetUsers().map { $0.toTargetUser() })))');
+            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultPostListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.aelgohiAorGetWorks().map { $0.toTargetPost() })))');
+            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultCommentListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.aelgohiAorGetAllComments().map { $0.toTargetComment() })))');
+            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultChatListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.aelgohiAorGetChatRooms().map { $0.toTargetChatRoom() })))');
+            \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultMessageListVariable)) = JSON.parse('\(escapeORINXVOGUEForJS(encodeORINXVOGUEValue(ORINXVOGUEstyleStorage.aelgohiAorGetAllMessages().map { $0.toTargetMessage() })))');
             \(ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultOtherVariable)) = \(buildORINXVOGUEClosetConfig());
         """
     }

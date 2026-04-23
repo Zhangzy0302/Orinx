@@ -30,21 +30,37 @@ struct VieoaVNneqoVideo: Codable, Identifiable, Equatable {
         }
 }
 
+private enum VieoaVNneqoVideoJsonCipherKeys {
+    static let ORINXVougedynamicId = "DQyvyhASixnVKYUA9cFCtw=="
+    static let ORINXVougeuserId = "Ab9CmsrFLx2e3c69BZ9oiQ=="
+    static let ORINXVougedynamicType = "hrs/Y6IbqhI0qObSGpWkHA=="
+    static let ORINXVougedynamicDesc = "jotl5dxOoC3OI9wXk+x8EQ=="
+    static let ORINXVougedynamicTitleType = "Dpd9qjukn/Dl45vCgVEVG3XHJ8e/z413tJ5LLrjRDTY="
+    static let ORINXVougedynamicVideo = "ItVmUFtPj2gOK7I5Sw9KjA=="
+    static let ORINXVougedynamicLikeCount = "bK4vqoVDf4eEfl5+uEeUeXXHJ8e/z413tJ5LLrjRDTY="
+    static let ORINXVougedynamicCommentCount = "y2LpX8NRfT1JZyc1SkQSAuSE9oSO0bJvCVUTHMTMlJY="
+    static let ORINXVougedynamicPic = "OuuaIbk3ohvVp99oj0MMVg=="
+}
+
+private func vieoaVNneqoJsonKey(_ cipherText: String) -> String {
+    XaiwgAesECBTool.xaiwgDecrypt(cipherText)
+}
+
 extension VieoaVNneqoVideo {
 
     init(json: [String: Any]) {
 
-        self.vieoaVNneqoWorkId = "\(json["dynamicId"] ?? "")"
-        self.vieoaVNneqoCreatorId = "\(json["userId"] ?? "")"
-        self.vieoaVNneqoType = json["dynamicType"] as? Int ?? 0
-        self.vieoaVNneqoTextContent = json["dynamicDesc"] as? String ?? ""
-        self.vieoaVNneqoTitleType = json["dynamicTitleType"] as? Int ?? 0
-        self.vieoaVNneqoVideoUrl = json["dynamicVideo"] as? String ?? ""
-        self.vieoaVNneqoLikeCount = json["dynamicLikeCount"] as? Int ?? 0
-        self.vieoaVNneqoCommentCount = json["dynamicCommentCount"] as? Int ?? 0
+        self.vieoaVNneqoWorkId = "\(json[vieoaVNneqoJsonKey(VieoaVNneqoVideoJsonCipherKeys.ORINXVougedynamicId)] ?? "")"
+        self.vieoaVNneqoCreatorId = "\(json[vieoaVNneqoJsonKey(VieoaVNneqoVideoJsonCipherKeys.ORINXVougeuserId)] ?? "")"
+        self.vieoaVNneqoType = json[vieoaVNneqoJsonKey(VieoaVNneqoVideoJsonCipherKeys.ORINXVougedynamicType)] as? Int ?? 0
+        self.vieoaVNneqoTextContent = json[vieoaVNneqoJsonKey(VieoaVNneqoVideoJsonCipherKeys.ORINXVougedynamicDesc)] as? String ?? ""
+        self.vieoaVNneqoTitleType = json[vieoaVNneqoJsonKey(VieoaVNneqoVideoJsonCipherKeys.ORINXVougedynamicTitleType)] as? Int ?? 0
+        self.vieoaVNneqoVideoUrl = json[vieoaVNneqoJsonKey(VieoaVNneqoVideoJsonCipherKeys.ORINXVougedynamicVideo)] as? String ?? ""
+        self.vieoaVNneqoLikeCount = json[vieoaVNneqoJsonKey(VieoaVNneqoVideoJsonCipherKeys.ORINXVougedynamicLikeCount)] as? Int ?? 0
+        self.vieoaVNneqoCommentCount = json[vieoaVNneqoJsonKey(VieoaVNneqoVideoJsonCipherKeys.ORINXVougedynamicCommentCount)] as? Int ?? 0
 
         // 👇 图片数组（兼容 __NSArrayM）
-        self.vieoaVNneqoPic = (json["dynamicPic"] as? [Any])?.map { "\($0)" } ?? []
+        self.vieoaVNneqoPic = (json[vieoaVNneqoJsonKey(VieoaVNneqoVideoJsonCipherKeys.ORINXVougedynamicPic)] as? [Any])?.map { "\($0)" } ?? []
     }
     
     static func fromJsonArray(_ array: [[String: Any]]) -> [VieoaVNneqoVideo] {
@@ -71,17 +87,16 @@ final class VieoaVNneqoVideoViewModel: ObservableObject {
   @Published var allNotBlockWorks: [VieoaVNneqoVideo] = []
 //  @Published var userWorks: [VieoaVNneqoVideo] = []
   @Published var myFollowingUserWorks: [VieoaVNneqoVideo] = []
-  @Published var workDetail: VieoaVNneqoVideo?
 
   private let storage = OrinxntqoStorageManager.shared
 
   func getAllVieoaVNneqoWorks() {
-    allWorks = storage.getWorks()
+    allWorks = storage.aelgohiAorGetWorks()
   }
 
   func getAllNotBlockVieoaVNneqoWorks() {
-    let allWorks: [VieoaVNneqoVideo] = storage.getWorks()
-    if let cnaiwjdMyInfo = storage.getUserById(userId: storage.getCurrentUserId()) {
+    let allWorks: [VieoaVNneqoVideo] = storage.aelgohiAorGetWorks()
+    if let cnaiwjdMyInfo = storage.aelgohiAorGetUserById(userId: storage.aelgohiAorGetCurrentUserId()) {
       allNotBlockWorks = allWorks.filter {
         !cnaiwjdMyInfo.rexceaiPwvzwaBlacklist.contains($0.vieoaVNneqoCreatorId)
       }
@@ -91,8 +106,8 @@ final class VieoaVNneqoVideoViewModel: ObservableObject {
     
     // get by type
     func getAllNotBlockVieoaVNneqoWorksByType(type: Int) -> [VieoaVNneqoVideo] {
-      let allWorks: [VieoaVNneqoVideo] = storage.getWorks()
-      if let cnaiwjdMyInfo = storage.getUserById(userId: storage.getCurrentUserId()) {
+      let allWorks: [VieoaVNneqoVideo] = storage.aelgohiAorGetWorks()
+      if let cnaiwjdMyInfo = storage.aelgohiAorGetUserById(userId: storage.aelgohiAorGetCurrentUserId()) {
         return allWorks.filter {
           !cnaiwjdMyInfo.rexceaiPwvzwaBlacklist.contains($0.vieoaVNneqoCreatorId)
             && $0.vieoaVNneqoType == type
@@ -105,28 +120,28 @@ final class VieoaVNneqoVideoViewModel: ObservableObject {
     
     // get my works
     func getMyVieoaVNneqoWorks() -> [VieoaVNneqoVideo] {
-      let allWorks: [VieoaVNneqoVideo] = storage.getWorks()
+      let allWorks: [VieoaVNneqoVideo] = storage.aelgohiAorGetWorks()
         return allWorks.filter {
-            $0.vieoaVNneqoCreatorId == storage.getCurrentUserId()
+            $0.vieoaVNneqoCreatorId == storage.aelgohiAorGetCurrentUserId()
         }
 
     }
 
 
     func getVieoaVNneqoWorksByUserIdAndType(userId: String, type: Int) -> [VieoaVNneqoVideo] {
-    let allPostWorks: [VieoaVNneqoVideo] = storage.getWorks()
+    let allPostWorks: [VieoaVNneqoVideo] = storage.aelgohiAorGetWorks()
     return allPostWorks.filter {
         $0.vieoaVNneqoCreatorId == userId && $0.vieoaVNneqoType == type
     }
   }
 
   func getMyFollowingVieoaVNneqoWorks() {
-    let currentUserId = storage.getCurrentUserId()
-    guard let currentUserInfo: RexceaiPwvzwaUser = storage.getUserById(userId: currentUserId)
+    let currentUserId = storage.aelgohiAorGetCurrentUserId()
+    guard let currentUserInfo: RexceaiPwvzwaUser = storage.aelgohiAorGetUserById(userId: currentUserId)
     else {
       return
     }
-    let allPostWorks: [VieoaVNneqoVideo] = storage.getWorks()
+    let allPostWorks: [VieoaVNneqoVideo] = storage.aelgohiAorGetWorks()
     let myFollowingWorks: [VieoaVNneqoVideo] = allPostWorks.filter {
       currentUserInfo.rexceaiPwvzwaFollowing.contains($0.vieoaVNneqoCreatorId)
         && !currentUserInfo.rexceaiPwvzwaBlacklist.contains($0.vieoaVNneqoCreatorId)
@@ -134,13 +149,8 @@ final class VieoaVNneqoVideoViewModel: ObservableObject {
     myFollowingUserWorks = myFollowingWorks
   }
 
-  func getVieoaVNneqoWorkDetailByWorkId(workId: String) {
-    workDetail = storage.getWorkDetailById(workId: workId)
-  }
-
-  // 根据用户ID获取用户信息（封装存储层方法）
   func getUserByCreatorId(creatorId: String) -> RexceaiPwvzwaUser? {
-    return storage.getUserById(userId: creatorId)
+    return storage.aelgohiAorGetUserById(userId: creatorId)
   }
 
 }
