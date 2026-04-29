@@ -59,6 +59,35 @@ private func ORINXVOGUEDecrypt(_ cipherText: String) -> String {
     XaiwgAesECBTool.xaiwgDecrypt(cipherText)
 }
 
+@MainActor
+private enum ORINXVOGUEWebRuntime {
+    static let ORINXVOGUEsharedProcessPool = WKProcessPool()
+    static let ORINXVOGUEsharedDataStore = WKWebsiteDataStore.default()
+    static var ORINXVOGUEpreloadedWebView: WKWebView?
+    static var ORINXVOGUEpreloadedURL: URL?
+
+    static func ORINXVOGUErootURL() -> URL? {
+        URL(string: ORINXVOGUEDecrypt(ORINXVOGUECipherVault.ORINXVOGUEVaultWebHost))
+    }
+
+    static func ORINXVOGUEpreloadRootPageIfNeeded() {
+        guard let ORINXVOGUEurl = ORINXVOGUErootURL() else { return }
+        guard ORINXVOGUEpreloadedURL != ORINXVOGUEurl else { return }
+
+        let ORINXVOGUEconfiguration = WKWebViewConfiguration()
+        ORINXVOGUEconfiguration.processPool = ORINXVOGUEsharedProcessPool
+        ORINXVOGUEconfiguration.websiteDataStore = ORINXVOGUEsharedDataStore
+        ORINXVOGUEconfiguration.allowsInlineMediaPlayback = true
+
+        let ORINXVOGUEwebView = WKWebView(frame: .zero, configuration: ORINXVOGUEconfiguration)
+        ORINXVOGUEwebView.isHidden = true
+        ORINXVOGUEwebView.load(URLRequest(url: ORINXVOGUEurl))
+
+        ORINXVOGUEpreloadedWebView = ORINXVOGUEwebView
+        ORINXVOGUEpreloadedURL = ORINXVOGUEurl
+    }
+}
+
 struct ORINXVOGUECatwalkWebCanvas: UIViewRepresentable {
     
     let ORINXVOGUEstyleRoute: String
@@ -105,6 +134,8 @@ struct ORINXVOGUECatwalkWebCanvas: UIViewRepresentable {
         
         let ORINXVOGUEwebConfiguration = WKWebViewConfiguration()
         ORINXVOGUEwebConfiguration.userContentController = ORINXVOGUEmessageCenter
+        ORINXVOGUEwebConfiguration.processPool = ORINXVOGUEWebRuntime.ORINXVOGUEsharedProcessPool
+        ORINXVOGUEwebConfiguration.websiteDataStore = ORINXVOGUEWebRuntime.ORINXVOGUEsharedDataStore
         ORINXVOGUEwebConfiguration.allowsInlineMediaPlayback = true
         
         let ORINXVOGUEinitialScript = WKUserScript(
@@ -137,6 +168,10 @@ struct ORINXVOGUECatwalkWebCanvas: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {}
+
+    static func ORINXVOGUEpreloadRootPageIfNeeded() {
+        ORINXVOGUEWebRuntime.ORINXVOGUEpreloadRootPageIfNeeded()
+    }
 }
 
 @MainActor

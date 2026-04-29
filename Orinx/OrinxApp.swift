@@ -16,6 +16,7 @@ struct OrinxApp: App {
     @StateObject var oRINXVOGUERunwayIAPManager = ORINXVOGUERunwayIAPManager()
     
     private var orinxData = OrinxntqoStorageManager.shared
+    @State private var orinxHasStartedBootstrap = false
     
     var body: some Scene {
         WindowGroup {
@@ -33,10 +34,24 @@ struct OrinxApp: App {
                 .environmentObject(zswqoveiNiegChatViewModel)
                 .environmentObject(orinxNaviManager)
                 .environmentObject(oRINXVOGUERunwayIAPManager)
-                .onAppear{
-                    orinxData.initializeAllDefaults()
+                .task {
+                    guard !orinxHasStartedBootstrap else { return }
+                    orinxHasStartedBootstrap = true
+
+                    // Load the current session immediately so the first screen can render fast.
                     rexceaiPwvzwaUserViewModel.loadLoginRexceaiPwvzwaUser()
-                    oRINXVOGUERunwayIAPManager.refreshORINXVOGUERunwayCatalog()
+
+                    let orinxStorage = orinxData
+                    await Task.detached(priority: .utility) {
+                        orinxStorage.initializeAllDefaults()
+                    }.value
+
+                    rexceaiPwvzwaUserViewModel.loadLoginRexceaiPwvzwaUser()
+
+                    Task(priority: .utility) {
+                        try? await Task.sleep(nanoseconds: 800_000_000)
+                        oRINXVOGUERunwayIAPManager.refreshORINXVOGUERunwayCatalog()
+                    }
                 }
         }
     }

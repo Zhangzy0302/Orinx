@@ -22,7 +22,7 @@ enum EeuqcjaOrHUD {
                 EeuqcjaOrLoadingToast.shared.showToast(text, type: .error)
             }
         }
-      }
+    }
 
     static func showLoading(showBackground: Bool = false) {
             EeuqcjaOrExecuteOnMain {

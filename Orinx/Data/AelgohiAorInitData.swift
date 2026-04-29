@@ -3,11 +3,11 @@ import SwiftUI
 
 private enum AelgohiAorCipherVault {
   static let aelgohiAorAssetBaseURL =
-    "x2dYQh/Jdw43w59EgG47idY6rIrc2b6A8jjmOJqe/jhVRd68LV/AEbaardAVIIi4ZN1Th9ubaNm96WeQiQPbwg=="
+    "http://huanniuchat.oss-accelerate.aliyuncs.com/Orinx2026/"
 }
 
 private func aelgohiAorAssetURL(_ path: String) -> String {
-  XaiwgAesECBTool.xaiwgDecrypt(AelgohiAorCipherVault.aelgohiAorAssetBaseURL) + path
+    AelgohiAorCipherVault.aelgohiAorAssetBaseURL + path
 }
 
 final class OrinxntqoStorageManager {

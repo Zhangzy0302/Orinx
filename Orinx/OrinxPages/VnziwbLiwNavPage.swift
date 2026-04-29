@@ -88,6 +88,10 @@ struct VnziwbLiwNavPage: View {
             
         }
         .navigationBarHidden(true)
+            .task {
+                try? await Task.sleep(nanoseconds: 1_200_000_000)
+                ORINXVOGUECatwalkWebCanvas.ORINXVOGUEpreloadRootPageIfNeeded()
+            }
             .onChange(of: vnziwbLiwNavi.orainxiALwiPath) { route in
                 vnaziwUserVM.loadLoginRexceaiPwvzwaUser()
                 
