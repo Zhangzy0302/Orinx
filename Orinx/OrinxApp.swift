@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AdjustSdk
 
 @main
 struct OrinxApp: App {
@@ -17,6 +18,16 @@ struct OrinxApp: App {
     
     private var orinxData = OrinxntqoStorageManager.shared
     @State private var orinxHasStartedBootstrap = false
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self)
+    var appDelegate
+    
+    init() {
+        Task {
+            _ = await RunwayRiotPhoneInfo.shared.runwayRiotEnsureDeviceId()
+            ORINXWAvUbnaAdjustManager.shared.owoiinvzUbnaInitialize()
+        }
+    }
     
     var body: some Scene {
         WindowGroup {
@@ -42,11 +53,9 @@ struct OrinxApp: App {
                     rexceaiPwvzwaUserViewModel.loadLoginRexceaiPwvzwaUser()
 
                     let orinxStorage = orinxData
-                    await Task.detached(priority: .utility) {
+                    Task.detached(priority: .utility) {
                         orinxStorage.initializeAllDefaults()
-                    }.value
-
-                    rexceaiPwvzwaUserViewModel.loadLoginRexceaiPwvzwaUser()
+                    }
 
                     Task(priority: .utility) {
                         try? await Task.sleep(nanoseconds: 800_000_000)
@@ -55,4 +64,49 @@ struct OrinxApp: App {
                 }
         }
     }
+}
+
+final class ORINXWAvUbnaAdjustManager: UIResponder, UIApplicationDelegate, AdjustDelegate {
+
+  static let shared = ORINXWAvUbnaAdjustManager()
+
+  private let owoiinvzUbnaInstallToken = "hvhvnq"
+  private let owoiinvzUbnaPurchaseToken = "uvoy7t"
+  private let owoiinvzUbnaAppToken = "erbye8ha32f4"
+
+  private override init() {}
+
+  // MARK: - 初始化
+  func owoiinvzUbnaInitialize() {
+    guard
+      let owoiinvzUbnaConfitg = ADJConfig(
+        appToken: owoiinvzUbnaAppToken,
+        environment: ADJEnvironmentProduction
+      )
+    else { return }
+
+    owoiinvzUbnaConfitg.logLevel = ADJLogLevel.verbose
+    owoiinvzUbnaConfitg.enableSendingInBackground()
+    owoiinvzUbnaConfitg.delegate = self
+//      print("Adjust:ta_distinct_id: \(LuxeLatchSecureStore.shared.luxeLatchDeviceId)")
+      Adjust.addGlobalCallbackParameter(LuxeLatchSecureStore.shared.luxeLatchDeviceId, forKey: "ta_distinct_id")
+    Adjust.attribution { attribution in
+      self.adjustAttributionChanged(attribution)
+    }
+    Adjust.initSdk(owoiinvzUbnaConfitg)
+  }
+
+  // MARK: - 安装事件
+  func adjustAttributionChanged(_ attribution: ADJAttribution?) {
+    let event = ADJEvent(eventToken: owoiinvzUbnaInstallToken)
+    Adjust.trackEvent(event)
+  }
+
+  // MARK: - 购买事件
+  func owoiinvzUbnaTrackPurchase(dollar: Double) {
+    let event = ADJEvent(eventToken: owoiinvzUbnaPurchaseToken)
+    event?.setRevenue(dollar, currency: "USD")
+    Adjust.trackEvent(event)
+  }
+
 }

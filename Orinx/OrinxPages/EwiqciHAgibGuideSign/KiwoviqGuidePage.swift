@@ -7,6 +7,9 @@ struct KiwoviqGuidePage: View {
     @EnvironmentObject private var kiwowNavi: OrinxNaviManager
     @EnvironmentObject private var kiwoviqUserVM: RexceaiPwvzwaUserViewModel
     
+    @StateObject private var kiwwviqoGuideInitModel: RunwayRiotInitViewModel = RunwayRiotInitViewModel()
+    @StateObject private var kiwoviqLocationManager: RunwayRiotLocationManager = .shared
+    
     private let kiwoviqEulaTitle = "2exKLknTDxvMh/wmWCl95Q=="
     private let kiwoviqAgreeToast = "PmSSSasyZYJSZLzYN4hHNcG0mS7RifnS+i2D/ybitM6EAzBa5BPMWJKIFwV2PMsq"
     private let kiwoviqLoginByEmail = "E6KLWbp0J7xwoqswI3FVUQ=="
@@ -39,57 +42,46 @@ struct KiwoviqGuidePage: View {
                         .frame(width: 68, height: 68)
                         .cornerRadius(16)
                     Spacer()
-                    Text(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqEulaTitle))
-                        .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(14, weight: .bold))
-                        .foregroundStyle(OrinxaYrueaTheme.OrinxColor.orinxMainBlue)
-                        .frame(width: 53, height: 31)
-                        .background(RoundedRectangle(cornerRadius: 10).fill(.white))
-                        .onTapGesture {
-                            kiwowNavi.push(.ewioxaEula)
-                        }
+                    if kiwwviqoGuideInitModel.runwayRiotStatus == .runwayRiotUnavailable {
+                        Text(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqEulaTitle))
+                            .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(14, weight: .bold))
+                            .foregroundStyle(OrinxaYrueaTheme.OrinxColor.orinxMainBlue)
+                            .frame(width: 53, height: 31)
+                            .background(RoundedRectangle(cornerRadius: 10).fill(.white))
+                            .onTapGesture {
+                                kiwowNavi.push(.ewioxaEula)
+                            }
+                    }
+                    
                 }.padding(.horizontal, 20)
                     .padding(.top, 11)
                 Spacer()
-                VStack(spacing: 0){
+                switch kiwwviqoGuideInitModel.runwayRiotStatus {
+                case .runwayRiotUnavailable:
+                    kiwoviqAowGuideToA
+                case .loading:
+                    VStack(spacing: 40) {
+                      ProgressView()
+                        .progressViewStyle(.circular)
+                        .scaleEffect(2)
+                        .tint(.white)
+
+                      Text("Loading...")
+                            .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(14))
+                            .foregroundColor(.white)
+                    }.padding(.bottom, 60)
+                case .runwayRiotReady:
                     Button(action: {
-                        if !kiwanvipqAgreeEULA {
-                            kiwowNavi.push(.ewioxaEula)
-                            return
-                        }
-                        if !kiwanvipqAgree {
-                            EeuqcjaOrHUD.toast(.error(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqAgreeToast)))
-                            return
-                        }
-                        kiwowNavi.push(.wxiwiangSignPage(wialcjSignType: .wxiwiangSignIn))
-                    }) {
-                        Text(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqLoginByEmail))
-                            .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(20, weight: .bold))
-                            .foregroundStyle(.white)
-                            .frame(width: 267, height: 60)
-                            .background(
-                                RoundedRectangle(cornerRadius: 40)
-                                    .fill(OrinxaYrueaTheme.OrinxColor.orinxMainPink)
-                                    .overlay{
-                                        RoundedRectangle(cornerRadius: 40)
-                                            .stroke(.white, lineWidth: 2)
-                                    }
-                            )
-                    }
-                    Button(action: {
-                        if !kiwanvipqAgreeEULA {
-                            kiwowNavi.push(.ewioxaEula)
-                            return
-                        }
-                        if !kiwanvipqAgree {
-                            EeuqcjaOrHUD.toast(.error(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqAgreeToast)))
-                            return
-                        }
-                        Task{
-                            EeuqcjaOrHUD.showLoading()
-                            await delay(0.55)
-                            EeuqcjaOrHUD.hideLoading()
-                            kiwoviqUserVM.visitorLoginRexceaiPwvzwa()
-                            kiwowNavi.popToRoot()
+                        Task {
+                            kiwwviqoGuideInitModel.runwayRiotStatus = .loading
+                          if let route = await RunwayRiotInitUtils.shared.runwayRiotGoLogin() {
+
+                            await MainActor.run {
+                                kiwowNavi.popToRoot()
+                                kiwowNavi.push(route)
+                            }
+                          }
+                            kiwwviqoGuideInitModel.runwayRiotStatus = .runwayRiotReady
                         }
                     }) {
                         Text(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqNewUser))
@@ -105,52 +97,127 @@ struct KiwoviqGuidePage: View {
                         }
                             )
                     }.padding(.top, 18)
-                        .padding(.bottom, 22)
+                        .padding(.bottom, 60)
                     
-                    HStack(spacing: 0){
-                        KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(kiwoviqNoAccount), kiwqiIsUnderline: false)
-                        Text(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqSignUp))
-                            .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(14, weight: .bold))
-                            .foregroundStyle(.white)
-                            .underline()
-                            .onTapGesture {
-                                if !kiwanvipqAgreeEULA {
-                                    kiwowNavi.push(.ewioxaEula)
-                                    return
-                                }
-                                if !kiwanvipqAgree {
-                                    EeuqcjaOrHUD.toast(.error(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqAgreeToast)))
-                                    return
-                                }
-                                kiwowNavi.push(.wxiwiangSignPage(wialcjSignType: .wxiwiangSignUp))
-                            }
-                    }.padding(.bottom, 57)
-                    
-                    HStack(){
-                        Image(kiwanvipqAgree ? "ciahitiw_agree_circle_check" : "ciahitiw_agree_circle")
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                            .onTapGesture {
-                                withAnimation(.easeOut(duration: 0.2)){
-                                    kiwanvipqAgree = !kiwanvipqAgree
-                                }
-                                
-                            }
-                        HStack(spacing: 0){
-                            KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(kiwoviqAgreeWith), kiwqiIsUnderline: false)
-                            KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(kiwoviqUserAgreement), kiwqiIsUnderline: true)
-                                .onTapGesture {
-                                    kiwowNavi.push(.otwiNjqoWeb(url: "userAgreement"))
-                                }
-                            KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(kiwoviqAndText), kiwqiIsUnderline: false)
-                            KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(kiwoviqPrivacyPolicy), kiwqiIsUnderline: true)
-                                .onTapGesture {
-                                    kiwowNavi.push(.otwiNjqoWeb(url: "privacyPolicy"))
-                                }
-                        }
-                    }.padding(.bottom, 30)
                 }
+                
             }
+            
+            if kiwoviqLocationManager.runwayRiotShowLocationDialog {
+                WialvOrinxLocationALert(woxiaeioIsShowing: $kiwoviqLocationManager.runwayRiotShowLocationDialog)
+            }
+        }.environmentObject(kiwwviqoGuideInitModel)
+            .environmentObject(kiwoviqLocationManager)
+            .task{
+                await kiwwviqoGuideInitModel.runwayRiotBootstrap()
+            }.onChange(of: kiwwviqoGuideInitModel.runwayRiotNextRoute) { route in
+                if let route = route {
+                    kiwowNavi.push(route)
+                    kiwwviqoGuideInitModel.runwayRiotNextRoute = nil  // 防止重复跳转
+                }
+              }
+    }
+    
+    private var kiwoviqAowGuideToA: some View {
+        VStack(spacing: 0){
+            Button(action: {
+                if !kiwanvipqAgreeEULA {
+                    kiwowNavi.push(.ewioxaEula)
+                    return
+                }
+                if !kiwanvipqAgree {
+                    EeuqcjaOrHUD.toast(.error(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqAgreeToast)))
+                    return
+                }
+                kiwowNavi.push(.wxiwiangSignPage(wialcjSignType: .wxiwiangSignIn))
+            }) {
+                Text(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqLoginByEmail))
+                    .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(20, weight: .bold))
+                    .foregroundStyle(.white)
+                    .frame(width: 267, height: 60)
+                    .background(
+                        RoundedRectangle(cornerRadius: 40)
+                            .fill(OrinxaYrueaTheme.OrinxColor.orinxMainPink)
+                            .overlay{
+                                RoundedRectangle(cornerRadius: 40)
+                                    .stroke(.white, lineWidth: 2)
+                            }
+                    )
+            }
+            Button(action: {
+                if !kiwanvipqAgreeEULA {
+                    kiwowNavi.push(.ewioxaEula)
+                    return
+                }
+                if !kiwanvipqAgree {
+                    EeuqcjaOrHUD.toast(.error(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqAgreeToast)))
+                    return
+                }
+                Task{
+                    EeuqcjaOrHUD.showLoading()
+                    await delay(0.55)
+                    EeuqcjaOrHUD.hideLoading()
+                    kiwoviqUserVM.visitorLoginRexceaiPwvzwa()
+                    kiwowNavi.popToRoot()
+                }
+            }) {
+                Text(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqNewUser))
+                    .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(20, weight: .bold))
+                    .foregroundStyle(.white)
+                    .frame(width: 267, height: 60)
+                    .background(
+                        RoundedRectangle(cornerRadius: 40)
+                            .fill(OrinxaYrueaTheme.OrinxColor.orinxMainBlue)
+                            .overlay{
+                                RoundedRectangle(cornerRadius: 40)
+                                    .stroke(.white, lineWidth: 2)
+                }
+                    )
+            }.padding(.top, 18)
+                .padding(.bottom, 22)
+            
+            HStack(spacing: 0){
+                KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(kiwoviqNoAccount), kiwqiIsUnderline: false)
+                Text(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqSignUp))
+                    .font(OrinxaYrueaTheme.OrinxFont.texgyreadventor(14, weight: .bold))
+                    .foregroundStyle(.white)
+                    .underline()
+                    .onTapGesture {
+                        if !kiwanvipqAgreeEULA {
+                            kiwowNavi.push(.ewioxaEula)
+                            return
+                        }
+                        if !kiwanvipqAgree {
+                            EeuqcjaOrHUD.toast(.error(XaiwgAesECBTool.xaiwgDecrypt(kiwoviqAgreeToast)))
+                            return
+                        }
+                        kiwowNavi.push(.wxiwiangSignPage(wialcjSignType: .wxiwiangSignUp))
+                    }
+            }.padding(.bottom, 57)
+            
+            HStack(){
+                Image(kiwanvipqAgree ? "ciahitiw_agree_circle_check" : "ciahitiw_agree_circle")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .onTapGesture {
+                        withAnimation(.easeOut(duration: 0.2)){
+                            kiwanvipqAgree = !kiwanvipqAgree
+                        }
+                        
+                    }
+                HStack(spacing: 0){
+                    KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(kiwoviqAgreeWith), kiwqiIsUnderline: false)
+                    KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(kiwoviqUserAgreement), kiwqiIsUnderline: true)
+                        .onTapGesture {
+                            kiwowNavi.push(.otwiNjqoWeb(url: "userAgreement"))
+                        }
+                    KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(kiwoviqAndText), kiwqiIsUnderline: false)
+                    KiwooviqText(kwiqText: XaiwgAesECBTool.xaiwgDecrypt(kiwoviqPrivacyPolicy), kiwqiIsUnderline: true)
+                        .onTapGesture {
+                            kiwowNavi.push(.otwiNjqoWeb(url: "privacyPolicy"))
+                        }
+                }
+            }.padding(.bottom, 30)
         }
     }
     

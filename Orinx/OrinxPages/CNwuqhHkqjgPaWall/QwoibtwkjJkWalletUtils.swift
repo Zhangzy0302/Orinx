@@ -1,6 +1,7 @@
 import StoreKit
 import SwiftUI
 import Combine
+import FBSDKCoreKit
 
 struct ORINXVOGUEAtelierPack {
     let ORINXVOGUEsilhouetteKeyId: String
@@ -142,20 +143,72 @@ extension ORINXVOGUERunwayIAPManager: SKProductsRequestDelegate {
 }
 
 extension ORINXVOGUERunwayIAPManager: SKPaymentTransactionObserver {
+    
+    private func findWalletItem(productID: String) -> ORINXVOGUEAtelierPack? {
+        ORINXVOGUEAtelierCatalog.first { $0.ORINXVOGUEsilhouetteKeyId == productID }
+    }
+    
+    // MARK: - Facebook 埋点
+    private func peiaWUkAKwuFBLog(price: Double) {
+        AppEvents.shared.logPurchase(
+            amount: price,
+            currency: "USD",
+            parameters: [AppEvents.ParameterName(rawValue: "fb_mobile_purchase"): "true"]
+        )
+    }
 
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for ORINXVOGUEtransaction in transactions {
             switch ORINXVOGUEtransaction.transactionState {
             case .purchased:
-                SKPaymentQueue.default().finishTransaction(ORINXVOGUEtransaction)
-
-                if let ORINXVOGUEatelierPack = ORINXVOGUEfindAtelierPack(
-                    productID: ORINXVOGUEtransaction.payment.productIdentifier
-                ) {
-                    ORINXVOGUEfinishCheckout(with: .ORINXVOGUESuccess(wardrobeValue: ORINXVOGUEatelierPack.ORINXVOGUEwardrobeValue))
-                } else {
-                    ORINXVOGUEfinishCheckout(with: .ORINXVOGUEFailed(message: "Product not found"))
+                
+                guard let model = findWalletItem(productID: ORINXVOGUEtransaction.payment.productIdentifier) else {
+                    EeuqcjaOrHUD.toast(.error("Product config not found"))
+                    SKPaymentQueue.default().finishTransaction(ORINXVOGUEtransaction)
+                    EeuqcjaOrHUD.hideLoading()
+                    return
                 }
+                if !LuxeLatchAppStorage.luxeLatchIsB {
+                    SKPaymentQueue.default().finishTransaction(ORINXVOGUEtransaction)
+
+                    if let ORINXVOGUEatelierPack = ORINXVOGUEfindAtelierPack(
+                        productID: ORINXVOGUEtransaction.payment.productIdentifier
+                    ) {
+                        ORINXVOGUEfinishCheckout(with: .ORINXVOGUESuccess(wardrobeValue: ORINXVOGUEatelierPack.ORINXVOGUEwardrobeValue))
+                    } else {
+                        ORINXVOGUEfinishCheckout(with: .ORINXVOGUEFailed(message: "Product not found"))
+                    }
+                    return
+                }
+                Task{
+                    let qwoibtwjkPurId = ORINXVOGUEtransaction.transactionIdentifier ?? ""
+                    let qwoibtwjkVerificationData: String
+                    if let receiptURL = Bundle.main.appStoreReceiptURL,
+                       let receiptData = try? Data(contentsOf: receiptURL)
+                    {
+                        qwoibtwjkVerificationData = receiptData.base64EncodedString()
+                    } else {
+                        qwoibtwjkVerificationData = ""
+                    }
+                    let qwoibtwjkVertify = try await ZwoWewiOAwApiCall().zwoWewiOAwPayCall(
+                        purchaseID: qwoibtwjkPurId,
+                        serverVerificationData: qwoibtwjkVerificationData,  // StoreKit1 没有 JWS，通常传空或自签
+                        orderCode: luxeLatchUsersOrderCode
+                    )
+
+                    if qwoibtwjkVertify {
+                        peiaWUkAKwuFBLog(price: model.ORINXVOGUErunwayPrice) // fb
+                        ORINXWAvUbnaAdjustManager.shared.owoiinvzUbnaTrackPurchase(dollar: model.ORINXVOGUErunwayPrice) // adjust
+                        SKPaymentQueue.default().finishTransaction(ORINXVOGUEtransaction)
+//                            DwhaiXeuHUD.toast(.success("Purchase success"))
+                    } else {
+                        SKPaymentQueue.default().finishTransaction(ORINXVOGUEtransaction)
+                        EeuqcjaOrHUD.toast(.error("Purchase unverified"))
+                    }
+
+                    EeuqcjaOrHUD.hideLoading()
+                }
+                
 
             case .failed:
                 SKPaymentQueue.default().finishTransaction(ORINXVOGUEtransaction)

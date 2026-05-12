@@ -28,6 +28,8 @@ struct NeqocOwibRouter: View {
                     VnziwbLiwNavPage()
                 case .otwiNjqoWeb(let otwiNjqoWebUrl, let otrwiNjaEmail, let otrwiNjaPassword):
                     ORINXVOGUECatwalkWebScene(ORINXVOGUEstyleRoute: otwiNjqoWebUrl, ORINXVOGUEregisterEmail: otrwiNjaEmail, ORINXVOGUEregisterPassword: otrwiNjaPassword)
+                case .velvetVogueAgreement(let velvetVogueURL):
+                    VelvetVogueAgreement(velvetVogueWebURL: velvetVogueURL)
                 case .wxiwiangSignPage(let wialcjSignType):
                     WxiwiangSignPage(wxiwiangType: wialcjSignType)
                 }
@@ -41,6 +43,7 @@ enum OrinxRoute: Hashable {
     case ewioxaEula
     case wxiwiangSignPage(wialcjSignType: WxiwiangType)
     case otwiNjqoWeb(otwiNjqoWebUrl: String, otrwiNjaEmail: String?, otrwiNjaPassword: String?)
+    case velvetVogueAgreement(velvetVogueURL: String)
     case pxiwkfNavPage
 }
 
@@ -48,6 +51,10 @@ extension OrinxRoute {
     /// 只传入 URL，email 和 password 自动为 nil
     static func otwiNjqoWeb(url: String) -> OrinxRoute {
         return .otwiNjqoWeb(otwiNjqoWebUrl: url, otrwiNjaEmail: nil, otrwiNjaPassword: nil)
+    }
+
+    static func velvetVogueAgreement(url: String) -> OrinxRoute {
+        return .velvetVogueAgreement(velvetVogueURL: url)
     }
 }
 
